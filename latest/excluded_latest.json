@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T23:05:07+02:00",
+  "generated_at": "2026-08-05T23:37:56+02:00",
   "count": 551,
   "titoli": [
     {
@@ -14,7 +14,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "APGE",
@@ -28,7 +28,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ARM",
@@ -42,7 +42,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ATAT",
@@ -56,7 +56,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BIDU",
@@ -70,7 +70,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BILI",
@@ -84,7 +84,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BNTX",
@@ -98,7 +98,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BZ",
@@ -112,7 +112,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CELC",
@@ -126,7 +126,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "COGT",
@@ -140,7 +140,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DFTX",
@@ -154,7 +154,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DNLI",
@@ -168,7 +168,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DYN",
@@ -182,7 +182,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ELVN",
@@ -196,7 +196,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ERAS",
@@ -210,7 +210,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EWTX",
@@ -224,7 +224,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FUTU",
@@ -238,7 +238,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GDS",
@@ -252,7 +252,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GGAL",
@@ -266,7 +266,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GMAB",
@@ -280,7 +280,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HSAI",
@@ -294,7 +294,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HTHT",
@@ -308,7 +308,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "IMVT",
@@ -322,7 +322,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "JD",
@@ -336,7 +336,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LEGN",
@@ -350,7 +350,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MBX",
@@ -364,7 +364,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MLYS",
@@ -378,7 +378,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NTES",
@@ -392,7 +392,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ORKA",
@@ -406,7 +406,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PAYP",
@@ -420,7 +420,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PBLS",
@@ -434,7 +434,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PCVX",
@@ -448,7 +448,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PDD",
@@ -462,7 +462,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RVMD",
@@ -476,7 +476,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RYAAY",
@@ -490,7 +490,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SIMO",
@@ -504,7 +504,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SKHY",
@@ -518,7 +518,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SNY",
@@ -532,7 +532,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SRRK",
@@ -546,7 +546,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SYRE",
@@ -560,7 +560,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TCOM",
@@ -574,7 +574,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TRVI",
@@ -588,7 +588,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VERA",
@@ -602,7 +602,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VKTX",
@@ -616,7 +616,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VOD",
@@ -630,7 +630,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ZLAB",
@@ -644,7 +644,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AAL",
@@ -662,7 +662,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AAOI",
@@ -680,7 +680,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AAON",
@@ -696,7 +696,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AAPL",
@@ -714,7 +714,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ABNB",
@@ -732,7 +732,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ACAD",
@@ -750,7 +750,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ACGL",
@@ -768,7 +768,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ACHC",
@@ -785,7 +785,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ACIW",
@@ -803,7 +803,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ACMR",
@@ -820,7 +820,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ADBE",
@@ -838,7 +838,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ADEA",
@@ -856,7 +856,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ADP",
@@ -874,7 +874,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ADPT",
@@ -891,7 +891,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ADSK",
@@ -909,7 +909,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AEHR",
@@ -925,7 +925,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AEP",
@@ -942,7 +942,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AKAM",
@@ -961,7 +961,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ALGM",
@@ -978,7 +978,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ALGN",
@@ -996,7 +996,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ALKS",
@@ -1012,7 +1012,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ALKT",
@@ -1029,7 +1029,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ALMS",
@@ -1047,7 +1047,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ALNY",
@@ -1063,7 +1063,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AMAT",
@@ -1079,7 +1079,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AMBA",
@@ -1097,7 +1097,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AMGN",
@@ -1115,7 +1115,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AMKR",
@@ -1132,7 +1132,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AMLX",
@@ -1149,7 +1149,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AMRX",
@@ -1166,7 +1166,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AMZN",
@@ -1184,7 +1184,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "APA",
@@ -1202,7 +1202,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "APLD",
@@ -1220,7 +1220,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "APP",
@@ -1236,7 +1236,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "APPN",
@@ -1254,7 +1254,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ARCC",
@@ -1271,7 +1271,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ARQT",
@@ -1288,7 +1288,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ARWR",
@@ -1307,7 +1307,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ASO",
@@ -1325,7 +1325,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ASTS",
@@ -1344,7 +1344,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ATRC",
@@ -1362,7 +1362,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AUGO",
@@ -1379,7 +1379,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AVAV",
@@ -1395,7 +1395,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AVT",
@@ -1413,7 +1413,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AXGN",
@@ -1430,7 +1430,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AXON",
@@ -1447,7 +1447,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AXSM",
@@ -1465,7 +1465,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "AXTI",
@@ -1483,7 +1483,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BBIO",
@@ -1501,7 +1501,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BEAM",
@@ -1520,7 +1520,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BIIB",
@@ -1537,7 +1537,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BKNG",
@@ -1554,7 +1554,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BKR",
@@ -1572,7 +1572,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BLKB",
@@ -1589,7 +1589,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BLLN",
@@ -1606,7 +1606,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BMRN",
@@ -1624,7 +1624,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BRKR",
@@ -1643,7 +1643,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BRZE",
@@ -1660,7 +1660,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BSY",
@@ -1679,7 +1679,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BTSG",
@@ -1696,7 +1696,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BUSE",
@@ -1713,7 +1713,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "BWIN",
@@ -1730,7 +1730,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CAE",
@@ -1748,7 +1748,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CAI",
@@ -1764,7 +1764,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CAKE",
@@ -1783,7 +1783,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CALM",
@@ -1800,7 +1800,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CAR",
@@ -1817,7 +1817,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CARG",
@@ -1835,7 +1835,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CART",
@@ -1852,7 +1852,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CBRS",
@@ -1869,7 +1869,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CBSH",
@@ -1887,7 +1887,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CCEP",
@@ -1905,7 +1905,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CDNA",
@@ -1923,7 +1923,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CDW",
@@ -1943,7 +1943,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CECO",
@@ -1962,7 +1962,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CEG",
@@ -1980,7 +1980,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CELH",
@@ -1996,7 +1996,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CENX",
@@ -2015,7 +2015,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CG",
@@ -2033,7 +2033,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CGNX",
@@ -2049,7 +2049,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CGON",
@@ -2068,7 +2068,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CHDN",
@@ -2086,7 +2086,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CHKP",
@@ -2104,7 +2104,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CHRD",
@@ -2122,7 +2122,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CHRW",
@@ -2140,7 +2140,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CHTR",
@@ -2158,7 +2158,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CHYM",
@@ -2176,7 +2176,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CIFR",
@@ -2194,7 +2194,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CINF",
@@ -2210,7 +2210,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CLBT",
@@ -2227,7 +2227,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CLDX",
@@ -2246,7 +2246,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CLMT",
@@ -2265,7 +2265,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CMCSA",
@@ -2283,7 +2283,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CME",
@@ -2301,7 +2301,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "COCO",
@@ -2317,7 +2317,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "COHU",
@@ -2333,7 +2333,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "COIN",
@@ -2351,7 +2351,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "COLB",
@@ -2368,7 +2368,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "COO",
@@ -2386,7 +2386,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CORT",
@@ -2403,7 +2403,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CORZ",
@@ -2420,7 +2420,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "COST",
@@ -2439,7 +2439,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CPB",
@@ -2456,7 +2456,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CPRT",
@@ -2474,7 +2474,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CRDO",
@@ -2491,7 +2491,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CRNX",
@@ -2509,7 +2509,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CROX",
@@ -2526,7 +2526,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CRSP",
@@ -2543,7 +2543,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CRWD",
@@ -2559,7 +2559,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CRWV",
@@ -2577,7 +2577,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CSCO",
@@ -2595,7 +2595,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CSGP",
@@ -2613,7 +2613,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CSX",
@@ -2631,7 +2631,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CTAS",
@@ -2649,7 +2649,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CTSH",
@@ -2667,7 +2667,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CVBF",
@@ -2683,7 +2683,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CVLT",
@@ -2701,7 +2701,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CYTK",
@@ -2720,7 +2720,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "CZR",
@@ -2737,7 +2737,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DASH",
@@ -2755,7 +2755,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DBX",
@@ -2774,7 +2774,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DDOG",
@@ -2791,7 +2791,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DKNG",
@@ -2809,7 +2809,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DLTR",
@@ -2827,7 +2827,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DNTH",
@@ -2846,7 +2846,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DOCU",
@@ -2864,7 +2864,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DOX",
@@ -2883,7 +2883,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DPZ",
@@ -2901,7 +2901,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DRS",
@@ -2918,7 +2918,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DUOL",
@@ -2935,7 +2935,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "DXCM",
@@ -2951,7 +2951,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EA",
@@ -2967,7 +2967,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EBAY",
@@ -2985,7 +2985,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EBC",
@@ -3002,7 +3002,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ECHO",
@@ -3021,7 +3021,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ENPH",
@@ -3039,7 +3039,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ENSG",
@@ -3057,7 +3057,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ENTG",
@@ -3073,7 +3073,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EQPT",
@@ -3091,7 +3091,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ETOR",
@@ -3109,7 +3109,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EVRG",
@@ -3128,7 +3128,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EWBC",
@@ -3146,7 +3146,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EXC",
@@ -3164,7 +3164,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EXE",
@@ -3182,7 +3182,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EXEL",
@@ -3199,7 +3199,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EXLS",
@@ -3217,7 +3217,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EXPE",
@@ -3234,7 +3234,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "EXTR",
@@ -3253,7 +3253,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FA",
@@ -3270,7 +3270,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FANG",
@@ -3287,7 +3287,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FAST",
@@ -3305,7 +3305,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FER",
@@ -3322,7 +3322,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FFBC",
@@ -3340,7 +3340,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FFIN",
@@ -3358,7 +3358,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FHB",
@@ -3376,7 +3376,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FIBK",
@@ -3393,7 +3393,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FIGR",
@@ -3409,7 +3409,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FISV",
@@ -3428,7 +3428,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FIVE",
@@ -3445,7 +3445,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FIVN",
@@ -3463,7 +3463,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FLEX",
@@ -3479,7 +3479,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FLY",
@@ -3497,7 +3497,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FLYW",
@@ -3514,7 +3514,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FORM",
@@ -3530,7 +3530,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FOX",
@@ -3549,7 +3549,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FOXA",
@@ -3568,7 +3568,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FROG",
@@ -3585,7 +3585,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FRPT",
@@ -3604,7 +3604,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FRVO",
@@ -3620,7 +3620,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FSLR",
@@ -3637,7 +3637,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FSLY",
@@ -3655,7 +3655,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FTAI",
@@ -3671,7 +3671,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FTNT",
@@ -3687,7 +3687,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FULT",
@@ -3705,7 +3705,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "FWONK",
@@ -3722,7 +3722,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GEHC",
@@ -3740,7 +3740,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GEN",
@@ -3758,7 +3758,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GFS",
@@ -3776,7 +3776,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GH",
@@ -3793,7 +3793,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GILD",
@@ -3809,7 +3809,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GLBE",
@@ -3826,7 +3826,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GLNG",
@@ -3843,7 +3843,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GLPI",
@@ -3860,7 +3860,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GLXY",
@@ -3878,7 +3878,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GNTX",
@@ -3896,7 +3896,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GOOG",
@@ -3913,7 +3913,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GOOGL",
@@ -3930,7 +3930,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GSAT",
@@ -3947,7 +3947,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GTLB",
@@ -3963,7 +3963,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "GTX",
@@ -3981,7 +3981,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HALO",
@@ -3997,7 +3997,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HAS",
@@ -4014,7 +4014,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HBAN",
@@ -4030,7 +4030,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HLNE",
@@ -4048,7 +4048,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HON",
@@ -4065,7 +4065,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HONA",
@@ -4081,7 +4081,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HQY",
@@ -4097,7 +4097,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HRMY",
@@ -4115,7 +4115,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HSIC",
@@ -4134,7 +4134,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HST",
@@ -4152,7 +4152,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HTFL",
@@ -4169,7 +4169,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HUBG",
@@ -4187,7 +4187,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HUT",
@@ -4205,7 +4205,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "HWC",
@@ -4223,7 +4223,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ICHR",
@@ -4239,7 +4239,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ICLR",
@@ -4257,7 +4257,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "IDYA",
@@ -4274,7 +4274,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ILMN",
@@ -4292,7 +4292,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "IMNM",
@@ -4311,7 +4311,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "INDV",
@@ -4329,7 +4329,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "INOD",
@@ -4345,7 +4345,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "INSM",
@@ -4363,7 +4363,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "INTA",
@@ -4381,7 +4381,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "INTC",
@@ -4397,7 +4397,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "INTU",
@@ -4414,7 +4414,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "IONS",
@@ -4432,7 +4432,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "IRDM",
@@ -4449,7 +4449,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "IREN",
@@ -4467,7 +4467,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ISRG",
@@ -4485,7 +4485,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ITRI",
@@ -4503,7 +4503,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "JAZZ",
@@ -4520,7 +4520,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "JBHT",
@@ -4537,7 +4537,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "JKHY",
@@ -4555,7 +4555,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "KDP",
@@ -4574,7 +4574,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "KHC",
@@ -4592,7 +4592,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "KLAC",
@@ -4609,7 +4609,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "KLIC",
@@ -4626,7 +4626,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "KMB",
@@ -4644,7 +4644,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "KTOS",
@@ -4660,7 +4660,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "KYMR",
@@ -4679,7 +4679,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LASR",
@@ -4696,7 +4696,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LAUR",
@@ -4712,7 +4712,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LBRDK",
@@ -4730,7 +4730,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LFTO",
@@ -4747,7 +4747,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LGN",
@@ -4763,7 +4763,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LIN",
@@ -4781,7 +4781,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LIND",
@@ -4798,7 +4798,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LINE",
@@ -4817,7 +4817,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LITE",
@@ -4834,7 +4834,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LIVN",
@@ -4852,7 +4852,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LKQ",
@@ -4870,7 +4870,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LNT",
@@ -4888,7 +4888,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LNTH",
@@ -4905,7 +4905,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LOGI",
@@ -4922,7 +4922,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LQDA",
@@ -4939,7 +4939,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LSCC",
@@ -4956,7 +4956,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LULU",
@@ -4974,7 +4974,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "LYFT",
@@ -4993,7 +4993,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MAR",
@@ -5011,7 +5011,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MCHP",
@@ -5028,7 +5028,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MDB",
@@ -5044,7 +5044,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MDLN",
@@ -5064,7 +5064,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MDLZ",
@@ -5081,7 +5081,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MEOH",
@@ -5098,7 +5098,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "META",
@@ -5115,7 +5115,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MGNI",
@@ -5132,7 +5132,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MIDD",
@@ -5151,7 +5151,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MIRM",
@@ -5169,7 +5169,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MKSI",
@@ -5186,7 +5186,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MKTX",
@@ -5204,7 +5204,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MMED",
@@ -5220,7 +5220,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MMSI",
@@ -5238,7 +5238,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MMYT",
@@ -5255,7 +5255,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MNDY",
@@ -5273,7 +5273,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MNST",
@@ -5291,7 +5291,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MRNA",
@@ -5309,7 +5309,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MRVL",
@@ -5325,7 +5325,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MRX",
@@ -5342,7 +5342,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MSFT",
@@ -5358,7 +5358,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MSTR",
@@ -5376,7 +5376,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MTCH",
@@ -5392,7 +5392,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MTSI",
@@ -5408,7 +5408,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MU",
@@ -5425,7 +5425,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "MXL",
@@ -5441,7 +5441,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NAMS",
@@ -5460,7 +5460,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NAVN",
@@ -5476,7 +5476,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NBIS",
@@ -5496,7 +5496,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NCNO",
@@ -5514,7 +5514,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NDAQ",
@@ -5531,7 +5531,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NEO",
@@ -5548,7 +5548,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NESR",
@@ -5565,7 +5565,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NFLX",
@@ -5583,7 +5583,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NKTR",
@@ -5601,7 +5601,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NMRK",
@@ -5620,7 +5620,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NRIX",
@@ -5638,7 +5638,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NTAP",
@@ -5656,7 +5656,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NTNX",
@@ -5674,7 +5674,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NTRA",
@@ -5692,7 +5692,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NTRS",
@@ -5709,7 +5709,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NVDA",
@@ -5725,7 +5725,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NWBI",
@@ -5742,7 +5742,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NWS",
@@ -5760,7 +5760,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NWSA",
@@ -5778,7 +5778,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NXPI",
@@ -5794,7 +5794,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "NXT",
@@ -5811,7 +5811,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OCTV",
@@ -5828,7 +5828,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ODFL",
@@ -5845,7 +5845,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OKTA",
@@ -5864,7 +5864,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OLED",
@@ -5882,7 +5882,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OLLI",
@@ -5900,7 +5900,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ON",
@@ -5916,7 +5916,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ONB",
@@ -5933,7 +5933,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OPCH",
@@ -5952,7 +5952,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ORLY",
@@ -5970,7 +5970,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OSW",
@@ -5988,7 +5988,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OTEX",
@@ -6006,7 +6006,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OUST",
@@ -6023,7 +6023,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "OZK",
@@ -6041,7 +6041,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PAA",
@@ -6061,7 +6061,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PAGP",
@@ -6080,7 +6080,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PANW",
@@ -6098,7 +6098,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PAYX",
@@ -6115,7 +6115,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PCAR",
@@ -6132,7 +6132,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PCTY",
@@ -6150,7 +6150,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PDFS",
@@ -6168,7 +6168,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PECO",
@@ -6186,7 +6186,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PEGA",
@@ -6204,7 +6204,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PENN",
@@ -6223,7 +6223,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PEP",
@@ -6240,7 +6240,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PFG",
@@ -6258,7 +6258,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PGNY",
@@ -6276,7 +6276,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PLTR",
@@ -6292,7 +6292,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PODD",
@@ -6309,7 +6309,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "POOL",
@@ -6327,7 +6327,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "POWI",
@@ -6346,7 +6346,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "POWL",
@@ -6363,7 +6363,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PPC",
@@ -6382,7 +6382,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PPLI",
@@ -6401,7 +6401,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PRVA",
@@ -6419,7 +6419,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PTC",
@@ -6437,7 +6437,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PTCT",
@@ -6453,7 +6453,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PTRN",
@@ -6470,7 +6470,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "PYPL",
@@ -6488,7 +6488,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "QBTS",
@@ -6508,7 +6508,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "QCOM",
@@ -6526,7 +6526,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "QLYS",
@@ -6544,7 +6544,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "QNT",
@@ -6560,7 +6560,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "QRVO",
@@ -6578,7 +6578,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "QURE",
@@ -6596,7 +6596,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RARE",
@@ -6614,7 +6614,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RDNT",
@@ -6632,7 +6632,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "REG",
@@ -6650,7 +6650,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "REGN",
@@ -6668,7 +6668,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RELY",
@@ -6686,7 +6686,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "REYN",
@@ -6704,7 +6704,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RGEN",
@@ -6721,7 +6721,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RGTI",
@@ -6741,7 +6741,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RIOT",
@@ -6760,7 +6760,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RIVN",
@@ -6776,7 +6776,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RKLB",
@@ -6793,7 +6793,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RLAY",
@@ -6813,7 +6813,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RMBS",
@@ -6829,7 +6829,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ROAD",
@@ -6845,7 +6845,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ROIV",
@@ -6864,7 +6864,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ROKU",
@@ -6882,7 +6882,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ROP",
@@ -6900,7 +6900,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ROST",
@@ -6916,7 +6916,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RPRX",
@@ -6935,7 +6935,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RRR",
@@ -6953,7 +6953,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "RYTM",
@@ -6970,7 +6970,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SAIL",
@@ -6986,7 +6986,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SANM",
@@ -7002,7 +7002,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SBAC",
@@ -7020,7 +7020,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SBCF",
@@ -7037,7 +7037,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SBLK",
@@ -7054,7 +7054,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SBRA",
@@ -7071,7 +7071,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SBUX",
@@ -7087,7 +7087,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SEDG",
@@ -7104,7 +7104,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SFD",
@@ -7123,7 +7123,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SFM",
@@ -7142,7 +7142,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SFNC",
@@ -7161,7 +7161,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SGRY",
@@ -7179,7 +7179,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SHAZ",
@@ -7196,7 +7196,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SHC",
@@ -7215,7 +7215,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SHOO",
@@ -7232,7 +7232,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SHOP",
@@ -7249,7 +7249,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SIRI",
@@ -7267,7 +7267,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SLDE",
@@ -7283,7 +7283,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SLM",
@@ -7301,7 +7301,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SMCI",
@@ -7319,7 +7319,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SMTC",
@@ -7336,7 +7336,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SNDK",
@@ -7354,7 +7354,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SNEX",
@@ -7372,7 +7372,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SNPS",
@@ -7388,7 +7388,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SOLS",
@@ -7405,7 +7405,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SSNC",
@@ -7422,7 +7422,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SSRM",
@@ -7439,7 +7439,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "STEP",
@@ -7456,7 +7456,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "STOK",
@@ -7475,7 +7475,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SUPN",
@@ -7492,7 +7492,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SWKS",
@@ -7510,7 +7510,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SYM",
@@ -7527,7 +7527,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "SYNA",
@@ -7546,7 +7546,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TARS",
@@ -7562,7 +7562,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TEAM",
@@ -7581,7 +7581,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TECH",
@@ -7598,7 +7598,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TEM",
@@ -7614,7 +7614,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TENB",
@@ -7632,7 +7632,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TER",
@@ -7648,7 +7648,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TFSL",
@@ -7665,7 +7665,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TGTX",
@@ -7681,7 +7681,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TIGO",
@@ -7698,7 +7698,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TLN",
@@ -7714,7 +7714,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TMDX",
@@ -7730,7 +7730,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TMUS",
@@ -7747,7 +7747,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TNGX",
@@ -7766,7 +7766,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TPG",
@@ -7783,7 +7783,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TRI",
@@ -7802,7 +7802,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TRMB",
@@ -7819,7 +7819,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TRMD",
@@ -7835,7 +7835,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TROW",
@@ -7852,7 +7852,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TSCO",
@@ -7870,7 +7870,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TSEM",
@@ -7886,7 +7886,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TSLA",
@@ -7903,7 +7903,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TTAN",
@@ -7919,7 +7919,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TTD",
@@ -7937,7 +7937,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TTEK",
@@ -7955,7 +7955,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TTMI",
@@ -7971,7 +7971,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TTWO",
@@ -7989,7 +7989,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TVTX",
@@ -8006,7 +8006,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TW",
@@ -8024,7 +8024,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TWST",
@@ -8041,7 +8041,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TXG",
@@ -8060,7 +8060,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "TXRH",
@@ -8078,7 +8078,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "UAL",
@@ -8096,7 +8096,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "UBSI",
@@ -8114,7 +8114,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "UCTT",
@@ -8130,7 +8130,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ULTA",
@@ -8148,7 +8148,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "UPST",
@@ -8165,7 +8165,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "URBN",
@@ -8183,7 +8183,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "URGN",
@@ -8201,7 +8201,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "USAR",
@@ -8217,7 +8217,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VCYT",
@@ -8235,7 +8235,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VECO",
@@ -8254,7 +8254,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VIAV",
@@ -8271,7 +8271,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VICR",
@@ -8287,7 +8287,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VNOM",
@@ -8304,7 +8304,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VRDN",
@@ -8321,7 +8321,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VRNS",
@@ -8339,7 +8339,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VRSK",
@@ -8357,7 +8357,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VRSN",
@@ -8375,7 +8375,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VRTX",
@@ -8393,7 +8393,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VSAT",
@@ -8411,7 +8411,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VSNT",
@@ -8429,7 +8429,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "VTRS",
@@ -8447,7 +8447,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WAY",
@@ -8465,7 +8465,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WBD",
@@ -8484,7 +8484,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WDAY",
@@ -8501,7 +8501,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WDC",
@@ -8518,7 +8518,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WERN",
@@ -8535,7 +8535,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WFRD",
@@ -8552,7 +8552,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WGS",
@@ -8570,7 +8570,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WING",
@@ -8587,7 +8587,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WIX",
@@ -8605,7 +8605,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WMG",
@@ -8623,7 +8623,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WMT",
@@ -8642,7 +8642,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WSBC",
@@ -8659,7 +8659,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WSC",
@@ -8677,7 +8677,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WULF",
@@ -8696,7 +8696,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WWD",
@@ -8712,7 +8712,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "WYNN",
@@ -8729,7 +8729,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "XEL",
@@ -8747,7 +8747,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "XENE",
@@ -8766,7 +8766,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "XMTR",
@@ -8782,7 +8782,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "XP",
@@ -8799,7 +8799,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "Z",
@@ -8818,7 +8818,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ZBIO",
@@ -8835,7 +8835,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ZBRA",
@@ -8853,7 +8853,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ZG",
@@ -8872,7 +8872,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ZION",
@@ -8889,7 +8889,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ZM",
@@ -8906,7 +8906,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ZS",
@@ -8924,7 +8924,7 @@
       },
       "missing_fields": [],
       "source": "Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:02+02:00"
+      "retrieved_at": "2026-08-05T23:30:23+02:00"
     },
     {
       "ticker": "ADI",
@@ -8940,7 +8940,7 @@
         "price": 377.69,
         "rsi14": 48.55505762989111,
         "atr_pct": 3.9610637680070484,
-        "rvol20": 0.7256209322156033,
+        "rvol20": 0.7284190207282827,
         "performance_21d_pct": -0.3535340210537363,
         "distance_52w_high_pct": 15.299051378080783,
         "distance_resistance_pct": 18.062432153353285
@@ -8951,7 +8951,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:57:46+02:00"
+      "retrieved_at": "2026-08-05T23:30:56+02:00"
     },
     {
       "ticker": "AEIS",
@@ -8964,7 +8964,7 @@
         "price": 329.23,
         "rsi14": 55.5511618566384,
         "atr_pct": 7.330425355727677,
-        "rvol20": 1.0959427335184295,
+        "rvol20": 1.095972860259665,
         "performance_21d_pct": 14.42324401348487,
         "distance_52w_high_pct": 17.162338969404182,
         "distance_resistance_pct": 18.394435501017526
@@ -8975,7 +8975,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:58:00+02:00"
+      "retrieved_at": "2026-08-05T23:31:11+02:00"
     },
     {
       "ticker": "AFRM",
@@ -8989,7 +8989,7 @@
         "price": 78.47,
         "rsi14": 55.71251521245034,
         "atr_pct": 4.684464699910438,
-        "rvol20": 0.6664585755417813,
+        "rvol20": 0.6673204276625512,
         "performance_21d_pct": -6.15881368093758,
         "distance_52w_high_pct": 21.53,
         "distance_resistance_pct": 10.61552185548617
@@ -9000,7 +9000,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:58:15+02:00"
+      "retrieved_at": "2026-08-05T23:31:25+02:00"
     },
     {
       "ticker": "ALAB",
@@ -9015,7 +9015,7 @@
         "price": 318.43,
         "rsi14": 47.83410840431533,
         "atr_pct": 12.04042571565742,
-        "rvol20": 2.010985564410702,
+        "rvol20": 2.024697262068534,
         "performance_21d_pct": -16.835122358902034,
         "distance_52w_high_pct": 36.2472125798987,
         "distance_resistance_pct": 56.855886694092895
@@ -9026,7 +9026,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:58:29+02:00"
+      "retrieved_at": "2026-08-05T23:31:39+02:00"
     },
     {
       "ticker": "AMD",
@@ -9040,7 +9040,7 @@
         "price": 482.05,
         "rsi14": 46.612482667485715,
         "atr_pct": 8.378429734464046,
-        "rvol20": 1.7042867790596388,
+        "rvol20": 1.7089993287959617,
         "performance_21d_pct": -6.599368351707968,
         "distance_52w_high_pct": 17.5602414789732,
         "distance_resistance_pct": 21.30069494865678
@@ -9051,7 +9051,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:58:44+02:00"
+      "retrieved_at": "2026-08-05T23:31:52+02:00"
     },
     {
       "ticker": "ARXS",
@@ -9105,7 +9105,7 @@
         "week52_high"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:58:59+02:00"
+      "retrieved_at": "2026-08-05T23:32:07+02:00"
     },
     {
       "ticker": "ASML",
@@ -9120,7 +9120,7 @@
         "price": 1678.22,
         "rsi14": 46.89586369644926,
         "atr_pct": 4.97440519206341,
-        "rvol20": 0.6150549194156969,
+        "rvol20": 0.6163608878407832,
         "performance_21d_pct": -3.952428918089823,
         "distance_52w_high_pct": 16.08732174643493,
         "distance_resistance_pct": 19.171503140231913
@@ -9131,7 +9131,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:59:14+02:00"
+      "retrieved_at": "2026-08-05T23:32:21+02:00"
     },
     {
       "ticker": "AVGO",
@@ -9143,7 +9143,7 @@
         "price": 418.28,
         "rsi14": 61.7967648741115,
         "atr_pct": 4.081655151053049,
-        "rvol20": 0.8121085364021543,
+        "rvol20": 0.814862329700838,
         "performance_21d_pct": 12.81083122066995,
         "distance_52w_high_pct": 15.498989898989905,
         "distance_resistance_pct": 18.341780625418387
@@ -9154,7 +9154,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:59:20+02:00"
+      "retrieved_at": "2026-08-05T23:32:26+02:00"
     },
     {
       "ticker": "BSP",
@@ -9208,7 +9208,7 @@
         "week52_high"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:59:35+02:00"
+      "retrieved_at": "2026-08-05T23:32:40+02:00"
     },
     {
       "ticker": "CDNS",
@@ -9224,7 +9224,7 @@
         "price": 337.07,
         "rsi14": 42.340693362683524,
         "atr_pct": 4.362644716268256,
-        "rvol20": 0.6887654414468465,
+        "rvol20": 0.6890789952316078,
         "performance_21d_pct": -9.160243626367704,
         "distance_52w_high_pct": 19.10772996712184,
         "distance_resistance_pct": 23.621206277627792
@@ -9235,7 +9235,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T22:59:50+02:00"
+      "retrieved_at": "2026-08-05T23:32:54+02:00"
     },
     {
       "ticker": "DLO",
@@ -9248,7 +9248,7 @@
         "price": 15.2,
         "rsi14": 61.3478830722259,
         "atr_pct": 3.5585021024338923,
-        "rvol20": 1.306846842173461,
+        "rvol20": 1.3068479482413327,
         "performance_21d_pct": 2.1505376344086002,
         "distance_52w_high_pct": 9.415971394517292,
         "distance_resistance_pct": 2.0394736842105297
@@ -9259,7 +9259,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:00:04+02:00"
+      "retrieved_at": "2026-08-05T23:33:08+02:00"
     },
     {
       "ticker": "HAPN",
@@ -9306,7 +9306,7 @@
         "week52_high"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:00:10+02:00"
+      "retrieved_at": "2026-08-05T23:33:13+02:00"
     },
     {
       "ticker": "HOOD",
@@ -9323,7 +9323,7 @@
         "price": 92.8,
         "rsi14": 44.33239226216037,
         "atr_pct": 6.66689772663535,
-        "rvol20": 0.6746095733774156,
+        "rvol20": 0.676806832709785,
         "performance_21d_pct": -17.803365810451734,
         "distance_52w_high_pct": 39.68538911048298,
         "distance_resistance_pct": 29.364224137931032
@@ -9334,7 +9334,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:00:25+02:00"
+      "retrieved_at": "2026-08-05T23:33:27+02:00"
     },
     {
       "ticker": "HYMC",
@@ -9348,7 +9348,7 @@
         "price": 24.48,
         "rsi14": 59.16467338578802,
         "atr_pct": 7.383665743441611,
-        "rvol20": 1.8298014307566235,
+        "rvol20": 1.8329300428233373,
         "performance_21d_pct": 12.759097190234915,
         "distance_52w_high_pct": 58.317654210206385,
         "distance_resistance_pct": 89.13398692810456
@@ -9362,7 +9362,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:00:31+02:00"
+      "retrieved_at": "2026-08-05T23:33:32+02:00"
     },
     {
       "ticker": "IBKR",
@@ -9377,7 +9377,7 @@
         "price": 88.74,
         "rsi14": 45.74864474480177,
         "atr_pct": 4.045381396194346,
-        "rvol20": 1.1366561567590578,
+        "rvol20": 1.1368172812920467,
         "performance_21d_pct": -6.164745691022522,
         "distance_52w_high_pct": 9.300899427636967,
         "distance_resistance_pct": 10.254676583276998
@@ -9388,7 +9388,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:00:46+02:00"
+      "retrieved_at": "2026-08-05T23:33:46+02:00"
     },
     {
       "ticker": "INCY",
@@ -9401,7 +9401,7 @@
         "price": 119.8,
         "rsi14": 54.98840592187109,
         "atr_pct": 3.5610645278401445,
-        "rvol20": 0.9138723504922203,
+        "rvol20": 0.9165964417120894,
         "performance_21d_pct": 1.4824227022448122,
         "distance_52w_high_pct": 9.65309200603318,
         "distance_resistance_pct": 10.68447412353923
@@ -9412,7 +9412,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:01:00+02:00"
+      "retrieved_at": "2026-08-05T23:34:00+02:00"
     },
     {
       "ticker": "INIO",
@@ -9466,7 +9466,7 @@
         "week52_high"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:01:07+02:00"
+      "retrieved_at": "2026-08-05T23:34:05+02:00"
     },
     {
       "ticker": "KNSA",
@@ -9479,7 +9479,7 @@
         "price": 78.08,
         "rsi14": 67.58697866507336,
         "atr_pct": 4.641476571904546,
-        "rvol20": 0.6745598318454598,
+        "rvol20": 0.6745611017413956,
         "performance_21d_pct": 16.035072076088564,
         "distance_52w_high_pct": 5.8596575837955145,
         "distance_resistance_pct": 6.224385245901639
@@ -9490,7 +9490,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:01:21+02:00"
+      "retrieved_at": "2026-08-05T23:34:19+02:00"
     },
     {
       "ticker": "LPLA",
@@ -9506,7 +9506,7 @@
         "price": 359.92,
         "rsi14": 71.71686032333425,
         "atr_pct": 2.8602235798739732,
-        "rvol20": 0.988121588034381,
+        "rvol20": 1.022021117411161,
         "performance_21d_pct": 17.01671109955134,
         "distance_52w_high_pct": 10.05597760895642,
         "distance_resistance_pct": 1.191931540342288
@@ -9517,7 +9517,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:01:36+02:00"
+      "retrieved_at": "2026-08-05T23:34:33+02:00"
     },
     {
       "ticker": "LRCX",
@@ -9534,7 +9534,7 @@
         "price": 307.42,
         "rsi14": 47.554510864771586,
         "atr_pct": 8.549659467245029,
-        "rvol20": 0.7471057567897318,
+        "rvol20": 0.7664528632585642,
         "performance_21d_pct": -5.736976052494402,
         "distance_52w_high_pct": 29.892816419612313,
         "distance_resistance_pct": 42.63873528072343
@@ -9545,7 +9545,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:01:51+02:00"
+      "retrieved_at": "2026-08-05T23:34:46+02:00"
     },
     {
       "ticker": "MPWR",
@@ -9560,7 +9560,7 @@
         "price": 1345.45,
         "rsi14": 48.58315068505685,
         "atr_pct": 7.056334578390035,
-        "rvol20": 0.7306090948606268,
+        "rvol20": 0.7309107018833741,
         "performance_21d_pct": 5.70745044429255,
         "distance_52w_high_pct": 21.506159041016463,
         "distance_resistance_pct": 27.398530608604528
@@ -9571,7 +9571,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:02:05+02:00"
+      "retrieved_at": "2026-08-05T23:35:01+02:00"
     },
     {
       "ticker": "MWH",
@@ -9625,7 +9625,7 @@
         "week52_high"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:02:19+02:00"
+      "retrieved_at": "2026-08-05T23:35:15+02:00"
     },
     {
       "ticker": "NBIX",
@@ -9641,7 +9641,7 @@
         "price": 161.5,
         "rsi14": 39.32628220300334,
         "atr_pct": 3.8534297350254905,
-        "rvol20": 0.9444647819614236,
+        "rvol20": 0.9447931235759371,
         "performance_21d_pct": -9.008958251169085,
         "distance_52w_high_pct": 13.228024930152593,
         "distance_resistance_pct": 15.244582043343657
@@ -9652,7 +9652,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:02:34+02:00"
+      "retrieved_at": "2026-08-05T23:35:29+02:00"
     },
     {
       "ticker": "PENG",
@@ -9668,7 +9668,7 @@
         "price": 55.72,
         "rsi14": 47.04581024066551,
         "atr_pct": 12.001856314594187,
-        "rvol20": 0.2818329652112467,
+        "rvol20": 0.2819206324184031,
         "performance_21d_pct": -11.146547600063794,
         "distance_52w_high_pct": 37.99243267304696,
         "distance_resistance_pct": 61.270638908829866
@@ -9680,7 +9680,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:02:48+02:00"
+      "retrieved_at": "2026-08-05T23:35:43+02:00"
     },
     {
       "ticker": "PPTA",
@@ -9694,7 +9694,7 @@
         "price": 22.93,
         "rsi14": 64.52093957174563,
         "atr_pct": 5.84451121116971,
-        "rvol20": 1.8320799663817626,
+        "rvol20": 1.8558706221466643,
         "performance_21d_pct": 14.70735367683842,
         "distance_52w_high_pct": 38.64062081883864,
         "distance_resistance_pct": 41.255996511120806
@@ -9708,7 +9708,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:02:55+02:00"
+      "retrieved_at": "2026-08-05T23:35:48+02:00"
     },
     {
       "ticker": "SOFI",
@@ -9724,7 +9724,7 @@
         "price": 18.25,
         "rsi14": 55.910306298417325,
         "atr_pct": 5.131690877475646,
-        "rvol20": 0.6549614325409268,
+        "rvol20": 0.6561388226920319,
         "performance_21d_pct": 2.8169014084507005,
         "distance_52w_high_pct": 44.24075771463489,
         "distance_resistance_pct": 8.164383561643827
@@ -9735,7 +9735,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:03:09+02:00"
+      "retrieved_at": "2026-08-05T23:36:02+02:00"
     },
     {
       "ticker": "SPCX",
@@ -9789,7 +9789,7 @@
         "week52_high"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:03:15+02:00"
+      "retrieved_at": "2026-08-05T23:36:07+02:00"
     },
     {
       "ticker": "STLD",
@@ -9801,7 +9801,7 @@
         "price": 265.96,
         "rsi14": 66.62819748164236,
         "atr_pct": 3.4281185533468395,
-        "rvol20": 0.9197077124736994,
+        "rvol20": 0.9198728514294946,
         "performance_21d_pct": 15.826147548122972,
         "distance_52w_high_pct": 7.889450716907954,
         "distance_resistance_pct": 8.565197774101382
@@ -9812,7 +9812,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:03:30+02:00"
+      "retrieved_at": "2026-08-05T23:36:21+02:00"
     },
     {
       "ticker": "STRC",
@@ -9829,7 +9829,7 @@
         "price": 94.1,
         "rsi14": 64.3157422919326,
         "atr_pct": 2.681637823465658,
-        "rvol20": 1.140679901573079,
+        "rvol20": 1.1413966820771742,
         "performance_21d_pct": 8.710720887245827,
         "distance_52w_high_pct": 6.291887327197664,
         "distance_resistance_pct": 6.280552603613189
@@ -9844,7 +9844,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:03:44+02:00"
+      "retrieved_at": "2026-08-05T23:36:35+02:00"
     },
     {
       "ticker": "STRL",
@@ -9860,7 +9860,7 @@
         "price": 536.03,
         "rsi14": 37.36073627392956,
         "atr_pct": 11.254968129656898,
-        "rvol20": 1.245052683803783,
+        "rvol20": 1.2454509997105117,
         "performance_21d_pct": -20.516318450748084,
         "distance_52w_high_pct": 46.699756045709165,
         "distance_resistance_pct": 87.6164020670485
@@ -9871,7 +9871,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:03:58+02:00"
+      "retrieved_at": "2026-08-05T23:36:49+02:00"
     },
     {
       "ticker": "STX",
@@ -9886,7 +9886,7 @@
         "price": 837.66,
         "rsi14": 48.48389239372635,
         "atr_pct": 9.233776461562295,
-        "rvol20": 0.7400127436646196,
+        "rvol20": 0.7504067226620972,
         "performance_21d_pct": 1.2106713063650743,
         "distance_52w_high_pct": 26.841921397379913,
         "distance_resistance_pct": 36.690303941933486
@@ -9897,7 +9897,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:04:13+02:00"
+      "retrieved_at": "2026-08-05T23:37:03+02:00"
     },
     {
       "ticker": "TXN",
@@ -9913,7 +9913,7 @@
         "price": 277.72,
         "rsi14": 44.928420956881645,
         "atr_pct": 4.616945047635417,
-        "rvol20": 0.662931735274078,
+        "rvol20": 0.663211641889682,
         "performance_21d_pct": -5.311967269007834,
         "distance_52w_high_pct": 16.85776726641318,
         "distance_resistance_pct": 20.27581737001294
@@ -9924,7 +9924,7 @@
         "shares_change_6m_pct"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:04:27+02:00"
+      "retrieved_at": "2026-08-05T23:37:17+02:00"
     },
     {
       "ticker": "XE",
@@ -9978,7 +9978,7 @@
         "week52_high"
       ],
       "source": "TradingView MCP + Finviz via finvizfinance screener views",
-      "retrieved_at": "2026-08-05T23:04:42+02:00"
+      "retrieved_at": "2026-08-05T23:37:31+02:00"
     }
   ]
 }
