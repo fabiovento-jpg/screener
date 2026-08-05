@@ -1,0 +1,61 @@
+# Repository di soli output dati.
+# Tutto cio' che non e' un file di output dello Scanner 3.0 e' escluso.
+
+# --- segreti e credenziali ---
+.env
+.env.*
+*.key
+*.pem
+*.token
+*.pfx
+*.p12
+cookies*
+sessions*
+credentials*
+secrets*
+
+# --- configurazioni di strumenti e agenti ---
+.mcp*
+mcp.json
+claude*
+.claude/
+settings*
+*.config.json
+
+# --- artefatti di progetto, mai pubblicabili ---
+logs/
+backup/
+automation/
+prompts/
+output/
+__pycache__/
+*.py
+*.pyc
+*.ps1
+*.psm1
+*.bat
+*.cmd
+*.sh
+scan_output.txt
+universe.json
+gates.config.json
+FAILED_*.txt
+
+# --- rumore di sistema ---
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- whitelist esplicita: solo dati ---
+!latest/scanner_v3_latest.json
+!latest/scanner_v3_latest.csv
+!latest/excluded_latest.json
+!latest/excluded_latest.csv
+!latest/run_metadata_latest.json
+!history/**/scanner_v3_*.json
+!history/**/scanner_v3_*.csv
+!history/**/excluded_*.json
+!history/**/excluded_*.csv
+!history/**/run_metadata_*.json
+!README.md
+!.gitignore

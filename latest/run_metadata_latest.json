@@ -1,0 +1,94 @@
+{
+  "run_started_at": "2026-08-05T22:30:30+02:00",
+  "run_completed_at": "2026-08-05T22:39:01+02:00",
+  "market_session_date": "2026-08-05",
+  "market_closed_confirmed": true,
+  "market_session_forced": false,
+  "market_regime": "BULL",
+  "market_regime_components": {
+    "QQQ": {
+      "price": 717.3,
+      "sma50": 715.0083999999999,
+      "sma200": 646.74155,
+      "price_above_sma50": true,
+      "sma50_above_sma200": true
+    },
+    "NASDAQ_COMPOSITE": {
+      "price": 26363.4293,
+      "sma50": 25947.521572,
+      "sma200": 24053.6012695,
+      "price_above_sma50": true,
+      "sma50_above_sma200": true
+    }
+  },
+  "universe_count": 551,
+  "analyzed_count": 33,
+  "passed_count": 0,
+  "excluded_count": 551,
+  "missing_data_count": 0,
+  "tradingview_mcp_status": "ok",
+  "fundamental_provider": "finvizfinance",
+  "fundamental_provider_status": "OK",
+  "finviz_mcp_status": "NOT_CONFIGURED",
+  "software_version": "3.0.0",
+  "thresholds": {
+    "price_min": 15.0,
+    "market_cap_min": 2000000000,
+    "avg_volume_min": 750000,
+    "rsi": [
+      55.0,
+      72.0
+    ],
+    "atr_pct_min": 3.0,
+    "rvol20_min": 1.2,
+    "performance_21d": [
+      0.0,
+      30.0
+    ],
+    "distance_resistance_min": 8.0,
+    "move_10d_max": 30.0,
+    "consolidation_definition": "range 5 sedute <= 1.5 x ATR14",
+    "earnings_blackout_days": 7,
+    "pead_window": [
+      1,
+      15
+    ]
+  },
+  "errors": [
+    {
+      "stage": "tradingview",
+      "ticker": "ARXS",
+      "detail": "storico insufficiente (77 barre, ne servono 200)"
+    },
+    {
+      "stage": "tradingview",
+      "ticker": "BSP",
+      "detail": "storico insufficiente (25 barre, ne servono 200)"
+    },
+    {
+      "stage": "tradingview",
+      "ticker": "HAPN",
+      "detail": "storico insufficiente (35 barre, ne servono 200)"
+    },
+    {
+      "stage": "tradingview",
+      "ticker": "INIO",
+      "detail": "storico insufficiente (43 barre, ne servono 200)"
+    },
+    {
+      "stage": "tradingview",
+      "ticker": "MWH",
+      "detail": "storico insufficiente (121 barre, ne servono 200)"
+    },
+    {
+      "stage": "tradingview",
+      "ticker": "SPCX",
+      "detail": "storico insufficiente (37 barre, ne servono 200)"
+    },
+    {
+      "stage": "tradingview",
+      "ticker": "XE",
+      "detail": "storico insufficiente (70 barre, ne servono 200)"
+    }
+  ]
+}
