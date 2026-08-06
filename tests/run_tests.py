@@ -128,11 +128,19 @@ def check_report_pairs_verdict_and_quality():
         if key not in payload:
             return f"il report del guard non espone {key}"
     buckets = payload["data_quality_breakdown"]
-    expected = {"verified", "unverified_declared", "not_exported", "errors"}
-    if set(buckets) != expected:
-        return f"contatori di copertura {sorted(buckets)}, attesi {sorted(expected)}"
+    counters = {"verified", "unverified_declared", "not_exported", "errors"}
+    if not counters <= set(buckets):
+        return f"contatori di copertura mancanti: {sorted(counters - set(buckets))}"
     if buckets["verified"] <= 0 or buckets["unverified_declared"] <= 0:
         return f"contatori non popolati: {buckets}"
+    # L'unita' e' il campo atteso per record, non l'occorrenza nei gate: la
+    # somma dei quattro deve chiudere esattamente su total_expected.
+    for key in ("unit", "expected_fields_per_record", "total_expected"):
+        if key not in buckets:
+            return f"il breakdown non dichiara {key}"
+    total = sum(buckets[c] for c in counters)
+    if total != buckets["total_expected"]:
+        return f"i contatori sommano {total}, total_expected {buckets['total_expected']}"
     if code != 0:
         return f"run_4_0 doveva essere consentito, exit {code}"
     return None

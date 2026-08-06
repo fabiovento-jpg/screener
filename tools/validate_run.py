@@ -562,7 +562,12 @@ def resolve_thresholds(meta):
     return thresholds, provenance
 
 
+# I campi attesi da almeno un gate, deduplicati: `price` serve sia a `price_min`
+# sia a `price_above_sma50` ma resta un campo solo. L'unita' dei contatori di
+# copertura e' quindi "campo atteso per record", non "operando per gate": la
+# somma dei quattro vale len(EXPECTED_FIELDS) x numero di record.
 EXPECTED_FIELDS = sorted({k for g in GATES for k in g["inputs"]} | {"trend_structural_pass"})
+QUALITY_UNIT = "campo_atteso_per_record"
 
 
 def missing_reasons(record):
@@ -643,7 +648,12 @@ def build_result(run_dir, meta, promoted, excluded, rep, provenance):
         "software_version": meta.get("software_version"),
         "run_verdict": verdict,
         "data_quality_score": round(sum(rep.scores) / len(rep.scores)) if rep.scores else None,
-        "data_quality_breakdown": rep.quality_breakdown,
+        "data_quality_breakdown": dict(
+            rep.quality_breakdown,
+            unit=QUALITY_UNIT,
+            expected_fields_per_record=len(EXPECTED_FIELDS),
+            total_expected=len(EXPECTED_FIELDS) * rep.records,
+        ),
         "records": rep.records,
         "promoted": len(promoted),
         "excluded": len(excluded),
@@ -744,8 +754,10 @@ def render(result):
                    f" (media dei record)  minimo {q['min_record_score']}/100"
                    f"  record sotto 100: {q['records_below_100']}")
         b = result["data_quality_breakdown"]
-        out.append("  copertura degli operandi attesi: "
-                   f"verificati {b['verified']}, "
+        out.append(f"  copertura su {b['total_expected']} campi attesi"
+                   f" ({b['expected_fields_per_record']} per record x {result['records']}"
+                   " record, campi unici non occorrenze nei gate):")
+        out.append(f"    verificati {b['verified']}, "
                    f"non verificabili ma dichiarati {b['unverified_declared']}, "
                    f"non esportati {b['not_exported']}, "
                    f"errori {b['errors']}")

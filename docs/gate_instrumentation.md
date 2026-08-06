@@ -320,12 +320,36 @@ Il report li tiene sempre insieme, con i quattro contatori di copertura:
 }
 ```
 
-| Contatore | Operandi attesi che... |
+| Contatore | Campi attesi che... |
 |---|---|
 | `verified` | sono presenti e non nulli |
 | `unverified_declared` | sono nulli con motivo dichiarato (`source_no_data`, `stage_not_executed`) |
 | `not_exported` | non compaiono affatto nel record: l'unico che segnala un buco silenzioso |
 | `errors` | sono nulli per un guasto di pipeline |
+
+### Unita' dei contatori
+
+L'unita' e' il **campo atteso per record**, non l'occorrenza dell'operando nei
+gate. I campi attesi sono deduplicati: `price` serve sia a `price_min` sia a
+`price_above_sma50`, ma conta una volta sola per record. La somma dei quattro
+contatori e' quindi esattamente `campi attesi x record`, e il breakdown lo
+dichiara per non lasciarlo dedurre:
+
+```json
+"data_quality_breakdown": {
+  "verified": 2135,
+  "unverified_declared": 34,
+  "not_exported": 11013,
+  "errors": 42,
+  "unit": "campo_atteso_per_record",
+  "expected_fields_per_record": 24,
+  "total_expected": 13224
+}
+```
+
+`2135 + 34 + 11013 + 42 = 13224 = 24 x 551`. `verified: 2135` non significa
+2.135 dati aziendali distinti: significa 2.135 coppie (record, campo) coperte su
+13.224 attese. Il validatore verifica che l'aritmetica chiuda.
 
 `not_exported = 0` e' la condizione che conta: dice che ogni buco e' dichiarato.
 Un `unverified_declared` alto e' accettabile, ed e' anzi il profilo normale di

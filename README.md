@@ -58,7 +58,9 @@ operandi erano disponibili e quanti buchi erano dichiarati. Un run con tutti i
 dati presenti e i gate applicati male vale 98/100 ed e' `RUN INVALID`. Per
 questo il punteggio non autorizza mai da solo la pubblicazione, e il report lo
 espone sempre accanto al verdetto, con i quattro contatori di copertura
-`verified`, `unverified_declared`, `not_exported`, `errors`.
+`verified`, `unverified_declared`, `not_exported`, `errors`. L'unita' e' il
+campo atteso per record — campi unici, non occorrenze nei gate — ed e'
+dichiarata nel breakdown insieme al totale atteso.
 
 ```
 python3 tools/validate_run.py latest/          # leggibile
