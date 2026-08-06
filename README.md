@@ -1,8 +1,9 @@
 # Screener — output quantitativi Nasdaq Scanner 3.0
 
 Repository degli **output quantitativi** dello Scanner Nasdaq 3.0.
-Contiene esclusivamente dati generati automaticamente: nessun codice, nessuna
-configurazione, nessuna credenziale.
+Contiene i dati generati automaticamente e gli strumenti per verificarli:
+nessun codice del motore di scansione, nessuna configurazione, nessuna
+credenziale.
 
 ## Nessuna raccomandazione finanziaria
 
@@ -26,6 +27,8 @@ acquisizione dei due gruppi di dati.
 ```
 latest/     ultimo run valido
 history/    un cartella per giorno, YYYY-MM-DD
+docs/       schema di strumentazione dei gate e audit dei run
+tools/      validatore degli output
 ```
 
 `latest/` viene aggiornato **solo** quando un run si conclude completo e supera
@@ -37,6 +40,21 @@ Ogni file:
 - `scanner_v3_*` — titoli che superano tutti i gate quantitativi
 - `excluded_*` — titoli esclusi, con i gate falliti e i valori che li hanno causati
 - `run_metadata_*` — metadati del run: regime di mercato, conteggi, soglie applicate, errori
+
+## Verifica dei gate
+
+Ogni gate deve pubblicare nel record i valori numerici che lo determinano, per i
+titoli promossi come per quelli esclusi. Lo schema richiesto e' in
+[`docs/gate_instrumentation.md`](docs/gate_instrumentation.md).
+
+```
+python3 tools/validate_run.py latest/
+```
+
+Il validatore ricalcola l'esito di ogni gate dai valori pubblicati e lo confronta
+con `failed_gates`, segnala i gate lasciati passare su dato mancante ed elenca i
+gate non auditabili perche' privi di valori. L'esito sul run 2026-08-05 e' in
+[`docs/audit_2026-08-05.md`](docs/audit_2026-08-05.md).
 
 ## Date e orari
 
