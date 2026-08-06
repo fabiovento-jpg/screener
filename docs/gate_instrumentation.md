@@ -111,17 +111,20 @@ Quindi:
 
 ### Se si resta selettivi
 
-L'unica forma accettabile e' dichiararlo. I gate non calcolati vanno pubblicati
-con valori `null`, stato `UNVERIFIED` e motivo esplicito:
+L'unica forma accettabile e' dichiararlo. I gate non calcolati restano nel
+blocco `gates`, con operandi `null`, stato `UNVERIFIED` e motivo esplicito:
 
 ```json
-"unverified_gates": ["price_above_sma50", "rsi14"],
-"missing_details": {
-  "sma50": {"reason": "stage_not_executed", "source": "TradingView MCP"}
+"gates": {
+  "price_above_sma50": {
+    "status": "UNVERIFIED",
+    "operands": {"price": null, "sma50": null},
+    "reason": "stage_not_executed_after_fundamental_fail"
+  }
 }
 ```
 
-Mai per omissione. Un campo assente e un campo dichiarato mancante non sono la
+Mai per omissione. Un gate assente e un gate dichiarato non eseguito non sono la
 stessa cosa: il secondo e' un dato, il primo e' un silenzio.
 
 ## 4. Operandi richiesti, gate per gate
