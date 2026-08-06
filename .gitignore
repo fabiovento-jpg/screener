@@ -34,6 +34,7 @@ __pycache__/
 
 # eccezione: il validatore degli output e' parte del repository
 !tools/*.py
+!tests/*.py
 *.ps1
 *.psm1
 *.bat

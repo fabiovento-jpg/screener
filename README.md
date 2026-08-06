@@ -29,6 +29,7 @@ latest/     ultimo run valido
 history/    un cartella per giorno, YYYY-MM-DD
 docs/       schema di strumentazione dei gate e audit dei run
 tools/      validatore degli output
+tests/      fixture e test del validatore
 ```
 
 `latest/` viene aggiornato **solo** quando un run si conclude completo e supera
@@ -43,18 +44,26 @@ Ogni file:
 
 ## Verifica dei gate
 
-Ogni gate deve pubblicare nel record i valori numerici che lo determinano, per i
-titoli promossi come per quelli esclusi. Lo schema richiesto e' in
-[`docs/gate_instrumentation.md`](docs/gate_instrumentation.md).
+Lo scanner non chiede fiducia: ogni record deve pubblicare i valori numerici che
+determinano ogni gate, per i titoli promossi come per quelli esclusi, cosi' che
+chiunque possa ricalcolarli senza leggere il codice sorgente. Lo schema richiesto
+e' in [`docs/gate_instrumentation.md`](docs/gate_instrumentation.md).
+
+Ogni gate ha quattro stati possibili — `PASS`, `FAIL`, `UNVERIFIED`, `ERROR` — e
+solo `PASS` promuove. Il campo `audit_status` di ogni record ne e' il riassunto,
+con precedenza `ERROR > FAIL > UNVERIFIED > PASS`.
 
 ```
-python3 tools/validate_run.py latest/
+python3 tools/validate_run.py latest/          # leggibile
+python3 tools/validate_run.py latest/ --json   # per consumo automatico
+python3 tests/run_tests.py                     # test del validatore
 ```
 
-Il validatore ricalcola l'esito di ogni gate dai valori pubblicati e lo confronta
-con `failed_gates`, segnala i gate lasciati passare su dato mancante ed elenca i
-gate non auditabili perche' privi di valori. L'esito sul run 2026-08-05 e' in
-[`docs/audit_2026-08-05.md`](docs/audit_2026-08-05.md).
+Il validatore ricalcola ogni gate dai valori pubblicati e lo confronta con lo
+stato dichiarato: `RUN VALID` (exit 0), `RUN INVALID` (exit 1, almeno un gate
+diverge), `RUN NON AUDITABILE` (exit 2, valori non esportati). L'esito sul run
+2026-08-05 e' in [`docs/audit_2026-08-05.md`](docs/audit_2026-08-05.md): oggi
+**RUN INVALID**.
 
 ## Date e orari
 

@@ -1,165 +1,279 @@
 #!/usr/bin/env python3
-"""Validatore degli output dello Scanner 3.0.
+"""Validatore degli output dello Scanner 3.0 / 3.1.
 
-Ricalcola l'esito di ogni gate a partire dai valori numerici scritti nel JSON
-e lo confronta con la lista `failed_gates`. Serve a rispondere a una domanda
-sola: i gate dichiarati sono coerenti con i numeri pubblicati?
+Ricalcola ogni gate a partire dai valori numerici pubblicati nel JSON e lo
+confronta con lo stato dichiarato dal motore. Lo scanner non deve chiedere
+fiducia: se un gate non e' ricalcolabile dai dati esportati, il run non e'
+certificabile.
 
-Un gate e' auditabile solo se il record contiene i valori che lo determinano.
-I gate non auditabili vengono contati a parte: non sono un "pass", sono un
-buco di strumentazione.
+Ogni gate riceve uno di quattro stati:
+
+    PASS        valori presenti, condizione soddisfatta
+    FAIL        valori presenti, condizione non soddisfatta
+    UNVERIFIED  un valore necessario e' null o assente dalla sorgente
+    ERROR       il gate non e' stato valutato per un errore di pipeline
+
+Solo PASS promuove. UNVERIFIED ed ERROR non sono un pass: sono l'assenza di
+un verdetto.
+
+Verdetto del run:
+
+    RUN VALID           tutti i gate ricalcolabili e coerenti con il dichiarato
+    RUN INVALID         almeno un gate dichiarato diverge dal ricalcolo
+    RUN NON AUDITABILE  strumentazione incompleta: gate non ricalcolabili
 
 Uso:
     python3 tools/validate_run.py latest/
-    python3 tools/validate_run.py history/2026-08-05/
+    python3 tools/validate_run.py latest/ --json
 
-Exit code 0 se non ci sono incoerenze, 1 altrimenti.
+Exit code: 0 RUN VALID, 1 RUN INVALID, 2 RUN NON AUDITABILE, 64 errore d'uso.
 """
 
 import json
 import sys
 from pathlib import Path
 
-# Soglie non dichiarate in run_metadata.thresholds, dedotte dalla separazione
-# osservata nei dati (valore, confronto stretto). Vanno sostituite dai valori
-# reali appena il motore le pubblica nei metadati.
-# eps_next_year usa il confronto stretto: nel run 2026-08-05 un valore esatto
-# di 15.0 risulta fallito, quindi la soglia e' "> 15" e non ">= 15".
-FUNDAMENTAL_THRESHOLDS = {
-    "revenue_growth": ("revenue_growth_yoy", 20.0, False),
-    "eps_growth": ("eps_growth_yoy", 30.0, False),
-    "eps_next_year": ("eps_next_year", 15.0, True),
-    "operating_margin": ("operating_margin", 8.0, False),
+PASS = "PASS"
+FAIL = "FAIL"
+UNVERIFIED = "UNVERIFIED"
+ERROR = "ERROR"
+NOT_AUDITABLE = "NON_AUDITABILE"
+
+# Precedenza per il rollup di record e run: uno stato peggiore assorbe i migliori.
+PRECEDENCE = [ERROR, FAIL, UNVERIFIED, PASS]
+
+EXIT_VALID, EXIT_INVALID, EXIT_NOT_AUDITABLE, EXIT_USAGE = 0, 1, 2, 64
+
+
+def rollup(statuses):
+    for level in PRECEDENCE:
+        if level in statuses:
+            return level
+    return PASS
+
+
+# --- Definizione dei gate -------------------------------------------------
+#
+# Ogni gate dichiara i valori che gli servono e la condizione da ricalcolare.
+# `inputs` mancanti dal record -> il gate non e' auditabile (buco di
+# strumentazione, distinto da UNVERIFIED che e' un dato assente alla fonte).
+
+
+def gate(name, inputs, predicate):
+    return {"name": name, "inputs": inputs, "predicate": predicate}
+
+
+def _between(value, bounds):
+    return bounds[0] <= value <= bounds[1]
+
+
+def _earnings_window(values, thresholds):
+    """Blackout earnings. La regola deve essere dichiarata nei metadati:
+    senza, il gate non e' ricalcolabile e resta non auditabile."""
+    rule = thresholds["earnings_window_rule"]
+    if rule != "no_earnings_within_blackout":
+        raise KeyError(f"earnings_window_rule non riconosciuta: {rule}")
+    days = values["days_to_earnings"]
+    return not (0 <= days <= thresholds["earnings_blackout_days"])
+
+
+GATES = [
+    # Hard filter d'universo
+    gate("price_min", ["price"], lambda v, t: v["price"] >= t["price_min"]),
+    gate("market_cap_min", ["market_cap"], lambda v, t: v["market_cap"] >= t["market_cap_min"]),
+    gate("avg_volume_min", ["avg_volume_20d"], lambda v, t: v["avg_volume_20d"] >= t["avg_volume_min"]),
+    # Struttura di trend: catena price > SMA50 > SMA150 > SMA200
+    gate("price_above_sma50", ["price", "sma50"], lambda v, t: v["price"] > v["sma50"]),
+    gate("sma50_above_sma150", ["sma50", "sma150"], lambda v, t: v["sma50"] > v["sma150"]),
+    gate("sma150_above_sma200", ["sma150", "sma200"], lambda v, t: v["sma150"] > v["sma200"]),
+    gate("ema21_above_ema50", ["ema21", "ema50"], lambda v, t: v["ema21"] > v["ema50"]),
+    # Momentum e volatilita'
+    gate("rsi14", ["rsi14"], lambda v, t: _between(v["rsi14"], t["rsi"])),
+    gate("atr_pct", ["atr_pct"], lambda v, t: v["atr_pct"] >= t["atr_pct_min"]),
+    gate("rvol20", ["rvol20"], lambda v, t: v["rvol20"] >= t["rvol20_min"]),
+    gate("performance_21d", ["performance_21d_pct"],
+         lambda v, t: _between(v["performance_21d_pct"], t["performance_21d"])),
+    gate("no_extended_move_10d", ["move_10d_pct"], lambda v, t: v["move_10d_pct"] <= t["move_10d_max"]),
+    # Posizione nel range
+    gate("within_25pct_52w_high", ["distance_52w_high_pct"],
+         lambda v, t: v["distance_52w_high_pct"] <= t["within_52w_high_max_pct"]),
+    gate("distance_resistance", ["distance_resistance_pct"],
+         lambda v, t: v["distance_resistance_pct"] >= t["distance_resistance_min"]),
+    # Fondamentali
+    gate("revenue_growth", ["revenue_growth_yoy"],
+         lambda v, t: v["revenue_growth_yoy"] >= t["revenue_growth_min"]),
+    gate("eps_growth", ["eps_growth_yoy"], lambda v, t: v["eps_growth_yoy"] >= t["eps_growth_min"]),
+    gate("eps_next_year", ["eps_next_year"], lambda v, t: v["eps_next_year"] > t["eps_next_year_min"]),
+    gate("operating_margin", ["operating_margin"],
+         lambda v, t: v["operating_margin"] >= t["operating_margin_min"]),
+    # Esclusioni categoriali
+    gate("adr", ["is_adr"], lambda v, t: not v["is_adr"]),
+    gate("biotech_pre_revenue", ["industry", "revenue_ttm"],
+         lambda v, t: not (v["industry"] == "Biotechnology" and (v["revenue_ttm"] or 0) <= 0)),
+    gate("earnings_window", ["days_to_earnings"], _earnings_window),
+]
+
+# Soglie che il motore non dichiara ancora in run_metadata.thresholds, dedotte
+# dalla separazione osservata nel run 2026-08-05. Vanno rimosse da qui appena
+# compaiono nei metadati: sono un ripiego, non una fonte di verita'.
+DEDUCED_THRESHOLDS = {
+    "revenue_growth_min": 20.0,
+    "eps_growth_min": 30.0,
+    "eps_next_year_min": 15.0,  # confronto stretto: 15.0 esatto risulta bocciato
+    "operating_margin_min": 8.0,
+    "within_52w_high_max_pct": 25.0,
 }
 
-# Gate della struttura di trend: catena price > SMA50 > SMA150 > SMA200.
-TREND_CHAIN = [
-    ("price_above_sma50", "price", "sma50"),
-    ("sma50_above_sma150", "sma50", "sma150"),
-    ("sma150_above_sma200", "sma150", "sma200"),
-    ("ema21_above_ema50", "ema21", "ema50"),
-]
+TREND_CHAIN = ["price_above_sma50", "sma50_above_sma150", "sma150_above_sma200"]
+TREND_INPUTS = ["price", "sma50", "sma150", "sma200"]
+
+
+def evaluate(gate_def, values, thresholds, pipeline_error=False):
+    """Ricalcola un gate. Ritorna (stato, dettaglio).
+
+    Un valore assente vale ERROR se il run dichiara un errore di pipeline sul
+    titolo (run_metadata.errors), UNVERIFIED se il dato semplicemente non
+    esiste alla fonte. In entrambi i casi non e' un pass.
+    """
+    name, inputs = gate_def["name"], gate_def["inputs"]
+    missing = [k for k in inputs if k not in values]
+    if missing:
+        return NOT_AUDITABLE, f"valori non esportati: {', '.join(missing)}"
+    null = [k for k in inputs if values[k] is None]
+    if null:
+        status = ERROR if pipeline_error else UNVERIFIED
+        return status, f"valori null: {', '.join(null)}"
+    try:
+        ok = gate_def["predicate"](values, thresholds)
+    except KeyError as exc:
+        return NOT_AUDITABLE, f"soglia non dichiarata: {exc.args[0]}"
+    detail = ", ".join(f"{k}={values[k]!r}" for k in inputs)
+    return (PASS if ok else FAIL), detail
+
+
+def declared_status(record, gate_name):
+    """Stato dichiarato dal motore per un gate.
+
+    Schema 3.1: liste failed_gates / unverified_gates / error_gates.
+    Schema 3.0: solo failed_gates, tutto il resto e' implicitamente un pass.
+    """
+    if gate_name in record.get("error_gates", []):
+        return ERROR
+    if gate_name in record.get("failed_gates", []):
+        return FAIL
+    if gate_name in record.get("unverified_gates", []):
+        return UNVERIFIED
+    return PASS
+
+
+def severity(declared, computed):
+    """Classifica una divergenza.
+
+    fail_open        il motore dichiara PASS dove il ricalcolo nega il pass:
+                     un titolo puo' essere promosso senza titolo per esserlo
+    false_exclusion  il motore esclude un titolo che il ricalcolo promuove
+    labeling         entrambi non-PASS, etichette diverse (es. FAIL vs
+                     UNVERIFIED): l'esito operativo e' lo stesso, ma lo stato
+                     dichiarato non e' leggibile senza interpretazione
+    """
+    if declared == PASS:
+        return "fail_open"
+    if computed == PASS:
+        return "false_exclusion"
+    return "labeling"
 
 
 class Report:
     def __init__(self):
-        self.mismatches = []
-        self.fail_open = []
-        self.unauditable = {}
-        self.audited = 0
+        self.divergences = []
+        self.not_auditable = {}
+        self.gate_statuses = {}
+        self.records = 0
+        self.promoted_not_pass = []
+        self.rollup_errors = []
 
-    def mismatch(self, ticker, gate, detail):
-        self.mismatches.append((ticker, gate, detail))
+    def diverge(self, ticker, gate_name, declared, computed, detail):
+        self.divergences.append({
+            "ticker": ticker, "gate": gate_name,
+            "declared": declared, "computed": computed, "detail": detail,
+            "severity": severity(declared, computed),
+        })
 
-    def opened(self, ticker, gate, detail):
-        self.fail_open.append((ticker, gate, detail))
+    def blind(self, gate_name, reason):
+        entry = self.not_auditable.setdefault(gate_name, {"count": 0, "reason": reason})
+        entry["count"] += 1
 
-    def blind(self, gate):
-        self.unauditable[gate] = self.unauditable.get(gate, 0) + 1
-
-
-def check_threshold(rep, ticker, failed, values, gate, key, minimum, maximum=None, strict=False):
-    """Verifica un gate a soglia. `key` assente -> gate non auditabile."""
-    if key not in values:
-        rep.blind(gate)
-        return
-    value = values[key]
-    flagged = gate in failed
-    if value is None:
-        # Dato non disponibile: il gate non e' verificabile e non deve promuovere.
-        if not flagged:
-            rep.opened(ticker, gate, f"{key}=null ma il gate non e' in failed_gates")
-        return
-    if maximum is None:
-        ok = value > minimum if strict else value >= minimum
-    else:
-        ok = minimum <= value <= maximum
-    if ok and flagged:
-        rep.mismatch(ticker, gate, f"{key}={value!r} rispetta la soglia ma il gate risulta fallito")
-    elif not ok and not flagged:
-        rep.mismatch(ticker, gate, f"{key}={value!r} viola la soglia ma il gate non risulta fallito")
+    def count(self, status):
+        self.gate_statuses[status] = self.gate_statuses.get(status, 0) + 1
 
 
-def check_pair(rep, ticker, failed, values, gate, upper, lower):
-    """Verifica un gate di confronto fra due serie (es. price > sma50)."""
-    if upper not in values or lower not in values:
-        rep.blind(gate)
-        return
-    a, b = values[upper], values[lower]
-    flagged = gate in failed
-    if a is None or b is None:
-        if not flagged:
-            rep.opened(ticker, gate, f"{upper}={a!r} {lower}={b!r} ma il gate non e' in failed_gates")
-        return
-    ok = a > b
-    if ok and flagged:
-        rep.mismatch(ticker, gate, f"{upper}={a} > {lower}={b} ma il gate risulta fallito")
-    elif not ok and not flagged:
-        rep.mismatch(ticker, gate, f"{upper}={a} <= {lower}={b} ma il gate non risulta fallito")
+def check_trend_flag(rep, ticker, values, computed_chain):
+    """`trend_structural_pass` deve coincidere con l'AND della sola catena SMA.
 
-
-def check_trend_flag(rep, ticker, values, failed):
-    """`trend_structural_pass` deve coincidere con l'AND della catena."""
+    Il flag e' trattato come un gate: dichiararlo true dove il ricalcolo lo
+    nega e' un fail-open, non un problema di etichetta.
+    """
     if "trend_structural_pass" not in values:
-        rep.blind("trend_structural_pass")
+        rep.blind("trend_structural_pass", "campo non esportato")
         return
-    declared = values["trend_structural_pass"]
-    needed = ["price", "sma50", "sma150", "sma200"]
-    if any(values.get(k) is None for k in needed) or not all(k in values for k in needed):
-        if declared:
-            rep.opened(ticker, "trend_structural_pass",
-                       "dichiarato true con almeno un valore della catena mancante")
+    declared = PASS if values["trend_structural_pass"] else FAIL
+    if any(k not in values or values[k] is None for k in TREND_INPUTS):
+        if declared == PASS:
+            rep.diverge(ticker, "trend_structural_pass", declared, UNVERIFIED,
+                        "dichiarato true con almeno un valore della catena mancante")
         return
-    computed = (values["price"] > values["sma50"] > values["sma150"] > values["sma200"])
-    if declared != computed:
-        rep.mismatch(
-            ticker, "trend_structural_pass",
-            "dichiarato {} ma price={} sma50={} sma150={} sma200={} danno {}".format(
-                declared, values["price"], values["sma50"], values["sma150"],
-                values["sma200"], computed),
-        )
-    chain_failed = {g for g, _, _ in TREND_CHAIN[:3]} & set(failed)
-    if declared and chain_failed:
-        rep.mismatch(ticker, "trend_structural_pass",
-                     f"dichiarato true ma failed_gates contiene {sorted(chain_failed)}")
+    expected = PASS if values["price"] > values["sma50"] > values["sma150"] > values["sma200"] else FAIL
+    if declared != expected:
+        rep.diverge(ticker, "trend_structural_pass", declared, expected,
+                    "price={price} sma50={sma50} sma150={sma150} sma200={sma200}".format(**values))
+        return
+    # Coerente con i propri operandi: resta da verificare che concordi con lo
+    # stato ricalcolato dei tre gate della catena.
+    chain = [computed_chain[g] for g in TREND_CHAIN if g in computed_chain]
+    if declared == PASS and any(s != PASS for s in chain):
+        rep.diverge(ticker, "trend_structural_pass", declared, rollup(chain),
+                    "catena ricalcolata: " + "/".join(chain))
 
 
-def validate_record(rep, record, thresholds):
+def validate_record(rep, record, thresholds, promoted, error_tickers=frozenset()):
     ticker = record.get("ticker", "?")
     values = record.get("values", {})
-    failed = set(record.get("failed_gates", []))
-    rep.audited += 1
+    rep.records += 1
 
-    for gate, upper, lower in TREND_CHAIN:
-        check_pair(rep, ticker, failed, values, gate, upper, lower)
-    check_trend_flag(rep, ticker, values, failed)
+    computed_statuses = []
+    chain = {}
+    for gate_def in GATES:
+        status, detail = evaluate(gate_def, values, thresholds, ticker in error_tickers)
+        name = gate_def["name"]
+        if name in TREND_CHAIN:
+            chain[name] = status
+        if status == NOT_AUDITABLE:
+            rep.blind(name, detail)
+            continue
+        rep.count(status)
+        computed_statuses.append(status)
+        declared = declared_status(record, name)
+        if declared != status:
+            rep.diverge(ticker, name, declared, status, detail)
 
-    rsi_min, rsi_max = thresholds["rsi"]
-    perf_min, perf_max = thresholds["performance_21d"]
-    check_threshold(rep, ticker, failed, values, "rsi14", "rsi14", rsi_min, rsi_max)
-    check_threshold(rep, ticker, failed, values, "atr_pct", "atr_pct", thresholds["atr_pct_min"])
-    check_threshold(rep, ticker, failed, values, "rvol20", "rvol20", thresholds["rvol20_min"])
-    check_threshold(rep, ticker, failed, values, "performance_21d", "performance_21d_pct",
-                    perf_min, perf_max)
-    check_threshold(rep, ticker, failed, values, "distance_resistance", "distance_resistance_pct",
-                    thresholds["distance_resistance_min"])
-    if "distance_52w_high_pct" in values:
-        check_threshold(rep, ticker, failed, values, "within_25pct_52w_high",
-                        "distance_52w_high_pct", float("-inf"), 25.0)
-    else:
-        rep.blind("within_25pct_52w_high")
+    check_trend_flag(rep, ticker, values, chain)
 
-    for gate, (key, minimum, strict) in FUNDAMENTAL_THRESHOLDS.items():
-        check_threshold(rep, ticker, failed, values, gate, key, minimum, strict=strict)
-
-    # Un campo dichiarato mancante non puo' lasciare passare il gate corrispondente.
+    # missing_fields deve implicare uno stato non-PASS sui gate che lo usano.
     for field in record.get("missing_fields", []):
-        for gate, (key, _, _strict) in FUNDAMENTAL_THRESHOLDS.items():
-            if field == key and gate not in failed:
-                rep.opened(ticker, gate, f"{key} in missing_fields ma il gate non e' in failed_gates")
-        for gate, upper, lower in TREND_CHAIN:
-            if field in (upper, lower) and gate not in failed:
-                rep.opened(ticker, gate, f"{field} in missing_fields ma il gate non e' in failed_gates")
+        for gate_def in GATES:
+            if field in gate_def["inputs"] and declared_status(record, gate_def["name"]) == PASS:
+                rep.diverge(ticker, gate_def["name"], PASS, UNVERIFIED,
+                            f"{field} elencato in missing_fields")
+
+    # audit_status di record: rollup degli stati ricalcolati.
+    if "audit_status" in record and computed_statuses:
+        expected = rollup(computed_statuses)
+        if record["audit_status"] != expected:
+            rep.rollup_errors.append((ticker, record["audit_status"], expected))
+
+    # Un titolo promosso deve avere ogni gate ricalcolato su PASS.
+    if promoted and any(s != PASS for s in computed_statuses):
+        rep.promoted_not_pass.append(ticker)
 
 
 def load(path):
@@ -167,50 +281,117 @@ def load(path):
         return json.load(handle)
 
 
+def resolve_thresholds(meta):
+    thresholds = dict(DEDUCED_THRESHOLDS)
+    thresholds.update(meta.get("thresholds", {}))
+    return thresholds
+
+
+def build_result(run_dir, meta, promoted, excluded, rep):
+    if rep.divergences or rep.rollup_errors or rep.promoted_not_pass:
+        verdict, code = "RUN INVALID", EXIT_INVALID
+    elif rep.not_auditable:
+        verdict, code = "RUN NON AUDITABILE", EXIT_NOT_AUDITABLE
+    else:
+        verdict, code = "RUN VALID", EXIT_VALID
+    return {
+        "run": str(run_dir),
+        "market_session_date": meta.get("market_session_date"),
+        "software_version": meta.get("software_version"),
+        "verdict": verdict,
+        "records": rep.records,
+        "promoted": len(promoted),
+        "excluded": len(excluded),
+        "gate_status_counts": rep.gate_statuses,
+        "divergence_counts": {
+            key: sum(1 for d in rep.divergences if d["severity"] == key)
+            for key in ("fail_open", "false_exclusion", "labeling")
+        },
+        "divergences": rep.divergences,
+        "audit_status_rollup_errors": [
+            {"ticker": t, "declared": d, "expected": e} for t, d, e in rep.rollup_errors
+        ],
+        "promoted_with_non_pass_gate": rep.promoted_not_pass,
+        "not_auditable_gates": rep.not_auditable,
+    }, code
+
+
+def render(result):
+    out = []
+    out.append(f"run: {result['run']}  sessione {result['market_session_date']}"
+               f"  motore {result['software_version']}")
+    out.append(f"record: {result['records']} "
+               f"({result['promoted']} promossi, {result['excluded']} esclusi)")
+    counts = result["gate_status_counts"]
+    if counts:
+        out.append("gate ricalcolati: " + "  ".join(f"{k}={v}" for k, v in sorted(counts.items())))
+
+    div = result["divergences"]
+    if div:
+        titles = {
+            "fail_open": "FAIL-OPEN — dichiarato PASS, il ricalcolo nega il pass",
+            "false_exclusion": "ESCLUSIONI INGIUSTIFICATE — il ricalcolo dice PASS",
+            "labeling": "ETICHETTATURA — esito operativo corretto, stato dichiarato ambiguo",
+        }
+        for key, title in titles.items():
+            group = [d for d in div if d["severity"] == key]
+            if not group:
+                continue
+            out.append(f"\n{title}: {len(group)}")
+            for d in group:
+                out.append(f"  {d['ticker']:8} {d['gate']:24} dichiarato={d['declared']:<10}"
+                           f" ricalcolato={d['computed']:<10} {d['detail']}")
+    else:
+        out.append("\nDivergenze dichiarato/ricalcolato: nessuna.")
+
+    if result["audit_status_rollup_errors"]:
+        out.append(f"\nAUDIT_STATUS di record incoerenti: {len(result['audit_status_rollup_errors'])}")
+        for e in result["audit_status_rollup_errors"]:
+            out.append(f"  {e['ticker']:8} dichiarato={e['declared']} atteso={e['expected']}")
+
+    if result["promoted_with_non_pass_gate"]:
+        out.append("\nPROMOSSI CON GATE NON-PASS: "
+                   + ", ".join(result["promoted_with_non_pass_gate"]))
+
+    if result["not_auditable_gates"]:
+        out.append("\nGATE NON AUDITABILI:")
+        for name, info in sorted(result["not_auditable_gates"].items(),
+                                 key=lambda kv: -kv[1]["count"]):
+            out.append(f"  {name:24} {info['count']:4} record — {info['reason']}")
+
+    out.append(f"\n{result['verdict']}")
+    return "\n".join(out)
+
+
 def main(argv):
-    if len(argv) != 2:
+    args = [a for a in argv[1:] if not a.startswith("--")]
+    as_json = "--json" in argv[1:]
+    if len(args) != 1:
         print(__doc__)
-        return 2
-    run_dir = Path(argv[1])
-    meta_path = next((p for p in run_dir.glob("run_metadata_*.json")), None)
-    excl_path = next((p for p in run_dir.glob("excluded_*.json")), None)
-    pass_path = next((p for p in run_dir.glob("scanner_v3_*.json")), None)
+        return EXIT_USAGE
+    run_dir = Path(args[0])
+    meta_path = next(iter(sorted(run_dir.glob("run_metadata_*.json"))), None)
+    excl_path = next(iter(sorted(run_dir.glob("excluded_*.json"))), None)
+    pass_path = next(iter(sorted(run_dir.glob("scanner_v3_*.json"))), None)
     if not (meta_path and excl_path and pass_path):
         print(f"[errore] {run_dir}: attesi run_metadata_*, excluded_* e scanner_v3_*.json")
-        return 2
+        return EXIT_USAGE
 
     meta = load(meta_path)
-    thresholds = meta["thresholds"]
+    thresholds = resolve_thresholds(meta)
     rep = Report()
 
+    error_tickers = {e.get("ticker") for e in meta.get("errors", []) if e.get("ticker")}
     promoted = load(pass_path).get("titoli", [])
     excluded = load(excl_path).get("titoli", [])
-    for record in promoted + excluded:
-        validate_record(rep, record, thresholds)
+    for record in promoted:
+        validate_record(rep, record, thresholds, True, error_tickers)
+    for record in excluded:
+        validate_record(rep, record, thresholds, False, error_tickers)
 
-    print(f"run: {run_dir}  sessione {meta.get('market_session_date')}")
-    print(f"record esaminati: {rep.audited} ({len(promoted)} promossi, {len(excluded)} esclusi)")
-
-    if rep.mismatches:
-        print(f"\nINCOERENZE gate/valori: {len(rep.mismatches)}")
-        for ticker, gate, detail in rep.mismatches:
-            print(f"  {ticker:8} {gate:24} {detail}")
-    else:
-        print("\nIncoerenze gate/valori: nessuna fra i gate auditabili.")
-
-    if rep.fail_open:
-        print(f"\nFAIL-OPEN su dato mancante: {len(rep.fail_open)}")
-        for ticker, gate, detail in rep.fail_open:
-            print(f"  {ticker:8} {gate:24} {detail}")
-    else:
-        print("Fail-open su dato mancante: nessuno.")
-
-    if rep.unauditable:
-        print("\nGATE NON AUDITABILI (valori non pubblicati nel JSON):")
-        for gate, count in sorted(rep.unauditable.items(), key=lambda kv: -kv[1]):
-            print(f"  {gate:24} {count} record senza i valori necessari")
-
-    return 1 if (rep.mismatches or rep.fail_open) else 0
+    result, code = build_result(run_dir, meta, promoted, excluded, rep)
+    print(json.dumps(result, indent=2, ensure_ascii=False) if as_json else render(result))
+    return code
 
 
 if __name__ == "__main__":
