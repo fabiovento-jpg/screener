@@ -24,14 +24,34 @@ Ogni gate ha uno di quattro stati:
 distinzione fra i due conta perche' hanno cause diverse — il primo e' un buco
 del provider, il secondo un guasto del run (e va anche in `run_metadata.errors`).
 
-Nel record gli stati si esprimono con tre liste; tutto cio' che non compare in
-nessuna delle tre e' `PASS`:
+Ogni gate si dichiara con il proprio stato e i propri operandi:
 
 ```json
-"failed_gates": ["price_above_sma50"],
-"unverified_gates": ["operating_margin"],
-"error_gates": []
+"gates": {
+  "price_above_sma50": {
+    "status": "FAIL",
+    "operands": {"price": 93.15, "sma50": 106.40}
+  }
+}
 ```
+
+Per uno stadio non eseguito il gate **c'e' comunque**, con operandi nulli e
+motivo esplicito:
+
+```json
+"gates": {
+  "price_above_sma50": {
+    "status": "UNVERIFIED",
+    "operands": {"price": null, "sma50": null},
+    "reason": "stage_not_executed_after_fundamental_fail"
+  }
+}
+```
+
+Il gate non va mai omesso. Il validatore accetta anche la forma precedente a
+tre liste (`failed_gates` / `unverified_gates` / `error_gates` con `values`
+piatto), ma quella annidata e' la canonica: lega ogni stato agli operandi che
+lo hanno prodotto, invece di lasciarli in un dizionario comune.
 
 ## 2. `audit_status` di record
 
@@ -104,9 +124,10 @@ con valori `null`, stato `UNVERIFIED` e motivo esplicito:
 Mai per omissione. Un campo assente e un campo dichiarato mancante non sono la
 stessa cosa: il secondo e' un dato, il primo e' un silenzio.
 
-## 4. Valori richiesti, gate per gate
+## 4. Operandi richiesti, gate per gate
 
-Tutti in `values`, con `null` quando il dato non c'e'.
+Ogni gate pubblica questi operandi nel proprio blocco, con `null` quando il
+dato non c'e'.
 
 | Gate | Valori |
 |---|---|
@@ -132,47 +153,41 @@ Tutti in `values`, con `null` quando il dato non c'e'.
 | `biotech_pre_revenue` | `industry`, `revenue_ttm` |
 | `earnings_window` | `days_to_earnings` |
 
-Esempio completo:
+Esempio, un titolo fermato dalla finestra earnings prima dello stadio tecnico:
 
 ```json
 {
   "ticker": "AAON",
   "audit_status": "FAIL",
-  "failed_gates": ["earnings_window"],
-  "unverified_gates": [],
-  "error_gates": [],
-  "values": {
-    "price": 93.15,
-    "market_cap": 7600000000,
-    "avg_volume_20d": 1250000,
+  "data_quality_score": 64,
+  "gates": {
+    "price_min":         {"status": "PASS", "operands": {"price": 93.15}},
+    "market_cap_min":    {"status": "PASS", "operands": {"market_cap": 7600000000}},
+    "avg_volume_min":    {"status": "PASS", "operands": {"avg_volume_20d": 1250000}},
 
-    "ema21": 95.30,
-    "ema50": 98.70,
-    "sma50": 106.40,
-    "sma150": 109.80,
-    "sma200": 119.30,
-    "trend_structural_pass": false,
+    "revenue_growth":    {"status": "PASS", "operands": {"revenue_growth_yoy": 54.3}},
+    "eps_growth":        {"status": "PASS", "operands": {"eps_growth_yoy": 36.2}},
+    "eps_next_year":     {"status": "PASS", "operands": {"eps_next_year": 41.7}},
+    "operating_margin":  {"status": "PASS", "operands": {"operating_margin": 10.4}},
+    "earnings_window":   {"status": "FAIL", "operands": {"days_to_earnings": 3}},
 
-    "rsi14": 61.3,
-    "atr_pct": 4.8,
-    "rvol20": 1.41,
-    "performance_21d_pct": 12.4,
-    "move_10d_pct": 9.1,
-    "distance_52w_high_pct": 6.2,
-    "distance_resistance_pct": 11.7,
-
-    "revenue_growth_yoy": 54.3,
-    "eps_growth_yoy": 36.2,
-    "eps_next_year": 41.7,
-    "operating_margin": 10.4,
-
-    "is_adr": false,
-    "industry": "Building Products",
-    "revenue_ttm": 1250000000,
-    "days_to_earnings": 3
-  }
+    "price_above_sma50": {"status": "UNVERIFIED",
+                          "operands": {"price": null, "sma50": null},
+                          "reason": "stage_not_executed_after_fundamental_fail"},
+    "rsi14":             {"status": "UNVERIFIED",
+                          "operands": {"rsi14": null},
+                          "reason": "stage_not_executed_after_fundamental_fail"}
+  },
+  "values": {"trend_structural_pass": false}
 }
 ```
+
+Lo stesso operando puo' comparire in piu' gate — `price` in `price_min` e in
+`price_above_sma50`. Il validatore confronta le occorrenze non nulle: due valori
+diversi per lo stesso campo significano che almeno un gate ha deciso su un
+numero che non e' quello pubblicato altrove, e il ricalcolo perde significato.
+Un operando `null` in un gate dichiarato non eseguito non e' un conflitto: e' la
+dichiarazione stessa.
 
 ### `trend_structural_pass`
 
@@ -293,7 +308,40 @@ blocca su verdetto diverso da `RUN VALID`, soglie dedotte, o titoli promossi con
 destinazione. Le due deroghe (`--allow-not-auditable`, `--allow-deduced`) sono
 esplicite e restano stampate nell'output del run.
 
-## 9. Verifica
+## 9. Criterio di accettazione
+
+La 4.0 e' pronta quando:
+
+```
+python3 tools/validate_run.py latest/
+  -> RUN VALID
+  -> 0 divergenze fail-open
+  -> 0 soglie dedotte
+  -> 0 gate non auditabili sui titoli promossi
+  -> data_quality_score coerente con il dichiarato
+```
+
+**Non serve qualita' 100/100 su tutti i 551 titoli.** Un titolo escluso allo
+stadio fondamentale con undici gate tecnici dichiarati `UNVERIFIED` vale 61/100,
+e il run resta valido: l'omissione e' dichiarata, quindi verificabile.
+
+La distinzione che il validatore applica:
+
+| Situazione | Verificabile | Effetto sul verdetto |
+|---|---|---|
+| Gate presente, stato non-PASS, operandi `null`, `reason` esplicito | si' | nessuno sugli esclusi |
+| Gate assente dal blocco `gates` | no | `RUN NON AUDITABILE` |
+| Gate con stato definito ma operandi non esportati | no | `RUN NON AUDITABILE` |
+| Qualunque gate non ricalcolabile su un **promosso** | no | `RUN NON AUDITABILE` |
+| Promosso con anche un solo gate non-`PASS` | si' | `RUN INVALID` |
+
+Le tre condizioni sostanziali sono quindi:
+
+1. ogni omissione e' dichiarata, mai silenziosa;
+2. ogni promosso ha tutti gli hard gate `PASS`;
+3. ogni valore usato per promuovere e' esportato e ricalcolabile.
+
+## 10. Verifica
 
 ```
 python3 tools/validate_run.py latest/          # leggibile

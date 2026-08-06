@@ -18,9 +18,13 @@ un verdetto.
 
 Verdetto del run:
 
-    RUN VALID           tutti i gate ricalcolabili e coerenti con il dichiarato
+    RUN VALID           ogni gate coerente col dichiarato, ogni omissione dichiarata
     RUN INVALID         almeno un gate dichiarato diverge dal ricalcolo
-    RUN NON AUDITABILE  strumentazione incompleta: gate non ricalcolabili
+    RUN NON AUDITABILE  omissione silenziosa: gate assente o operandi non esportati
+
+Un gate dichiarato UNVERIFIED o ERROR con operandi nulli e motivo esplicito e'
+verificabile e non impedisce la certificazione di un titolo escluso. Un titolo
+promosso deve invece avere ogni gate PASS e ogni operando esportato.
 
 Riporta inoltre il `data_quality_score` (100 meno 3 per ogni campo atteso non
 utilizzabile, 10 se la causa e' un guasto di pipeline) e segnala quali soglie
@@ -188,6 +192,21 @@ QUALITY_PENALTIES = {
     "not_exported": 3,         # campo assente dal record: stessa cecita', ma silenziosa
 }
 
+
+def penalty_for(reason):
+    """Penalita' di un motivo, tollerante ai motivi qualificati.
+
+    Lo schema 4.0 ammette motivi descrittivi come
+    `stage_not_executed_after_fundamental_fail`: contano come la famiglia a cui
+    appartengono. Un motivo non riconoscibile vale come dato assente alla fonte.
+    """
+    if reason in QUALITY_PENALTIES:
+        return QUALITY_PENALTIES[reason], reason
+    for family, penalty in QUALITY_PENALTIES.items():
+        if reason.startswith(family):
+            return penalty, family
+    return QUALITY_PENALTIES["source_no_data"], "source_no_data"
+
 TREND_CHAIN = ["price_above_sma50", "sma50_above_sma150", "sma150_above_sma200"]
 TREND_INPUTS = ["price", "sma50", "sma150", "sma200"]
 
@@ -221,12 +240,30 @@ def evaluate(gate_def, values, thresholds, reasons=None, pipeline_error=False):
     return (PASS if ok else FAIL), detail
 
 
+def gate_block(record, gate_name):
+    """Il blocco `gates[nome]` dello schema 4.0, se il record lo usa."""
+    gates = record.get("gates")
+    if isinstance(gates, dict):
+        block = gates.get(gate_name)
+        if isinstance(block, dict):
+            return block
+    return None
+
+
+def uses_gate_blocks(record):
+    return isinstance(record.get("gates"), dict)
+
+
 def declared_status(record, gate_name):
     """Stato dichiarato dal motore per un gate.
 
+    Schema 4.0: `gates[nome].status`.
     Schema 3.1: liste failed_gates / unverified_gates / error_gates.
     Schema 3.0: solo failed_gates, tutto il resto e' implicitamente un pass.
     """
+    block = gate_block(record, gate_name)
+    if block is not None and block.get("status") in (PASS, FAIL, UNVERIFIED, ERROR):
+        return block["status"]
     if gate_name in record.get("error_gates", []):
         return ERROR
     if gate_name in record.get("failed_gates", []):
@@ -234,6 +271,84 @@ def declared_status(record, gate_name):
     if gate_name in record.get("unverified_gates", []):
         return UNVERIFIED
     return PASS
+
+
+def gate_operands(record, gate_def):
+    """Valori visibili a un gate.
+
+    Nello schema 4.0 gli operandi stanno in `gates[nome].operands`; `values`
+    resta come vista di ripiego per gli schemi precedenti e per gli operandi
+    che un gate consulta solo in via condizionale (il fatturato per il ramo
+    alternativo di `eps_growth`).
+    """
+    merged = dict(record.get("values") or {})
+    block = gate_block(record, gate_def["name"])
+    if block is not None:
+        merged.update(block.get("operands") or {})
+    return merged
+
+
+def merged_values(record):
+    """Tutti gli operandi del record in un'unica vista.
+
+    Nello schema 4.0 lo stesso operando puo' comparire in piu' gate (`price` in
+    `price_min` e in `price_above_sma50`): la vista unita serve al calcolo
+    della qualita' e al flag di trend.
+    """
+    merged = dict(record.get("values") or {})
+    gates = record.get("gates")
+    if isinstance(gates, dict):
+        for block in gates.values():
+            if isinstance(block, dict):
+                merged.update(block.get("operands") or {})
+    return merged
+
+
+def operand_conflicts(record):
+    """Lo stesso operando con valori diversi in gate diversi.
+
+    Nello schema annidato gli operandi sono duplicati: se due gate riportano
+    `price` diverso, uno dei due ha valutato su un numero che non e' quello
+    pubblicato altrove, e il ricalcolo non significa piu' nulla.
+    """
+    gates = record.get("gates")
+    if not isinstance(gates, dict):
+        return []
+    seen, conflicts = {}, []
+    for gate_name, block in gates.items():
+        if not isinstance(block, dict):
+            continue
+        for field, value in (block.get("operands") or {}).items():
+            # Un operando nullo e' la dichiarazione di un gate non eseguito,
+            # non un valore in disaccordo: si confrontano solo i non nulli.
+            if value is None:
+                continue
+            if field in seen and seen[field][1] != value:
+                conflicts.append((field, seen[field][0], seen[field][1], gate_name, value))
+            else:
+                seen.setdefault(field, (gate_name, value))
+    return conflicts
+
+
+def declared_omission(record, gate_def):
+    """Il gate dichiara di non essere stato valutato, e lo fa correttamente?
+
+    Un'omissione dichiarata e' verificabile: il gate c'e', lo stato non e'
+    PASS, gli operandi sono presenti e nulli, il motivo e' esplicito. Non e'
+    un buco di strumentazione — e' un dato. Ritorna (True, motivo) oppure
+    (False, None).
+    """
+    block = gate_block(record, gate_def["name"])
+    if block is None:
+        return False, None
+    status = block.get("status")
+    if status not in (UNVERIFIED, ERROR):
+        return False, None
+    operands = block.get("operands") or {}
+    if any(k not in operands or operands[k] is not None for k in gate_def["inputs"]):
+        return False, None
+    reason = block.get("reason") or ""
+    return bool(reason), reason
 
 
 def severity(declared, computed):
@@ -257,6 +372,9 @@ class Report:
     def __init__(self):
         self.divergences = []
         self.not_auditable = {}
+        self.not_auditable_promoted = 0
+        self.omissions = {}
+        self.operand_conflicts = []
         self.gate_statuses = {}
         self.records = 0
         self.promoted_not_pass = []
@@ -273,9 +391,16 @@ class Report:
             "severity": severity(declared, computed),
         })
 
-    def blind(self, gate_name, reason):
+    def blind(self, gate_name, reason, promoted=False):
         entry = self.not_auditable.setdefault(gate_name, {"count": 0, "reason": reason})
         entry["count"] += 1
+        if promoted:
+            entry["promoted"] = entry.get("promoted", 0) + 1
+            self.not_auditable_promoted += 1
+
+    def declared_omission(self, gate_name, reason):
+        key = f"{gate_name} ({reason})"
+        self.omissions[key] = self.omissions.get(key, 0) + 1
 
     def count(self, status):
         self.gate_statuses[status] = self.gate_statuses.get(status, 0) + 1
@@ -316,16 +441,35 @@ def validate_record(rep, record, thresholds, promoted, error_tickers=frozenset()
 
     reasons = missing_reasons(record)
     pipeline_error = ticker in error_tickers
+    nested = uses_gate_blocks(record)
     computed_statuses = []
     already_reported = set()
     chain = {}
     for gate_def in GATES:
-        status, detail = evaluate(gate_def, values, thresholds, reasons, pipeline_error)
         name = gate_def["name"]
+        operands = gate_operands(record, gate_def)
+
+        # Schema 4.0: un gate assente dal blocco `gates` e' un'omissione
+        # silenziosa, anche se gli operandi comparissero altrove nel record.
+        if nested and gate_block(record, name) is None:
+            rep.blind(name, "gate assente dal blocco `gates`", promoted)
+            continue
+
+        omitted, omission_reason = declared_omission(record, gate_def)
+        if omitted:
+            rep.declared_omission(name, omission_reason)
+            declared = declared_status(record, name)
+            rep.count(declared)
+            computed_statuses.append(declared)
+            if name in TREND_CHAIN:
+                chain[name] = declared
+            continue
+
+        status, detail = evaluate(gate_def, operands, thresholds, reasons, pipeline_error)
         if name in TREND_CHAIN:
             chain[name] = status
         if status == NOT_AUDITABLE:
-            rep.blind(name, detail)
+            rep.blind(name, detail, promoted)
             continue
         rep.count(status)
         computed_statuses.append(status)
@@ -334,7 +478,12 @@ def validate_record(rep, record, thresholds, promoted, error_tickers=frozenset()
             rep.diverge(ticker, name, declared, status, detail)
             already_reported.add(name)
 
-    check_trend_flag(rep, ticker, values, chain)
+    check_trend_flag(rep, ticker, merged_values(record), chain)
+
+    for field, gate_a, value_a, gate_b, value_b in operand_conflicts(record):
+        rep.operand_conflicts.append(
+            {"ticker": ticker, "field": field,
+             "detail": f"{gate_a}={value_a!r} ma {gate_b}={value_b!r}"})
 
     # missing_fields deve implicare uno stato non-PASS sui gate che lo usano.
     for field in record.get("missing_fields", []):
@@ -405,19 +554,31 @@ EXPECTED_FIELDS = sorted({k for g in GATES for k in g["inputs"]} | {"trend_struc
 
 
 def missing_reasons(record):
-    """Mappa campo -> motivo, da `missing_details`.
+    """Mappa campo -> motivo.
 
-    Accetta sia {campo: {reason, source}} sia [{field, reason, source}].
+    Nello schema 4.0 il motivo sta accanto al gate (`gates[nome].reason`) e
+    vale per i suoi operandi; `missing_details` resta la forma degli schemi
+    precedenti e accetta sia {campo: {reason, source}} sia
+    [{field, reason, source}].
     """
+    from_gates = {}
+    gates = record.get("gates")
+    if isinstance(gates, dict):
+        for block in gates.values():
+            if not isinstance(block, dict) or not block.get("reason"):
+                continue
+            for field, value in (block.get("operands") or {}).items():
+                if value is None:
+                    from_gates[field] = block["reason"]
+
     details = record.get("missing_details") or {}
     if isinstance(details, list):
-        return {d.get("field"): d.get("reason") for d in details if isinstance(d, dict)}
-    if isinstance(details, dict):
-        out = {}
+        from_gates.update({d.get("field"): d.get("reason")
+                           for d in details if isinstance(d, dict)})
+    elif isinstance(details, dict):
         for field, info in details.items():
-            out[field] = info.get("reason") if isinstance(info, dict) else info
-        return out
-    return {}
+            from_gates[field] = info.get("reason") if isinstance(info, dict) else info
+    return from_gates
 
 
 def quality_score(record, pipeline_error):
@@ -427,7 +588,7 @@ def quality_score(record, pipeline_error):
     presenti: altrimenti omettere un campo darebbe un punteggio migliore che
     dichiararlo `null`, e la metrica premierebbe la reticenza.
     """
-    values = record.get("values", {})
+    values = merged_values(record)
     reasons = missing_reasons(record)
     breakdown, penalty = {}, 0
     for field in EXPECTED_FIELDS:
@@ -437,16 +598,26 @@ def quality_score(record, pipeline_error):
             reason = reasons.get(field) or ("pipeline_error" if pipeline_error else "source_no_data")
         else:
             continue
-        if reason not in QUALITY_PENALTIES:
-            reason = "source_no_data"
-        penalty += QUALITY_PENALTIES[reason]
-        breakdown[reason] = breakdown.get(reason, 0) + 1
+        cost, family = penalty_for(reason)
+        penalty += cost
+        breakdown[family] = breakdown.get(family, 0) + 1
     return max(0, 100 - penalty), breakdown
 
 
 def build_result(run_dir, meta, promoted, excluded, rep, provenance):
+    """Verdetto del run.
+
+    Un'omissione *dichiarata* — gate presente, stato non-PASS, operandi nulli,
+    motivo esplicito — non impedisce la certificazione su un titolo escluso:
+    e' verificabile, ed e' la forma prevista per gli stadi non eseguiti. Cio'
+    che blocca e' l'omissione silenziosa (gate assente, o operandi mancanti a
+    fronte di uno stato definito), ovunque si trovi, e qualunque gate non
+    ricalcolabile su un titolo *promosso*: un promosso deve avere ogni hard
+    gate PASS e ogni operando che lo giustifica esportato.
+    """
     if (rep.divergences or rep.rollup_errors or rep.promoted_not_pass
-            or rep.score_errors or rep.promoted_declared_not_pass):
+            or rep.score_errors or rep.promoted_declared_not_pass
+            or rep.operand_conflicts):
         verdict, code = "RUN INVALID", EXIT_INVALID
     elif rep.not_auditable:
         verdict, code = "RUN NON AUDITABILE", EXIT_NOT_AUDITABLE
@@ -474,6 +645,9 @@ def build_result(run_dir, meta, promoted, excluded, rep, provenance):
             {"ticker": t, "audit_status": a} for t, a in rep.promoted_declared_not_pass
         ],
         "not_auditable_gates": rep.not_auditable,
+        "not_auditable_on_promoted": rep.not_auditable_promoted,
+        "declared_omissions": rep.omissions,
+        "operand_conflicts": rep.operand_conflicts,
         "data_quality": {
             "run_score": round(sum(rep.scores) / len(rep.scores)) if rep.scores else None,
             "min_record_score": min(rep.scores) if rep.scores else None,
@@ -529,11 +703,26 @@ def render(result):
             f"{e['ticker']} ({e['audit_status']})"
             for e in result["promoted_with_declared_audit_status_not_pass"]))
 
+    if result["operand_conflicts"]:
+        out.append(f"\nOPERANDI IN CONFLITTO fra gate: {len(result['operand_conflicts'])}")
+        for c in result["operand_conflicts"]:
+            out.append(f"  {c['ticker']:8} {c['field']:24} {c['detail']}")
+
+    if result["declared_omissions"]:
+        total = sum(result["declared_omissions"].values())
+        out.append(f"\nOMISSIONI DICHIARATE (verificabili, non bloccanti sugli esclusi): {total}")
+        for label, count in sorted(result["declared_omissions"].items(),
+                                   key=lambda kv: -kv[1]):
+            out.append(f"  {label:56} {count:4} record")
+
     if result["not_auditable_gates"]:
-        out.append("\nGATE NON AUDITABILI:")
+        promoted_note = (f"  — di cui {result['not_auditable_on_promoted']} su titoli PROMOSSI"
+                         if result["not_auditable_on_promoted"] else "")
+        out.append(f"\nGATE NON AUDITABILI (omissione silenziosa){promoted_note}:")
         for name, info in sorted(result["not_auditable_gates"].items(),
                                  key=lambda kv: -kv[1]["count"]):
-            out.append(f"  {name:24} {info['count']:4} record — {info['reason']}")
+            on_promoted = f"  [{info['promoted']} promossi]" if info.get("promoted") else ""
+            out.append(f"  {name:24} {info['count']:4} record — {info['reason']}{on_promoted}")
 
     q = result["data_quality"]
     if q["run_score"] is not None:

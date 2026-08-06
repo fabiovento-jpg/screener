@@ -57,7 +57,18 @@ python3 tools/validate_run.py <run>   ->  nessuna riga "SOGLIE NON DICHIARATE"
 
 ## Priorita' 3 — esportare tutti gli operandi gia' calcolati
 
-Per ogni titolo che raggiunge lo stadio tecnico, `values` deve contenere:
+Ogni gate eseguito pubblica il proprio stato e i propri operandi:
+
+```json
+"gates": {
+  "price_above_sma50": {
+    "status": "FAIL",
+    "operands": {"price": 93.15, "sma50": 106.40}
+  }
+}
+```
+
+Per ogni titolo che raggiunge lo stadio tecnico gli operandi da esportare sono:
 
 ```
 price  ema21  ema50  sma50  sma150  sma200
@@ -69,22 +80,34 @@ piu' `trend_structural_pass`. Nessuno di questi richiede calcolo aggiuntivo:
 sono gia' tutti in memoria quando i gate vengono valutati, e per i 7 titoli con
 storico insufficiente il motore li elenca gia' per nome in `missing_fields`.
 
-Per i titoli fermati prima dello stadio tecnico valgono le stesse chiavi, con
-valori `null` e motivo dichiarato:
+Per i titoli fermati prima dello stadio tecnico il gate **c'e' comunque**, con
+operandi nulli e motivo dichiarato:
 
 ```json
-"unverified_gates": ["price_above_sma50", "sma50_above_sma150", "rsi14"],
-"missing_details": {
-  "sma50": {"reason": "stage_not_executed", "source": "TradingView MCP"}
+"gates": {
+  "price_above_sma50": {
+    "status": "UNVERIFIED",
+    "operands": {"price": null, "sma50": null},
+    "reason": "stage_not_executed_after_fundamental_fail"
+  }
 }
 ```
+
+Non omettere il gate: un gate assente e' un'omissione silenziosa e blocca la
+certificazione, mentre uno dichiarato `UNVERIFIED` con motivo e' un dato, ed e'
+accettato sui titoli esclusi.
 
 **Criterio di accettazione**
 
 ```
-python3 tools/validate_run.py <run>   ->  nessun gate in "GATE NON AUDITABILI"
+python3 tools/validate_run.py <run>   ->  0 gate non auditabili sui promossi
+                                          nessuna omissione silenziosa
                                           data_quality_score coerente col dichiarato
 ```
+
+Non serve qualita' 100/100 sull'intero universo: serve che ogni omissione sia
+dichiarata. La fixture `tests/fixtures/run_4_0/` e' un run che vale 87/100 ed e'
+`RUN VALID`.
 
 ## Priorita' 4 — audit prima della pubblicazione
 
@@ -114,6 +137,21 @@ di transizione: ogni deroga usata resta stampata nel log del run, cosi' la
 scelta e' tracciata invece che silenziosa.
 
 ---
+
+## Criterio definitivo
+
+```
+python3 tools/validate_run.py latest/
+  -> RUN VALID
+  -> 0 fail-open
+  -> 0 soglie dedotte
+  -> 0 gate non auditabili sui promossi
+  -> data_quality_score coerente
+```
+
+piu' le tre condizioni sostanziali: ogni omissione dichiarata, ogni promosso con
+tutti gli hard gate `PASS`, ogni valore che giustifica una promozione esportato e
+ricalcolabile.
 
 ## Ordine consigliato
 

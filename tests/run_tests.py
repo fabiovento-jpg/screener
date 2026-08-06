@@ -52,12 +52,40 @@ CASES = [
         # il dato c'e' tutto: la qualita' resta alta mentre il run e' invalido
         "DATA QUALITY SCORE: 98/100",
     ]),
+    # Schema 4.0, blocco `gates` annidato. Criterio di accettazione: un run e'
+    # valido anche senza qualita' 100, purche' ogni omissione sia dichiarata e
+    # ogni promosso sia completo.
+    ("run_4_0", EXIT_VALID, [
+        "RUN VALID",
+        "Divergenze dichiarato/ricalcolato: nessuna.",
+        "OMISSIONI DICHIARATE",
+        "price_above_sma50 (stage_not_executed_after_fundamental_fail)",
+        "DATA QUALITY SCORE: 87/100",
+    ]),
+    # Omissione silenziosa (gate assente) e operandi in disaccordo fra gate
+    ("run_4_0_omissioni", EXIT_INVALID, [
+        "RUN INVALID",
+        "OPERANDI IN CONFLITTO fra gate: 1",
+        "CONFLICT price                    price_min=140.0 ma price_above_sma50=93.15",
+        "GATE NON AUDITABILI (omissione silenziosa)",
+        "rsi14                       1 record — gate assente dal blocco `gates`",
+    ]),
+    # Un promosso con un gate dichiarato non eseguito resta inaccettabile:
+    # l'omissione e' dichiarata correttamente, ma un promosso non puo' averla.
+    ("run_4_0_promosso_incompleto", EXIT_INVALID, [
+        "RUN INVALID",
+        "PROMOSSI CON GATE NON-PASS: PARTIAL",
+        "PROMOSSI CON audit_status DICHIARATO NON-PASS: PARTIAL (UNVERIFIED)",
+    ]),
 ]
 
 
 # Il cancello di pubblicazione: (fixture, exit atteso, frammenti, opzioni)
 GUARD_CASES = [
     ("run_conforme", 0, ["PUBBLICAZIONE CONSENTITA"], ()),
+    ("run_4_0", 0, ["PUBBLICAZIONE CONSENTITA", "qualita': 87/100"], ()),
+    ("run_4_0_promosso_incompleto", 1,
+     ["PUBBLICAZIONE BLOCCATA", "promossi con audit_status dichiarato non-PASS"], ()),
     ("run_con_bug", 1, ["PUBBLICAZIONE BLOCCATA",
                         "promossi con gate ricalcolato non-PASS: BUG",
                         "`latest/` resta invariato"], ()),
