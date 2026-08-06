@@ -1,4 +1,4 @@
-# Schema 3.1 — strumentazione dei gate
+# Schema 4.0 — strumentazione dei gate
 
 Principio: **lo scanner non chiede fiducia**. Ogni record deve contenere tutti i
 numeri necessari perche' chiunque — l'autore, un LLM, un altro programma —
@@ -52,18 +52,57 @@ promozione.
 `false` finche' non c'e' revisione qualitativa. `audit_status = PASS` dice solo
 che i gate quantitativi sono stati superati e sono ricalcolabili.
 
-## 3. Nessuno short-circuit
+## 3. Valuta tutto, escludi subito
+
+Lo short-circuit non va rimosso: va separato in due decisioni distinte che oggi
+coincidono.
+
+- **Esclusione**: immediata al primo `FAIL`. Il titolo e' fuori, non cambia.
+- **Valutazione**: prosegue su tutti i gate rimanenti, e ne pubblica i valori.
+
+```
+gate1 FAIL -> segna FAIL, il titolo e' escluso
+           -> continua: gate2, gate3, gate4, ... fino alla fine
+```
 
 Nel run 2026-08-05 AAON e' escluso dal solo `earnings_window` allo stadio
-fondamentale, e non arriva mai allo stadio tecnico: le sue SMA non esistono
+fondamentale e non arriva mai a quello tecnico: le sue SMA non esistono
 nell'output. Non e' un caso isolato — 472 record su 551 non hanno alcun valore
 tecnico, 79 non hanno alcun valore fondamentale.
 
-L'export completo richiede quindi che **tutti i gate siano valutati per tutti i
-titoli dell'universo**, anche dopo il primo fallimento. Se calcolare un blocco
-per l'intero universo e' troppo costoso, l'alternativa accettabile e' marcare i
-gate non calcolati come `UNVERIFIED` con i rispettivi valori a `null` —
-esplicitamente, mai per omissione.
+### Il costo non e' uniforme
+
+Misurato sui `retrieved_at` del run 2026-08-05:
+
+| Stadio | Costo osservato | Estensione a 551 titoli |
+|---|---|---|
+| Fondamentale (Finviz) | un solo fetch bulk, timestamp identico per 472 record | gratis, gia' copre l'universo |
+| Tecnico (TradingView) | 395 s per 33 titoli = **12,3 s/titolo** | **~113 minuti** |
+
+Quindi:
+
+- per i gate fondamentali e d'universo la valutazione completa e' **a costo
+  zero**: i dati sono gia' stati scaricati per tutti, vanno solo valutati e
+  pubblicati. Qui non c'e' motivo di fermarsi al primo `FAIL`.
+- per i gate tecnici il vincolo e' la latenza per titolo, non il calcolo. Le
+  strade sono tre: accettare un run da ~2 ore; parallelizzare le richieste
+  (12,3 s/titolo e' tempo d'attesa, non di CPU: con 8 richieste in parallelo si
+  torna sotto i 15 minuti); oppure restare selettivi.
+
+### Se si resta selettivi
+
+L'unica forma accettabile e' dichiararlo. I gate non calcolati vanno pubblicati
+con valori `null`, stato `UNVERIFIED` e motivo esplicito:
+
+```json
+"unverified_gates": ["price_above_sma50", "rsi14"],
+"missing_details": {
+  "sma50": {"reason": "stage_not_executed", "source": "TradingView MCP"}
+}
+```
+
+Mai per omissione. Un campo assente e un campo dichiarato mancante non sono la
+stessa cosa: il secondo e' un dato, il primo e' un silenzio.
 
 ## 4. Valori richiesti, gate per gate
 
@@ -144,22 +183,45 @@ i gate corrispondenti vanno in `unverified_gates` o `error_gates`.
 
 ## 5. Soglie dichiarate, non dedotte
 
-`run_metadata.thresholds` deve contenere ogni soglia usata, con la semantica del
-confronto esplicita. Oggi mancano quelle dei gate fondamentali, il massimo di
-distanza dai massimi e la regola della finestra earnings; il validatore le
-deduce dalla separazione osservata nei dati, che e' un ripiego fragile:
+`run_metadata.thresholds` deve contenere ogni soglia usata, in forma piatta e
+con la semantica del confronto esplicita. Oggi mancano quelle dei gate
+fondamentali, il massimo di distanza dai massimi e la regola della finestra
+earnings: il validatore le deduce dalla separazione osservata nei dati e lo
+dichiara nel report, ma e' un'inferenza sul comportamento, non un contratto.
 
 ```json
-"revenue_growth_min": 20.0,
-"eps_growth_min": 30.0,
-"eps_next_year_min": 15.0,
-"eps_next_year_comparison": "strict",
-"operating_margin_min": 8.0,
-"within_52w_high_max_pct": 25.0,
-"trend_structure": "price > sma50 > sma150 > sma200",
-"ema_structure": "ema21 > ema50",
-"earnings_window_rule": "no_earnings_within_blackout"
+"thresholds": {
+  "price_min": 15.0,
+  "market_cap_min": 2000000000,
+  "avg_volume_min": 750000,
+
+  "rsi_min": 55.0,
+  "rsi_max": 72.0,
+  "atr_pct_min": 3.0,
+  "rvol20_min": 1.2,
+  "performance_21d_min": 0.0,
+  "performance_21d_max": 30.0,
+  "move_10d_max": 30.0,
+
+  "within_52w_high_max_pct": 25.0,
+  "distance_resistance_min": 8.0,
+
+  "revenue_growth_min": 20.0,
+  "eps_growth_min": 30.0,
+  "eps_next_year_min": 15.0,
+  "eps_next_year_comparison": "strict",
+  "operating_margin_min": 8.0,
+
+  "trend_structure": "price > sma50 > sma150 > sma200",
+  "ema_structure": "ema21 > ema50",
+  "earnings_blackout_days": 7,
+  "earnings_window_rule": "no_earnings_within_blackout"
+}
 ```
+
+Il validatore accetta anche la forma a intervallo attuale (`"rsi": [55, 72]`) e
+la normalizza, ma la forma piatta e' quella canonica: `rsi_min` e `rsi_max` non
+richiedono di sapere quale elemento della lista sia il minimo.
 
 ## 6. Dati mancanti
 
@@ -167,7 +229,50 @@ deduce dalla separazione osservata nei dati, che e' un ripiego fragile:
 `run_metadata.missing_data_count` li conta. Un campo `null` implica che il gate
 che lo usa sia in `unverified_gates` o `error_gates`: mai `PASS`.
 
-## 7. Verifica
+`missing_details` dichiara per ciascuno il motivo e la fonte interrogata. I
+motivi ammessi determinano lo stato del gate e la penalita' di qualita':
+
+| `reason` | Stato del gate | Penalita' |
+|---|---|---|
+| `source_no_data` | `UNVERIFIED` | -3 |
+| `stage_not_executed` | `UNVERIFIED` | -3 |
+| `pipeline_error` | `ERROR` | -10 |
+
+```json
+"missing_details": {
+  "operating_margin": {"reason": "source_no_data", "source": "finvizfinance"},
+  "sma200": {"reason": "pipeline_error", "source": "TradingView MCP"}
+}
+```
+
+## 7. `data_quality_score`
+
+Un numero per record, da 0 a 100, con il minimo a 0:
+
+```
+100 - 3 per ogni campo atteso non utilizzabile
+    - 10 se la causa e' un guasto di pipeline
+```
+
+Il conteggio parte dai **campi attesi** dal registro dei gate, non da quelli
+presenti nel record. E' la differenza che rende la metrica utile: contando solo
+i `null` presenti, il run 2026-08-05 prenderebbe 99/100, perche' i campi che
+mancano non sono `null` — sono assenti. Cosi' misurata, la metrica premierebbe
+l'omissione. Un campo assente vale quindi `not_exported`, -3 come un `null`.
+
+Con questa definizione il run 2026-08-05 vale **39/100**, minimo 0, tutti i 551
+record sotto 100.
+
+`data_quality_score` misura la **disponibilita' del dato, non la correttezza del
+gate**. Sono indipendenti, e vanno letti insieme: nella fixture `run_con_bug` un
+titolo promosso a torto con la catena SMA rotta ha `data_quality_score` 100 —
+tutti i valori ci sono, sono i gate a mentire. Un run puo' essere `RUN INVALID`
+con qualita' 100, o `RUN VALID` con qualita' 60.
+
+Il punteggio di run e' la media dei punteggi di record. Il validatore lo
+ricalcola e segnala i record il cui punteggio dichiarato non corrisponde.
+
+## 8. Verifica
 
 ```
 python3 tools/validate_run.py latest/          # leggibile

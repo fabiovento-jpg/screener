@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validatore degli output dello Scanner 3.0 / 3.1.
+"""Validatore degli output dello Scanner (schemi 3.0, 3.1 e 4.0).
 
 Ricalcola ogni gate a partire dai valori numerici pubblicati nel JSON e lo
 confronta con lo stato dichiarato dal motore. Lo scanner non deve chiedere
@@ -21,6 +21,10 @@ Verdetto del run:
     RUN VALID           tutti i gate ricalcolabili e coerenti con il dichiarato
     RUN INVALID         almeno un gate dichiarato diverge dal ricalcolo
     RUN NON AUDITABILE  strumentazione incompleta: gate non ricalcolabili
+
+Riporta inoltre il `data_quality_score` (100 meno 3 per ogni campo atteso non
+utilizzabile, 10 se la causa e' un guasto di pipeline) e segnala quali soglie
+il motore non dichiara, costringendo il validatore a dedurle.
 
 Uso:
     python3 tools/validate_run.py latest/
@@ -63,8 +67,8 @@ def gate(name, inputs, predicate):
     return {"name": name, "inputs": inputs, "predicate": predicate}
 
 
-def _between(value, bounds):
-    return bounds[0] <= value <= bounds[1]
+def _between(value, low, high):
+    return low <= value <= high
 
 
 def _earnings_window(values, thresholds):
@@ -88,11 +92,12 @@ GATES = [
     gate("sma150_above_sma200", ["sma150", "sma200"], lambda v, t: v["sma150"] > v["sma200"]),
     gate("ema21_above_ema50", ["ema21", "ema50"], lambda v, t: v["ema21"] > v["ema50"]),
     # Momentum e volatilita'
-    gate("rsi14", ["rsi14"], lambda v, t: _between(v["rsi14"], t["rsi"])),
+    gate("rsi14", ["rsi14"], lambda v, t: _between(v["rsi14"], t["rsi_min"], t["rsi_max"])),
     gate("atr_pct", ["atr_pct"], lambda v, t: v["atr_pct"] >= t["atr_pct_min"]),
     gate("rvol20", ["rvol20"], lambda v, t: v["rvol20"] >= t["rvol20_min"]),
     gate("performance_21d", ["performance_21d_pct"],
-         lambda v, t: _between(v["performance_21d_pct"], t["performance_21d"])),
+         lambda v, t: _between(v["performance_21d_pct"],
+                               t["performance_21d_min"], t["performance_21d_max"])),
     gate("no_extended_move_10d", ["move_10d_pct"], lambda v, t: v["move_10d_pct"] <= t["move_10d_max"]),
     # Posizione nel range
     gate("within_25pct_52w_high", ["distance_52w_high_pct"],
@@ -124,24 +129,43 @@ DEDUCED_THRESHOLDS = {
     "within_52w_high_max_pct": 25.0,
 }
 
+# Soglie a intervallo nella forma legacy (lista [min, max]) e loro nomi piatti.
+# Lo schema 4.0 pubblica direttamente i nomi piatti.
+LEGACY_RANGES = {
+    "rsi": ("rsi_min", "rsi_max"),
+    "performance_21d": ("performance_21d_min", "performance_21d_max"),
+}
+
+# Penalita' del data_quality_score, per campo atteso e non utilizzabile.
+QUALITY_PENALTIES = {
+    "pipeline_error": 10,      # guasto del run, dichiarato in run_metadata.errors
+    "source_no_data": 3,       # il provider non espone il dato
+    "stage_not_executed": 3,   # stadio non eseguito per questo titolo
+    "not_exported": 3,         # campo assente dal record: stessa cecita', ma silenziosa
+}
+
 TREND_CHAIN = ["price_above_sma50", "sma50_above_sma150", "sma150_above_sma200"]
 TREND_INPUTS = ["price", "sma50", "sma150", "sma200"]
 
 
-def evaluate(gate_def, values, thresholds, pipeline_error=False):
+def evaluate(gate_def, values, thresholds, reasons=None, pipeline_error=False):
     """Ricalcola un gate. Ritorna (stato, dettaglio).
 
-    Un valore assente vale ERROR se il run dichiara un errore di pipeline sul
-    titolo (run_metadata.errors), UNVERIFIED se il dato semplicemente non
-    esiste alla fonte. In entrambi i casi non e' un pass.
+    Un valore nullo vale ERROR se `missing_details` lo attribuisce a un guasto
+    di pipeline (o se il titolo compare in run_metadata.errors), UNVERIFIED se
+    il dato non esiste alla fonte o lo stadio non e' stato eseguito. In nessun
+    caso e' un pass.
     """
+    reasons = reasons or {}
     name, inputs = gate_def["name"], gate_def["inputs"]
     missing = [k for k in inputs if k not in values]
     if missing:
         return NOT_AUDITABLE, f"valori non esportati: {', '.join(missing)}"
     null = [k for k in inputs if values[k] is None]
     if null:
-        status = ERROR if pipeline_error else UNVERIFIED
+        errored = any(reasons.get(k) == "pipeline_error" for k in null) or (
+            pipeline_error and not any(k in reasons for k in null))
+        status = ERROR if errored else UNVERIFIED
         return status, f"valori null: {', '.join(null)}"
     try:
         ok = gate_def["predicate"](values, thresholds)
@@ -191,6 +215,9 @@ class Report:
         self.records = 0
         self.promoted_not_pass = []
         self.rollup_errors = []
+        self.scores = []
+        self.score_errors = []
+        self.quality_breakdown = {}
 
     def diverge(self, ticker, gate_name, declared, computed, detail):
         self.divergences.append({
@@ -240,10 +267,13 @@ def validate_record(rep, record, thresholds, promoted, error_tickers=frozenset()
     values = record.get("values", {})
     rep.records += 1
 
+    reasons = missing_reasons(record)
+    pipeline_error = ticker in error_tickers
     computed_statuses = []
+    already_reported = set()
     chain = {}
     for gate_def in GATES:
-        status, detail = evaluate(gate_def, values, thresholds, ticker in error_tickers)
+        status, detail = evaluate(gate_def, values, thresholds, reasons, pipeline_error)
         name = gate_def["name"]
         if name in TREND_CHAIN:
             chain[name] = status
@@ -255,21 +285,34 @@ def validate_record(rep, record, thresholds, promoted, error_tickers=frozenset()
         declared = declared_status(record, name)
         if declared != status:
             rep.diverge(ticker, name, declared, status, detail)
+            already_reported.add(name)
 
     check_trend_flag(rep, ticker, values, chain)
 
     # missing_fields deve implicare uno stato non-PASS sui gate che lo usano.
     for field in record.get("missing_fields", []):
         for gate_def in GATES:
-            if field in gate_def["inputs"] and declared_status(record, gate_def["name"]) == PASS:
-                rep.diverge(ticker, gate_def["name"], PASS, UNVERIFIED,
+            name = gate_def["name"]
+            if name in already_reported:
+                continue  # gia' segnalato dal ricalcolo del gate
+            if field in gate_def["inputs"] and declared_status(record, name) == PASS:
+                rep.diverge(ticker, name, PASS, UNVERIFIED,
                             f"{field} elencato in missing_fields")
+                already_reported.add(name)
 
     # audit_status di record: rollup degli stati ricalcolati.
     if "audit_status" in record and computed_statuses:
         expected = rollup(computed_statuses)
         if record["audit_status"] != expected:
             rep.rollup_errors.append((ticker, record["audit_status"], expected))
+
+    # data_quality_score: ricalcolato, e confrontato con quello dichiarato.
+    score, breakdown = quality_score(record, pipeline_error)
+    rep.scores.append(score)
+    for reason, count in breakdown.items():
+        rep.quality_breakdown[reason] = rep.quality_breakdown.get(reason, 0) + count
+    if "data_quality_score" in record and record["data_quality_score"] != score:
+        rep.score_errors.append((ticker, record["data_quality_score"], score))
 
     # Un titolo promosso deve avere ogni gate ricalcolato su PASS.
     if promoted and any(s != PASS for s in computed_statuses):
@@ -282,13 +325,74 @@ def load(path):
 
 
 def resolve_thresholds(meta):
-    thresholds = dict(DEDUCED_THRESHOLDS)
-    thresholds.update(meta.get("thresholds", {}))
-    return thresholds
+    """Normalizza le soglie e traccia da dove viene ciascuna.
+
+    Accetta sia i nomi piatti dello schema 4.0 (`rsi_min`, `rsi_max`) sia la
+    forma a intervallo attuale (`rsi: [55, 72]`). Cio' che il motore non
+    dichiara viene dedotto, e il validatore lo segnala: una soglia dedotta e'
+    un'inferenza sul comportamento osservato, non un contratto.
+    """
+    thresholds, provenance = {}, {}
+    for key, value in meta.get("thresholds", {}).items():
+        if key in LEGACY_RANGES and isinstance(value, (list, tuple)) and len(value) == 2:
+            low_key, high_key = LEGACY_RANGES[key]
+            thresholds[low_key], thresholds[high_key] = value
+            provenance[low_key] = provenance[high_key] = "metadati (forma a intervallo)"
+        else:
+            thresholds[key] = value
+            provenance[key] = "metadati"
+    for key, value in DEDUCED_THRESHOLDS.items():
+        if key not in thresholds:
+            thresholds[key] = value
+            provenance[key] = "DEDOTTA dai dati"
+    return thresholds, provenance
 
 
-def build_result(run_dir, meta, promoted, excluded, rep):
-    if rep.divergences or rep.rollup_errors or rep.promoted_not_pass:
+EXPECTED_FIELDS = sorted({k for g in GATES for k in g["inputs"]} | {"trend_structural_pass"})
+
+
+def missing_reasons(record):
+    """Mappa campo -> motivo, da `missing_details`.
+
+    Accetta sia {campo: {reason, source}} sia [{field, reason, source}].
+    """
+    details = record.get("missing_details") or {}
+    if isinstance(details, list):
+        return {d.get("field"): d.get("reason") for d in details if isinstance(d, dict)}
+    if isinstance(details, dict):
+        out = {}
+        for field, info in details.items():
+            out[field] = info.get("reason") if isinstance(info, dict) else info
+        return out
+    return {}
+
+
+def quality_score(record, pipeline_error):
+    """100 meno una penalita' per ogni campo atteso non utilizzabile.
+
+    Il conteggio parte dai campi *attesi* dal registro dei gate, non da quelli
+    presenti: altrimenti omettere un campo darebbe un punteggio migliore che
+    dichiararlo `null`, e la metrica premierebbe la reticenza.
+    """
+    values = record.get("values", {})
+    reasons = missing_reasons(record)
+    breakdown, penalty = {}, 0
+    for field in EXPECTED_FIELDS:
+        if field not in values:
+            reason = "not_exported"
+        elif values[field] is None:
+            reason = reasons.get(field) or ("pipeline_error" if pipeline_error else "source_no_data")
+        else:
+            continue
+        if reason not in QUALITY_PENALTIES:
+            reason = "source_no_data"
+        penalty += QUALITY_PENALTIES[reason]
+        breakdown[reason] = breakdown.get(reason, 0) + 1
+    return max(0, 100 - penalty), breakdown
+
+
+def build_result(run_dir, meta, promoted, excluded, rep, provenance):
+    if rep.divergences or rep.rollup_errors or rep.promoted_not_pass or rep.score_errors:
         verdict, code = "RUN INVALID", EXIT_INVALID
     elif rep.not_auditable:
         verdict, code = "RUN NON AUDITABILE", EXIT_NOT_AUDITABLE
@@ -313,6 +417,16 @@ def build_result(run_dir, meta, promoted, excluded, rep):
         ],
         "promoted_with_non_pass_gate": rep.promoted_not_pass,
         "not_auditable_gates": rep.not_auditable,
+        "data_quality": {
+            "run_score": round(sum(rep.scores) / len(rep.scores)) if rep.scores else None,
+            "min_record_score": min(rep.scores) if rep.scores else None,
+            "records_below_100": sum(1 for s in rep.scores if s < 100),
+            "penalties_by_reason": rep.quality_breakdown,
+            "declared_mismatches": [
+                {"ticker": t, "declared": d, "expected": e} for t, d, e in rep.score_errors
+            ],
+        },
+        "deduced_thresholds": sorted(k for k, v in provenance.items() if v.startswith("DEDOTTA")),
     }, code
 
 
@@ -359,6 +473,22 @@ def render(result):
                                  key=lambda kv: -kv[1]["count"]):
             out.append(f"  {name:24} {info['count']:4} record — {info['reason']}")
 
+    q = result["data_quality"]
+    if q["run_score"] is not None:
+        out.append(f"\nDATA QUALITY SCORE: {q['run_score']}/100 (media dei record)"
+                   f"  minimo {q['min_record_score']}/100"
+                   f"  record sotto 100: {q['records_below_100']}")
+        if q["penalties_by_reason"]:
+            out.append("  penalita' per motivo: " + "  ".join(
+                f"{k}={v}" for k, v in sorted(q["penalties_by_reason"].items())))
+        for m in q["declared_mismatches"]:
+            out.append(f"  INCOERENTE {m['ticker']:8} dichiarato={m['declared']} "
+                       f"ricalcolato={m['expected']}")
+
+    if result["deduced_thresholds"]:
+        out.append("\nSOGLIE NON DICHIARATE dal motore, dedotte dal validatore: "
+                   + ", ".join(result["deduced_thresholds"]))
+
     out.append(f"\n{result['verdict']}")
     return "\n".join(out)
 
@@ -378,7 +508,7 @@ def main(argv):
         return EXIT_USAGE
 
     meta = load(meta_path)
-    thresholds = resolve_thresholds(meta)
+    thresholds, provenance = resolve_thresholds(meta)
     rep = Report()
 
     error_tickers = {e.get("ticker") for e in meta.get("errors", []) if e.get("ticker")}
@@ -389,7 +519,7 @@ def main(argv):
     for record in excluded:
         validate_record(rep, record, thresholds, False, error_tickers)
 
-    result, code = build_result(run_dir, meta, promoted, excluded, rep)
+    result, code = build_result(run_dir, meta, promoted, excluded, rep, provenance)
     print(json.dumps(result, indent=2, ensure_ascii=False) if as_json else render(result))
     return code
 

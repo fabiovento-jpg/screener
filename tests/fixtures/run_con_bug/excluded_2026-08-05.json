@@ -6,6 +6,7 @@
       "ticker": "OPEN",
       "name": "OPEN Test Corp",
       "audit_status": "PASS",
+      "data_quality_score": 97,
       "failed_gates": [],
       "unverified_gates": [],
       "error_gates": [],
@@ -35,7 +36,15 @@
         "revenue_ttm": 1250000000.0,
         "days_to_earnings": 34
       },
-      "missing_fields": [],
+      "missing_fields": [
+        "revenue_growth_yoy"
+      ],
+      "missing_details": {
+        "revenue_growth_yoy": {
+          "reason": "source_no_data",
+          "source": "finvizfinance"
+        }
+      },
       "source": "fixture",
       "retrieved_at": "2026-08-05T23:30:00+02:00"
     }

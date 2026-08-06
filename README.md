@@ -51,7 +51,11 @@ e' in [`docs/gate_instrumentation.md`](docs/gate_instrumentation.md).
 
 Ogni gate ha quattro stati possibili — `PASS`, `FAIL`, `UNVERIFIED`, `ERROR` — e
 solo `PASS` promuove. Il campo `audit_status` di ogni record ne e' il riassunto,
-con precedenza `ERROR > FAIL > UNVERIFIED > PASS`.
+con precedenza `ERROR > FAIL > UNVERIFIED > PASS`; `data_quality_score` misura
+invece quanto dato era disponibile (100 meno 3 per ogni campo atteso non
+utilizzabile, 10 se la causa e' un guasto di pipeline). I due numeri sono
+indipendenti: un run puo' essere invalido con qualita' 100, o valido con
+qualita' 60.
 
 ```
 python3 tools/validate_run.py latest/          # leggibile
@@ -61,9 +65,10 @@ python3 tests/run_tests.py                     # test del validatore
 
 Il validatore ricalcola ogni gate dai valori pubblicati e lo confronta con lo
 stato dichiarato: `RUN VALID` (exit 0), `RUN INVALID` (exit 1, almeno un gate
-diverge), `RUN NON AUDITABILE` (exit 2, valori non esportati). L'esito sul run
+diverge), `RUN NON AUDITABILE` (exit 2, valori non esportati). Segnala inoltre
+quali soglie il motore non dichiara, costringendolo a dedurle. L'esito sul run
 2026-08-05 e' in [`docs/audit_2026-08-05.md`](docs/audit_2026-08-05.md): oggi
-**RUN INVALID**.
+**RUN INVALID**, qualita' 39/100.
 
 ## Date e orari
 

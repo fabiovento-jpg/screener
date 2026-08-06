@@ -6,6 +6,7 @@
       "ticker": "BREAK",
       "name": "BREAK Test Corp",
       "audit_status": "FAIL",
+      "data_quality_score": 100,
       "failed_gates": [
         "price_above_sma50",
         "ema21_above_ema50"
@@ -39,6 +40,7 @@
         "days_to_earnings": 34
       },
       "missing_fields": [],
+      "missing_details": {},
       "source": "fixture",
       "retrieved_at": "2026-08-05T23:30:00+02:00"
     },
@@ -46,6 +48,7 @@
       "ticker": "NODATA",
       "name": "NODATA Test Corp",
       "audit_status": "UNVERIFIED",
+      "data_quality_score": 97,
       "failed_gates": [],
       "unverified_gates": [
         "operating_margin"
@@ -80,6 +83,12 @@
       "missing_fields": [
         "operating_margin"
       ],
+      "missing_details": {
+        "operating_margin": {
+          "reason": "source_no_data",
+          "source": "finvizfinance"
+        }
+      },
       "source": "fixture",
       "retrieved_at": "2026-08-05T23:30:00+02:00"
     },
@@ -87,6 +96,7 @@
       "ticker": "BROKEN",
       "name": "BROKEN Test Corp",
       "audit_status": "ERROR",
+      "data_quality_score": 90,
       "failed_gates": [],
       "unverified_gates": [],
       "error_gates": [
@@ -121,6 +131,12 @@
       "missing_fields": [
         "sma200"
       ],
+      "missing_details": {
+        "sma200": {
+          "reason": "pipeline_error",
+          "source": "TradingView MCP"
+        }
+      },
       "source": "fixture",
       "retrieved_at": "2026-08-05T23:30:00+02:00"
     }

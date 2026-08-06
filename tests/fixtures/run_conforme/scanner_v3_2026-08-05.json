@@ -7,6 +7,7 @@
       "ticker": "GOOD",
       "name": "GOOD Test Corp",
       "audit_status": "PASS",
+      "data_quality_score": 100,
       "failed_gates": [],
       "unverified_gates": [],
       "error_gates": [],
@@ -37,6 +38,7 @@
         "days_to_earnings": 34
       },
       "missing_fields": [],
+      "missing_details": {},
       "source": "fixture",
       "retrieved_at": "2026-08-05T23:30:00+02:00"
     }

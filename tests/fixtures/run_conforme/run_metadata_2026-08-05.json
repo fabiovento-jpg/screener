@@ -1,30 +1,29 @@
 {
   "market_session_date": "2026-08-05",
-  "software_version": "3.1.0",
+  "software_version": "4.0.0",
   "market_regime": "BULL",
   "thresholds": {
     "price_min": 15.0,
     "market_cap_min": 2000000000,
     "avg_volume_min": 750000,
-    "rsi": [
-      55.0,
-      72.0
-    ],
+    "rsi_min": 55.0,
+    "rsi_max": 72.0,
     "atr_pct_min": 3.0,
     "rvol20_min": 1.2,
-    "performance_21d": [
-      0.0,
-      30.0
-    ],
+    "performance_21d_min": 0.0,
+    "performance_21d_max": 30.0,
     "distance_resistance_min": 8.0,
     "move_10d_max": 30.0,
     "within_52w_high_max_pct": 25.0,
     "revenue_growth_min": 20.0,
     "eps_growth_min": 30.0,
     "eps_next_year_min": 15.0,
+    "eps_next_year_comparison": "strict",
     "operating_margin_min": 8.0,
     "earnings_blackout_days": 7,
-    "earnings_window_rule": "no_earnings_within_blackout"
+    "earnings_window_rule": "no_earnings_within_blackout",
+    "trend_structure": "price > sma50 > sma150 > sma200",
+    "ema_structure": "ema21 > ema50"
   },
   "errors": [
     {

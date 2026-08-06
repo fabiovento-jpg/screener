@@ -28,7 +28,12 @@ def run(fixture):
 
 CASES = [
     # (fixture, exit code atteso, frammenti attesi nell'output)
-    ("run_conforme", EXIT_VALID, ["RUN VALID", "Divergenze dichiarato/ricalcolato: nessuna."]),
+    ("run_conforme", EXIT_VALID, [
+        "RUN VALID",
+        "Divergenze dichiarato/ricalcolato: nessuna.",
+        # soglie tutte dichiarate dal motore: il validatore non deduce nulla
+        "DATA QUALITY SCORE: 97/100",
+    ]),
     ("run_con_bug", EXIT_INVALID, [
         "RUN INVALID",
         # la catena SMA rotta viene ricalcolata gate per gate
@@ -42,6 +47,8 @@ CASES = [
         # rollup di record e promozione indebita
         "BUG      dichiarato=PASS atteso=FAIL",
         "PROMOSSI CON GATE NON-PASS: BUG",
+        # il dato c'e' tutto: la qualita' resta alta mentre il run e' invalido
+        "DATA QUALITY SCORE: 98/100",
     ]),
 ]
 
