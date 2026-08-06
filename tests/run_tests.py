@@ -86,7 +86,9 @@ GUARD_CASES = [
     ("run_4_0", 0, ["PUBBLICAZIONE CONSENTITA", "qualita': 87/100"], ()),
     ("run_4_0_promosso_incompleto", 1,
      ["PUBBLICAZIONE BLOCCATA", "promossi con audit_status dichiarato non-PASS"], ()),
+    # Qualita' 98/100 e run invalido: il punteggio non autorizza mai da solo
     ("run_con_bug", 1, ["PUBBLICAZIONE BLOCCATA",
+                        "verdetto: RUN INVALID   qualita': 98/100",
                         "promossi con gate ricalcolato non-PASS: BUG",
                         "`latest/` resta invariato"], ()),
     # una deroga si applica solo al motivo che copre, non agli altri
@@ -117,6 +119,25 @@ def check_guard_blocks_publication():
     return None
 
 
+def check_report_pairs_verdict_and_quality():
+    """Verdetto e qualita' viaggiano sempre insieme, con i quattro contatori."""
+    import json
+    code, out = run("run_4_0", GUARD, ("--json",))
+    payload = json.loads(out)
+    for key in ("run_verdict", "data_quality_score", "data_quality_breakdown"):
+        if key not in payload:
+            return f"il report del guard non espone {key}"
+    buckets = payload["data_quality_breakdown"]
+    expected = {"verified", "unverified_declared", "not_exported", "errors"}
+    if set(buckets) != expected:
+        return f"contatori di copertura {sorted(buckets)}, attesi {sorted(expected)}"
+    if buckets["verified"] <= 0 or buckets["unverified_declared"] <= 0:
+        return f"contatori non popolati: {buckets}"
+    if code != 0:
+        return f"run_4_0 doveva essere consentito, exit {code}"
+    return None
+
+
 def main():
     failures = 0
     for fixture, expected_code, fragments in CASES:
@@ -144,6 +165,13 @@ def main():
                 failures += 1
         if ok:
             print(f"ok   {label} (exit {code})")
+
+    problem = check_report_pairs_verdict_and_quality()
+    if problem:
+        print(f"FAIL {problem}")
+        failures += 1
+    else:
+        print("ok   report espone verdetto, punteggio e copertura insieme")
 
     problem = check_guard_blocks_publication()
     if problem:

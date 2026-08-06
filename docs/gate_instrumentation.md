@@ -291,11 +291,45 @@ l'omissione. Un campo assente vale quindi `not_exported`, -3 come un `null`.
 Con questa definizione il run 2026-08-05 vale **39/100**, minimo 0, tutti i 551
 record sotto 100.
 
-`data_quality_score` misura la **disponibilita' del dato, non la correttezza del
-gate**. Sono indipendenti, e vanno letti insieme: nella fixture `run_con_bug` un
-titolo promosso a torto con la catena SMA rotta ha `data_quality_score` 100 —
-tutti i valori ci sono, sono i gate a mentire. Un run puo' essere `RUN INVALID`
-con qualita' 100, o `RUN VALID` con qualita' 60.
+### Copertura, non correttezza
+
+Il punteggio misura **copertura e trasparenza**, non correttezza. Sono
+indipendenti: nella fixture `run_con_bug` un titolo promosso a torto con la
+catena SMA rotta vale 98/100 — i valori ci sono tutti, sono i gate a mentire.
+
+```
+qualita' 98/100 + RUN INVALID
+```
+
+e' uno stato possibile e frequente. Per questo il punteggio **non autorizza mai
+da solo**: `publish_guard.py` non lo consulta nemmeno per decidere, lo riporta
+soltanto accanto al verdetto.
+
+Il report li tiene sempre insieme, con i quattro contatori di copertura:
+
+```json
+{
+  "run_verdict": "RUN VALID",
+  "data_quality_score": 84,
+  "data_quality_breakdown": {
+    "verified": 4200,
+    "unverified_declared": 1750,
+    "not_exported": 0,
+    "errors": 7
+  }
+}
+```
+
+| Contatore | Operandi attesi che... |
+|---|---|
+| `verified` | sono presenti e non nulli |
+| `unverified_declared` | sono nulli con motivo dichiarato (`source_no_data`, `stage_not_executed`) |
+| `not_exported` | non compaiono affatto nel record: l'unico che segnala un buco silenzioso |
+| `errors` | sono nulli per un guasto di pipeline |
+
+`not_exported = 0` e' la condizione che conta: dice che ogni buco e' dichiarato.
+Un `unverified_declared` alto e' accettabile, ed e' anzi il profilo normale di
+un run che non esegue lo stadio tecnico su tutto l'universo.
 
 Il punteggio di run e' la media dei punteggi di record. Il validatore lo
 ricalcola e segnala i record il cui punteggio dichiarato non corrisponde.

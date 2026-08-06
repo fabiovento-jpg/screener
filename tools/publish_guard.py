@@ -62,7 +62,7 @@ def assess(run_dir, allow_not_auditable=False, allow_deduced=False):
     result, _ = V.build_result(run_dir, meta, promoted, excluded, rep, provenance)
 
     blockers = []
-    verdict = result["verdict"]
+    verdict = result["run_verdict"]
     if verdict == "RUN INVALID":
         counts = result["divergence_counts"]
         blockers.append(
@@ -134,20 +134,27 @@ def main(argv=None):
     if allowed and args.publish_to is not None:
         published = publish(args.run_dir, args.publish_to)
 
-    quality = result["data_quality"]["run_score"]
+    # Il punteggio di qualita' non entra mai nella decisione: misura copertura,
+    # e un run puo' valere 100 con i gate applicati male. Si riporta accanto al
+    # verdetto, mai al posto suo.
+    quality = result["data_quality_score"]
     if args.json:
         print(json.dumps({
             "run": str(args.run_dir),
             "decision": "ALLOW" if allowed else "BLOCK",
-            "verdict": result["verdict"],
+            "run_verdict": result["run_verdict"],
             "data_quality_score": quality,
+            "data_quality_breakdown": result["data_quality_breakdown"],
             "blockers": blockers,
             "waivers": result.get("waivers", []),
             "published": published,
         }, indent=2, ensure_ascii=False))
     else:
         print(f"run:      {args.run_dir}")
-        print(f"verdetto: {result['verdict']}   qualita': {quality}/100")
+        b = result["data_quality_breakdown"]
+        print(f"verdetto: {result['run_verdict']}   qualita': {quality}/100"
+              f" (verificati {b['verified']}, dichiarati {b['unverified_declared']},"
+              f" non esportati {b['not_exported']}, errori {b['errors']})")
         for waiver in result.get("waivers", []):
             print(f"  deroga accettata: {waiver}")
         if allowed:

@@ -193,6 +193,17 @@ QUALITY_PENALTIES = {
 }
 
 
+# I motivi si aggregano in quattro contatori di copertura. Sono una misura di
+# trasparenza, non di correttezza: dicono quanti operandi erano disponibili e
+# quanti buchi erano dichiarati, non se i gate sono stati applicati bene.
+QUALITY_BUCKETS = {
+    "source_no_data": "unverified_declared",
+    "stage_not_executed": "unverified_declared",
+    "pipeline_error": "errors",
+    "not_exported": "not_exported",
+}
+
+
 def penalty_for(reason):
     """Penalita' di un motivo, tollerante ai motivi qualificati.
 
@@ -382,7 +393,8 @@ class Report:
         self.rollup_errors = []
         self.scores = []
         self.score_errors = []
-        self.quality_breakdown = {}
+        self.quality_breakdown = {"verified": 0, "unverified_declared": 0,
+                                  "not_exported": 0, "errors": 0}
 
     def diverge(self, ticker, gate_name, declared, computed, detail):
         self.divergences.append({
@@ -505,8 +517,8 @@ def validate_record(rep, record, thresholds, promoted, error_tickers=frozenset()
     # data_quality_score: ricalcolato, e confrontato con quello dichiarato.
     score, breakdown = quality_score(record, pipeline_error)
     rep.scores.append(score)
-    for reason, count in breakdown.items():
-        rep.quality_breakdown[reason] = rep.quality_breakdown.get(reason, 0) + count
+    for bucket, count in breakdown.items():
+        rep.quality_breakdown[bucket] = rep.quality_breakdown.get(bucket, 0) + count
     if "data_quality_score" in record and record["data_quality_score"] != score:
         rep.score_errors.append((ticker, record["data_quality_score"], score))
 
@@ -590,17 +602,19 @@ def quality_score(record, pipeline_error):
     """
     values = merged_values(record)
     reasons = missing_reasons(record)
-    breakdown, penalty = {}, 0
+    breakdown = {"verified": 0, "unverified_declared": 0, "not_exported": 0, "errors": 0}
+    penalty = 0
     for field in EXPECTED_FIELDS:
         if field not in values:
             reason = "not_exported"
         elif values[field] is None:
             reason = reasons.get(field) or ("pipeline_error" if pipeline_error else "source_no_data")
         else:
+            breakdown["verified"] += 1
             continue
         cost, family = penalty_for(reason)
         penalty += cost
-        breakdown[family] = breakdown.get(family, 0) + 1
+        breakdown[QUALITY_BUCKETS[family]] += 1
     return max(0, 100 - penalty), breakdown
 
 
@@ -627,7 +641,9 @@ def build_result(run_dir, meta, promoted, excluded, rep, provenance):
         "run": str(run_dir),
         "market_session_date": meta.get("market_session_date"),
         "software_version": meta.get("software_version"),
-        "verdict": verdict,
+        "run_verdict": verdict,
+        "data_quality_score": round(sum(rep.scores) / len(rep.scores)) if rep.scores else None,
+        "data_quality_breakdown": rep.quality_breakdown,
         "records": rep.records,
         "promoted": len(promoted),
         "excluded": len(excluded),
@@ -648,11 +664,9 @@ def build_result(run_dir, meta, promoted, excluded, rep, provenance):
         "not_auditable_on_promoted": rep.not_auditable_promoted,
         "declared_omissions": rep.omissions,
         "operand_conflicts": rep.operand_conflicts,
-        "data_quality": {
-            "run_score": round(sum(rep.scores) / len(rep.scores)) if rep.scores else None,
+        "data_quality_detail": {
             "min_record_score": min(rep.scores) if rep.scores else None,
             "records_below_100": sum(1 for s in rep.scores if s < 100),
-            "penalties_by_reason": rep.quality_breakdown,
             "declared_mismatches": [
                 {"ticker": t, "declared": d, "expected": e} for t, d, e in rep.score_errors
             ],
@@ -724,14 +738,19 @@ def render(result):
             on_promoted = f"  [{info['promoted']} promossi]" if info.get("promoted") else ""
             out.append(f"  {name:24} {info['count']:4} record — {info['reason']}{on_promoted}")
 
-    q = result["data_quality"]
-    if q["run_score"] is not None:
-        out.append(f"\nDATA QUALITY SCORE: {q['run_score']}/100 (media dei record)"
-                   f"  minimo {q['min_record_score']}/100"
+    q = result["data_quality_detail"]
+    if result["data_quality_score"] is not None:
+        out.append(f"\nDATA QUALITY SCORE: {result['data_quality_score']}/100"
+                   f" (media dei record)  minimo {q['min_record_score']}/100"
                    f"  record sotto 100: {q['records_below_100']}")
-        if q["penalties_by_reason"]:
-            out.append("  penalita' per motivo: " + "  ".join(
-                f"{k}={v}" for k, v in sorted(q["penalties_by_reason"].items())))
+        b = result["data_quality_breakdown"]
+        out.append("  copertura degli operandi attesi: "
+                   f"verificati {b['verified']}, "
+                   f"non verificabili ma dichiarati {b['unverified_declared']}, "
+                   f"non esportati {b['not_exported']}, "
+                   f"errori {b['errors']}")
+        out.append("  misura copertura e trasparenza, non correttezza:"
+                   " si legge insieme al verdetto, mai da solo")
         for m in q["declared_mismatches"]:
             out.append(f"  INCOERENTE {m['ticker']:8} dichiarato={m['declared']} "
                        f"ricalcolato={m['expected']}")
@@ -740,7 +759,7 @@ def render(result):
         out.append("\nSOGLIE NON DICHIARATE dal motore, dedotte dal validatore: "
                    + ", ".join(result["deduced_thresholds"]))
 
-    out.append(f"\n{result['verdict']}")
+    out.append(f"\n{result['run_verdict']}")
     return "\n".join(out)
 
 

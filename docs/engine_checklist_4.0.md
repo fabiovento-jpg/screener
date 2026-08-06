@@ -140,18 +140,31 @@ scelta e' tracciata invece che silenziosa.
 
 ## Criterio definitivo
 
+La 4.0 e' accettabile quando il run reale soddisfa tutte queste condizioni
+insieme:
+
+| Condizione | Dove si legge |
+|---|---|
+| `RUN VALID` | `validate_run.py`, ultima riga |
+| `PUBBLICAZIONE CONSENTITA`, senza deroghe | `publish_guard.py`, exit 0 |
+| 0 divergenze fail-open | `divergence_counts.fail_open` |
+| 0 soglie dedotte | nessuna riga "SOGLIE NON DICHIARATE" |
+| 0 gate omessi silenziosamente | `data_quality_breakdown.not_exported = 0` |
+| 0 conflitti fra operandi | nessuna riga "OPERANDI IN CONFLITTO" |
+| 0 promossi con `audit_status` diverso da `PASS` | nessuna riga "PROMOSSI CON..." |
+
+Il comando che le verifica tutte in una volta e' il guard **senza deroghe**:
+
 ```
-python3 tools/validate_run.py latest/
-  -> RUN VALID
-  -> 0 fail-open
-  -> 0 soglie dedotte
-  -> 0 gate non auditabili sui promossi
-  -> data_quality_score coerente
+python3 tools/publish_guard.py <run_dir>
 ```
 
-piu' le tre condizioni sostanziali: ogni omissione dichiarata, ogni promosso con
-tutti gli hard gate `PASS`, ogni valore che giustifica una promozione esportato e
-ricalcolabile.
+Per gli esclusi e' ammesso `UNVERIFIED` con operandi `null` e `reason` esplicito.
+Per i promossi non c'e' deroga: ogni hard gate `PASS`, ogni operando esportato.
+
+Il `data_quality_score` non fa parte del criterio. Misura copertura, non
+correttezza: un run puo' valere 98/100 ed essere `RUN INVALID`. Si legge accanto
+al verdetto, mai al posto suo.
 
 ## Ordine consigliato
 

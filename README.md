@@ -51,11 +51,14 @@ e' in [`docs/gate_instrumentation.md`](docs/gate_instrumentation.md).
 
 Ogni gate ha quattro stati possibili — `PASS`, `FAIL`, `UNVERIFIED`, `ERROR` — e
 solo `PASS` promuove. Il campo `audit_status` di ogni record ne e' il riassunto,
-con precedenza `ERROR > FAIL > UNVERIFIED > PASS`; `data_quality_score` misura
-invece quanto dato era disponibile (100 meno 3 per ogni campo atteso non
-utilizzabile, 10 se la causa e' un guasto di pipeline). I due numeri sono
-indipendenti: un run puo' essere invalido con qualita' 100, o valido con
-qualita' 60.
+con precedenza `ERROR > FAIL > UNVERIFIED > PASS`.
+
+`data_quality_score` misura **copertura e trasparenza, non correttezza**: quanti
+operandi erano disponibili e quanti buchi erano dichiarati. Un run con tutti i
+dati presenti e i gate applicati male vale 98/100 ed e' `RUN INVALID`. Per
+questo il punteggio non autorizza mai da solo la pubblicazione, e il report lo
+espone sempre accanto al verdetto, con i quattro contatori di copertura
+`verified`, `unverified_declared`, `not_exported`, `errors`.
 
 ```
 python3 tools/validate_run.py latest/          # leggibile
