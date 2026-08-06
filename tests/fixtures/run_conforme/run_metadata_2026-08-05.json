@@ -23,7 +23,11 @@
     "earnings_blackout_days": 7,
     "earnings_window_rule": "no_earnings_within_blackout",
     "trend_structure": "price > sma50 > sma150 > sma200",
-    "ema_structure": "ema21 > ema50"
+    "ema_structure": "ema21 > ema50",
+    "eps_growth_alt_min": 20.0,
+    "eps_growth_alt_revenue_min": 40.0,
+    "pead_window_min": 1,
+    "pead_window_max": 15
   },
   "errors": [
     {

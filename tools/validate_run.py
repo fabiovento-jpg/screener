@@ -63,12 +63,50 @@ def rollup(statuses):
 # strumentazione, distinto da UNVERIFIED che e' un dato assente alla fonte).
 
 
-def gate(name, inputs, predicate):
-    return {"name": name, "inputs": inputs, "predicate": predicate}
+def gate(name, inputs, predicate, evaluator=None):
+    """Un gate del registro.
+
+    `inputs` sono i valori che servono sempre; `predicate` la condizione.
+    `evaluator` sostituisce il flusso standard quando il gate ha input
+    condizionali (vedi `eps_growth`, che consulta il fatturato solo se il ramo
+    principale non basta).
+    """
+    return {"name": name, "inputs": inputs, "predicate": predicate, "evaluator": evaluator}
 
 
 def _between(value, low, high):
     return low <= value <= high
+
+
+def _eps_growth(values, thresholds):
+    """Crescita EPS con ramo alternativo, a input condizionali.
+
+    Passa se `eps_growth_yoy >= eps_growth_min`, oppure se la crescita e'
+    almeno `eps_growth_alt_min` accompagnata da un fatturato in crescita di
+    almeno `eps_growth_alt_revenue_min`. Il fatturato viene consultato solo se
+    il ramo principale non basta: un titolo con EPS sopra la soglia piena non
+    diventa UNVERIFIED perche' manca il fatturato.
+
+    Se il ramo alternativo non e' dichiarato nei metadati vale la sola soglia
+    principale.
+    """
+    eps = values["eps_growth_yoy"]
+    if eps >= thresholds["eps_growth_min"]:
+        return PASS, f"eps_growth_yoy={eps!r} >= {thresholds['eps_growth_min']}"
+    alt_min = thresholds.get("eps_growth_alt_min")
+    alt_revenue_min = thresholds.get("eps_growth_alt_revenue_min")
+    if alt_min is None or alt_revenue_min is None:
+        return FAIL, f"eps_growth_yoy={eps!r} < {thresholds['eps_growth_min']}"
+    if eps < alt_min:
+        return FAIL, f"eps_growth_yoy={eps!r} sotto entrambe le soglie"
+    if "revenue_growth_yoy" not in values:
+        return NOT_AUDITABLE, "valori non esportati: revenue_growth_yoy (ramo alternativo)"
+    revenue = values["revenue_growth_yoy"]
+    if revenue is None:
+        return UNVERIFIED, "valori null: revenue_growth_yoy (serve al ramo alternativo)"
+    ok = revenue >= alt_revenue_min
+    detail = f"eps_growth_yoy={eps!r} con revenue_growth_yoy={revenue!r} (ramo alternativo)"
+    return (PASS if ok else FAIL), detail
 
 
 def _earnings_window(values, thresholds):
@@ -107,7 +145,7 @@ GATES = [
     # Fondamentali
     gate("revenue_growth", ["revenue_growth_yoy"],
          lambda v, t: v["revenue_growth_yoy"] >= t["revenue_growth_min"]),
-    gate("eps_growth", ["eps_growth_yoy"], lambda v, t: v["eps_growth_yoy"] >= t["eps_growth_min"]),
+    gate("eps_growth", ["eps_growth_yoy"], None, evaluator=lambda v, t: _eps_growth(v, t)),
     gate("eps_next_year", ["eps_next_year"], lambda v, t: v["eps_next_year"] > t["eps_next_year_min"]),
     gate("operating_margin", ["operating_margin"],
          lambda v, t: v["operating_margin"] >= t["operating_margin_min"]),
@@ -127,6 +165,11 @@ DEDUCED_THRESHOLDS = {
     "eps_next_year_min": 15.0,  # confronto stretto: 15.0 esatto risulta bocciato
     "operating_margin_min": 8.0,
     "within_52w_high_max_pct": 25.0,
+    # Ramo alternativo di eps_growth. Coerente con il run 2026-08-05 (nessuna
+    # contraddizione), ma mai decisivo: nessun titolo ha eps in [20, 30) con
+    # fatturato >= 40, quindi la regola non e' falsificabile su questi dati.
+    "eps_growth_alt_min": 20.0,
+    "eps_growth_alt_revenue_min": 40.0,
 }
 
 # Soglie a intervallo nella forma legacy (lista [min, max]) e loro nomi piatti.
@@ -134,6 +177,7 @@ DEDUCED_THRESHOLDS = {
 LEGACY_RANGES = {
     "rsi": ("rsi_min", "rsi_max"),
     "performance_21d": ("performance_21d_min", "performance_21d_max"),
+    "pead_window": ("pead_window_min", "pead_window_max"),
 }
 
 # Penalita' del data_quality_score, per campo atteso e non utilizzabile.
@@ -168,6 +212,8 @@ def evaluate(gate_def, values, thresholds, reasons=None, pipeline_error=False):
         status = ERROR if errored else UNVERIFIED
         return status, f"valori null: {', '.join(null)}"
     try:
+        if gate_def["evaluator"] is not None:
+            return gate_def["evaluator"](values, thresholds)
         ok = gate_def["predicate"](values, thresholds)
     except KeyError as exc:
         return NOT_AUDITABLE, f"soglia non dichiarata: {exc.args[0]}"
@@ -214,6 +260,7 @@ class Report:
         self.gate_statuses = {}
         self.records = 0
         self.promoted_not_pass = []
+        self.promoted_declared_not_pass = []
         self.rollup_errors = []
         self.scores = []
         self.score_errors = []
@@ -314,9 +361,15 @@ def validate_record(rep, record, thresholds, promoted, error_tickers=frozenset()
     if "data_quality_score" in record and record["data_quality_score"] != score:
         rep.score_errors.append((ticker, record["data_quality_score"], score))
 
-    # Un titolo promosso deve avere ogni gate ricalcolato su PASS.
-    if promoted and any(s != PASS for s in computed_statuses):
-        rep.promoted_not_pass.append(ticker)
+    # Un titolo promosso deve avere ogni gate ricalcolato su PASS, e deve
+    # dichiararlo: audit_status diverso da PASS in scanner_v3 e' una promozione
+    # che il motore stesso non sostiene.
+    if promoted:
+        if any(s != PASS for s in computed_statuses):
+            rep.promoted_not_pass.append(ticker)
+        declared = record.get("audit_status")
+        if declared is not None and declared != PASS:
+            rep.promoted_declared_not_pass.append((ticker, declared))
 
 
 def load(path):
@@ -392,7 +445,8 @@ def quality_score(record, pipeline_error):
 
 
 def build_result(run_dir, meta, promoted, excluded, rep, provenance):
-    if rep.divergences or rep.rollup_errors or rep.promoted_not_pass or rep.score_errors:
+    if (rep.divergences or rep.rollup_errors or rep.promoted_not_pass
+            or rep.score_errors or rep.promoted_declared_not_pass):
         verdict, code = "RUN INVALID", EXIT_INVALID
     elif rep.not_auditable:
         verdict, code = "RUN NON AUDITABILE", EXIT_NOT_AUDITABLE
@@ -416,6 +470,9 @@ def build_result(run_dir, meta, promoted, excluded, rep, provenance):
             {"ticker": t, "declared": d, "expected": e} for t, d, e in rep.rollup_errors
         ],
         "promoted_with_non_pass_gate": rep.promoted_not_pass,
+        "promoted_with_declared_audit_status_not_pass": [
+            {"ticker": t, "audit_status": a} for t, a in rep.promoted_declared_not_pass
+        ],
         "not_auditable_gates": rep.not_auditable,
         "data_quality": {
             "run_score": round(sum(rep.scores) / len(rep.scores)) if rep.scores else None,
@@ -466,6 +523,11 @@ def render(result):
     if result["promoted_with_non_pass_gate"]:
         out.append("\nPROMOSSI CON GATE NON-PASS: "
                    + ", ".join(result["promoted_with_non_pass_gate"]))
+
+    if result["promoted_with_declared_audit_status_not_pass"]:
+        out.append("\nPROMOSSI CON audit_status DICHIARATO NON-PASS: " + ", ".join(
+            f"{e['ticker']} ({e['audit_status']})"
+            for e in result["promoted_with_declared_audit_status_not_pass"]))
 
     if result["not_auditable_gates"]:
         out.append("\nGATE NON AUDITABILI:")

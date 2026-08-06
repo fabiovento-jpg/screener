@@ -208,6 +208,8 @@ dichiara nel report, ma e' un'inferenza sul comportamento, non un contratto.
 
   "revenue_growth_min": 20.0,
   "eps_growth_min": 30.0,
+  "eps_growth_alt_min": 20.0,
+  "eps_growth_alt_revenue_min": 40.0,
   "eps_next_year_min": 15.0,
   "eps_next_year_comparison": "strict",
   "operating_margin_min": 8.0,
@@ -215,9 +217,20 @@ dichiara nel report, ma e' un'inferenza sul comportamento, non un contratto.
   "trend_structure": "price > sma50 > sma150 > sma200",
   "ema_structure": "ema21 > ema50",
   "earnings_blackout_days": 7,
-  "earnings_window_rule": "no_earnings_within_blackout"
+  "earnings_window_rule": "no_earnings_within_blackout",
+  "pead_window_min": 1,
+  "pead_window_max": 15
 }
 ```
+
+`eps_growth` ammette un ramo alternativo: passa con
+`eps_growth_yoy >= eps_growth_min`, oppure con `eps_growth_yoy >=
+eps_growth_alt_min` accompagnato da `revenue_growth_yoy >=
+eps_growth_alt_revenue_min`. Il fatturato viene consultato solo se il ramo
+principale non basta, cosi' un titolo con EPS sopra la soglia piena non diventa
+`UNVERIFIED` perche' manca il fatturato. Se invece serve il ramo alternativo e
+il fatturato e' `null`, il gate e' `UNVERIFIED`: e' il caso di IDYA, USAR e
+AMLX, che oggi passano.
 
 Il validatore accetta anche la forma a intervallo attuale (`"rsi": [55, 72]`) e
 la normalizza, ma la forma piatta e' quella canonica: `rsi_min` e `rsi_max` non
@@ -272,7 +285,15 @@ con qualita' 100, o `RUN VALID` con qualita' 60.
 Il punteggio di run e' la media dei punteggi di record. Il validatore lo
 ricalcola e segnala i record il cui punteggio dichiarato non corrisponde.
 
-## 8. Verifica
+## 8. Pubblicazione condizionata
+
+`latest/` si aggiorna solo dopo un verdetto positivo. `tools/publish_guard.py`
+blocca su verdetto diverso da `RUN VALID`, soglie dedotte, o titoli promossi con
+`audit_status` diverso da `PASS`; in quel caso non scrive nulla nella
+destinazione. Le due deroghe (`--allow-not-auditable`, `--allow-deduced`) sono
+esplicite e restano stampate nell'output del run.
+
+## 9. Verifica
 
 ```
 python3 tools/validate_run.py latest/          # leggibile
