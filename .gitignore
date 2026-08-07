@@ -47,15 +47,18 @@ desktop.ini
 .DS_Store
 
 # --- whitelist esplicita: solo dati ---
+# latest/ contiene ESATTAMENTE questi cinque file (i CSV vivono in history/)
+!latest/daily_report.md
+!latest/review_queue_latest.json
 !latest/scanner_v3_latest.json
-!latest/scanner_v3_latest.csv
 !latest/excluded_latest.json
-!latest/excluded_latest.csv
 !latest/run_metadata_latest.json
 !history/**/scanner_v3_*.json
 !history/**/scanner_v3_*.csv
 !history/**/excluded_*.json
 !history/**/excluded_*.csv
 !history/**/run_metadata_*.json
+!history/**/review_queue_*.json
+!history/**/daily_report_*.md
 !README.md
 !.gitignore

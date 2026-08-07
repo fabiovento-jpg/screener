@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-08-07T23:38:43+02:00",
+  "market_session_date": "2026-08-07",
+  "purpose": "coda di revisione: titoli vicini ai filtri, NON promossi e NON candidati operativi",
+  "not_a_watchlist": true,
+  "ordering": "near_misses e regime_blocked: alfabetico per ticker; prefilter_watch: round-robin per failed_gate nell'ordine della strategia, dentro ogni gruppo distanza minima (percentuale; giorni per earnings_window). Nessuno score.",
+  "quantitative_near_misses_total": 4,
+  "prefilter_watch_total": 88,
+  "regime_blocked_candidates_total": 0,
+  "quantitative_near_misses": [
+    {
+      "ticker": "AVGO",
+      "failed_gate": "rvol20",
+      "stock_specific_failed_gates": [
+        "rvol20"
+      ],
+      "market_regime_allows_new_entries": true,
+      "values": {
+        "price": 427.76,
+        "price_tv": 427.76,
+        "price_finviz": 427.76,
+        "sma50": 395.04040000000003,
+        "sma150": 369.55176666666665,
+        "sma200": 367.589375,
+        "ema21": 396.95500326414543,
+        "ema50": 393.13967992734314,
+        "rsi14": 64.82270395198432,
+        "atr14": 16.600276893026823,
+        "atr_pct": 3.8807454864940207,
+        "rvol20": 0.7603928677677844,
+        "performance_21d_pct": 6.644062725935518,
+        "distance_52w_high_pct": 13.583838383838387,
+        "distance_resistance_pct": 15.71909481952497,
+        "move_10d_pct": 12.002513615416843,
+        "structural_trend_pass": true
+      },
+      "exclusion_stage": "tradingview_gates",
+      "technical_gates_evaluated": true,
+      "structural_trend_pass": true,
+      "earnings_state": "NORMAL",
+      "note": "NON E' UN SETUP VALIDO"
+    },
+    {
+      "ticker": "INCY",
+      "failed_gate": "rvol20",
+      "stock_specific_failed_gates": [
+        "rvol20"
+      ],
+      "market_regime_allows_new_entries": true,
+      "values": {
+        "price": 120.56,
+        "price_tv": 120.56,
+        "price_finviz": 120.56,
+        "sma50": 111.367,
+        "sma150": 102.86593333333333,
+        "sma200": 102.07095,
+        "ema21": 118.4487634695117,
+        "ema50": 112.97652254136538,
+        "rsi14": 55.82539740084297,
+        "atr14": 4.228266563533506,
+        "atr_pct": 3.507188589526796,
+        "rvol20": 0.7774942089926202,
+        "performance_21d_pct": 1.7212284846439552,
+        "distance_52w_high_pct": 9.079939668174957,
+        "distance_resistance_pct": 9.98672859986728,
+        "move_10d_pct": 2.4560210758902024,
+        "structural_trend_pass": true
+      },
+      "exclusion_stage": "tradingview_gates",
+      "technical_gates_evaluated": true,
+      "structural_trend_pass": true,
+      "earnings_state": "PEAD_WINDOW",
+      "note": "NON E' UN SETUP VALIDO"
+    },
+    {
+      "ticker": "KNSA",
+      "failed_gate": "rvol20",
+      "stock_specific_failed_gates": [
+        "rvol20"
+      ],
+      "market_regime_allows_new_entries": true,
+      "values": {
+        "price": 76.06,
+        "price_tv": 76.06,
+        "price_finviz": 76.06,
+        "sma50": 61.0876,
+        "sma150": 51.667633333333335,
+        "sma200": 48.908975,
+        "ema21": 70.39976605055564,
+        "ema50": 63.878544703815514,
+        "rsi14": 63.278536292105514,
+        "atr14": 3.4920697415376103,
+        "atr_pct": 4.591203972571142,
+        "rvol20": 0.2964326850300044,
+        "performance_21d_pct": 16.33527072499237,
+        "distance_52w_high_pct": 8.295153122739324,
+        "distance_resistance_pct": 9.045490402313956,
+        "move_10d_pct": 21.03755569700827,
+        "structural_trend_pass": true
+      },
+      "exclusion_stage": "tradingview_gates",
+      "technical_gates_evaluated": true,
+      "structural_trend_pass": true,
+      "earnings_state": "PEAD_WINDOW",
+      "note": "NON E' UN SETUP VALIDO"
+    },
+    {
+      "ticker": "STLD",
+      "failed_gate": "rvol20",
+      "stock_specific_failed_gates": [
+        "rvol20"
+      ],
+      "market_regime_allows_new_entries": true,
+      "values": {
+        "price": 262.45,
+        "price_tv": 262.45,
+        "price_finviz": 262.45,
+        "sma50": 250.525,
+        "sma150": 214.3252,
+        "sma200": 201.46302500000002,
+        "ema21": 250.91085054472347,
+        "ema50": 244.29438313179685,
+        "rsi14": 62.371337264131,
+        "atr14": 8.735993233087587,
+        "atr_pct": 3.32863144716616,
+        "rvol20": 0.8232915907487689,
+        "performance_21d_pct": 18.18877780779968,
+        "distance_52w_high_pct": 9.105077232111942,
+        "distance_resistance_pct": 10.017146123071068,
+        "move_10d_pct": 6.207761725547312,
+        "structural_trend_pass": true
+      },
+      "exclusion_stage": "tradingview_gates",
+      "technical_gates_evaluated": true,
+      "structural_trend_pass": true,
+      "earnings_state": "NORMAL",
+      "note": "NON E' UN SETUP VALIDO"
+    }
+  ],
+  "prefilter_watch": [
+    {
+      "ticker": "NXPI",
+      "failed_gate": "revenue_growth",
+      "actual_value": 19.48,
+      "applicable_threshold": 20.0,
+      "distance_to_threshold": 0.5199999999999996,
+      "distance_to_threshold_pct": 2.599999999999998,
+      "days_to_exit_blackout": null,
+      "distance_formula": "minimo: distance = threshold - actual; pct = distance / abs(threshold) * 100",
+      "fundamental_values": {
+        "revenue_growth_yoy": 19.48,
+        "eps_growth_yoy": 72.23,
+        "eps_next_year": 20.53,
+        "operating_margin": 28.7
+      },
+      "technical_gates_evaluated": false,
+      "earnings_state": "PEAD_WINDOW",
+      "note": "GATE TECNICI NON VALUTATI - NON E' UN CANDIDATO"
+    },
+    {
+      "ticker": "KLIC",
+      "failed_gate": "eps_growth",
+      "actual_value": 18.2212,
+      "applicable_threshold": 20.0,
+      "distance_to_threshold": 1.7788000000000004,
+      "distance_to_threshold_pct": 8.894000000000002,
+      "days_to_exit_blackout": null,
+      "distance_formula": "minimo: distance = threshold - actual; pct = distance / abs(threshold) * 100",
+      "fundamental_values": {
+        "revenue_growth_yoy": 122.63,
+        "eps_growth_yoy": 18.2212,
+        "eps_next_year": 49.87,
+        "operating_margin": 13.059999999999999
+      },
+      "technical_gates_evaluated": false,
+      "earnings_state": "PEAD_WINDOW",
+      "note": "GATE TECNICI NON VALUTATI - NON E' UN CANDIDATO"
+    },
+    {
+      "ticker": "WWD",
+      "failed_gate": "eps_next_year",
+      "actual_value": 13.27,
+      "applicable_threshold": 15.0,
+      "distance_to_threshold": 1.7300000000000004,
+      "distance_to_threshold_pct": 11.533333333333335,
+      "days_to_exit_blackout": null,
+      "distance_formula": "minimo: distance = threshold - actual; pct = distance / abs(threshold) * 100",
+      "fundamental_values": {
+        "revenue_growth_yoy": 21.22,
+        "eps_growth_yoy": 36.29,
+        "eps_next_year": 13.27,
+        "operating_margin": 15.840000000000002
+      },
+      "technical_gates_evaluated": false,
+      "earnings_state": "PEAD_WINDOW",
+      "note": "GATE TECNICI NON VALUTATI - NON E' UN CANDIDATO"
+    },
+    {
+      "ticker": "FLYW",
+      "failed_gate": "operating_margin",
+      "actual_value": 5.94,
+      "applicable_threshold": 8.0,
+      "distance_to_threshold": 2.0599999999999996,
+      "distance_to_threshold_pct": 25.749999999999996,
+      "days_to_exit_blackout": null,
+      "distance_formula": "minimo: distance = threshold - actual; pct = distance / abs(threshold) * 100",
+      "fundamental_values": {
+        "revenue_growth_yoy": 27.18,
+        "eps_growth_yoy": 32.39,
+        "eps_next_year": 59.97,
+        "operating_margin": 5.94
+      },
+      "technical_gates_evaluated": false,
+      "earnings_state": "PEAD_WINDOW",
+      "note": "GATE TECNICI NON VALUTATI - NON E' UN CANDIDATO"
+    },
+    {
+      "ticker": "ROAD",
+      "failed_gate": "earnings_window",
+      "actual_value": 0,
+      "applicable_threshold": 7,
+      "distance_to_threshold": 1,
+      "distance_to_threshold_pct": null,
+      "days_to_exit_blackout": 1,
+      "distance_formula": "days_to_exit_blackout = days_to_earnings + 1 (giorni; nessuna %)",
+      "fundamental_values": {
+        "revenue_growth_yoy": 34.56,
+        "eps_growth_yoy": 115.58999999999999,
+        "eps_next_year": 25.62,
+        "operating_margin": 8.63
+      },
+      "technical_gates_evaluated": false,
+      "earnings_state": "PRE_EARNINGS_BLACKOUT",
+      "note": "GATE TECNICI NON VALUTATI - NON E' UN CANDIDATO"
+    }
+  ],
+  "regime_blocked_candidates": []
+}

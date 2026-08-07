@@ -36,7 +36,12 @@ Ogni file:
 
 - `scanner_v3_*` — titoli che superano tutti i gate quantitativi
 - `excluded_*` — titoli esclusi, con i gate falliti e i valori che li hanno causati
-- `run_metadata_*` — metadati del run: regime di mercato, conteggi, soglie applicate, errori
+- `run_metadata_*` — metadati del run: regime di mercato, conteggi, soglie applicate, errori, `report_status`
+- `daily_report.md` / `daily_report_*` — report giornaliero autoesplicativo in markdown
+- `review_queue_*` — coda di revisione: titoli **vicini** ai filtri ma esclusi.
+  Non è una watchlist e non contiene candidati: `quantitative_near_misses` hanno
+  fallito un gate tecnico, `prefilter_watch` non hanno mai visto i gate tecnici
+  (`technical_gates_evaluated: false`)
 
 ## Date e orari
 
