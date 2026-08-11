@@ -1,0 +1,232 @@
+{
+  "generated_at": "2026-08-11T23:39:18+02:00",
+  "market_session_date": "2026-08-11",
+  "software_version": "3.5.0",
+  "market_regime": "BULL",
+  "market_regime_allows_new_entries": true,
+  "report_status": "QUANTITATIVE_CANDIDATES_PRESENT",
+  "stages": {
+    "universe_initial": 548,
+    "structural_exclusions": 46,
+    "survived_structural": 502,
+    "fundamental_exclusions": 462,
+    "reached_technical_stage": 40,
+    "technical_exclusions": 35,
+    "promoted": 3,
+    "promoted_cap": 3
+  },
+  "categories": {
+    "eligible_total": 5,
+    "shortlist_count": 3,
+    "eligible_not_shortlisted_count": 2,
+    "near_misses_count": 0
+  },
+  "eligible_not_shortlisted": [
+    {
+      "ticker": "INCY",
+      "name": "Incyte Corp",
+      "score": 45.0,
+      "reason_not_shortlisted": "idoneo su tutti i gate, fuori dai primi 3 per score",
+      "all_gates_passed": true,
+      "validation_level": 1,
+      "rvol20": 0.5482813237464774,
+      "rsi14": 56.322417866935304,
+      "performance_21d_pct": 5.987919110566398,
+      "distance_resistance_pct": 9.52341620550095,
+      "structural_trend_pass": true,
+      "score_breakdown": {
+        "rvol20": {
+          "value": 0.5482813237464774,
+          "points": -20.0,
+          "band": "penalita' forte"
+        },
+        "distance_resistance_pct": {
+          "value": 9.52341620550095,
+          "points": 5.0,
+          "band": "spazio adeguato"
+        },
+        "performance_21d_pct": {
+          "value": 5.987919110566398,
+          "points": 10.0,
+          "band": "momentum sano"
+        }
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 37.72,
+        "eps_growth_yoy": 38.019999999999996,
+        "eps_next_year": 106.43,
+        "operating_margin": 31.61,
+        "gross_margin": 91.42,
+        "market_cap": 24540000000.0
+      },
+      "earnings_state": "PEAD_WINDOW",
+      "dilution_check": {
+        "status": "NOT_VERIFIABLE",
+        "shares_change_6m_pct": null,
+        "reason": "variazione azioni a 6 mesi non disponibile: FinViz espone solo valori puntuali (Outstanding/Float) e lo storico proprietario e' in accumulo dal 2026-08-11. Nessuna fonte esterna collegata.",
+        "sources_checked": [
+          "FinViz screener (Outstanding, Float: valori puntuali)",
+          "storico proprietario shares_outstanding.jsonl (richiede 180 giorni)"
+        ],
+        "blocks_quantitative_shortlist": false,
+        "blocks_final_setup": true,
+        "requires_external_check": true,
+        "external_sources_required": [
+          "SEC EDGAR",
+          "Investor Relations"
+        ]
+      },
+      "requires_external_dilution_check": true,
+      "data_retrieved_at": "2026-08-11T23:34:34+02:00",
+      "note": "IDONEO MA FUORI DALLA SHORTLIST PER IL CAP — non e' un near miss"
+    },
+    {
+      "ticker": "KNSA",
+      "name": "Kiniksa Pharmaceuticals International Plc",
+      "score": 21.0,
+      "reason_not_shortlisted": "idoneo su tutti i gate, fuori dai primi 3 per score",
+      "all_gates_passed": true,
+      "validation_level": 1,
+      "rvol20": 0.49085494735718965,
+      "rsi14": 65.5561524857701,
+      "performance_21d_pct": 27.666557269445356,
+      "distance_resistance_pct": 6.6066838046272505,
+      "structural_trend_pass": true,
+      "score_breakdown": {
+        "rvol20": {
+          "value": 0.49085494735718965,
+          "points": -20.0,
+          "band": "penalita' forte"
+        },
+        "distance_resistance_pct": {
+          "value": 6.6066838046272505,
+          "points": -3.0,
+          "band": "spazio ridotto"
+        },
+        "performance_21d_pct": {
+          "value": 27.666557269445356,
+          "points": -6.0,
+          "band": "gia' esteso"
+        }
+      },
+      "fundamentals": {
+        "revenue_growth_yoy": 55.36,
+        "eps_growth_yoy": 33.300000000000004,
+        "eps_next_year": 47.3,
+        "operating_margin": 11.92,
+        "gross_margin": 54.449999999999996,
+        "market_cap": 6070000000.0
+      },
+      "earnings_state": "PEAD_WINDOW",
+      "dilution_check": {
+        "status": "NOT_VERIFIABLE",
+        "shares_change_6m_pct": null,
+        "reason": "variazione azioni a 6 mesi non disponibile: FinViz espone solo valori puntuali (Outstanding/Float) e lo storico proprietario e' in accumulo dal 2026-08-11. Nessuna fonte esterna collegata.",
+        "sources_checked": [
+          "FinViz screener (Outstanding, Float: valori puntuali)",
+          "storico proprietario shares_outstanding.jsonl (richiede 180 giorni)"
+        ],
+        "blocks_quantitative_shortlist": false,
+        "blocks_final_setup": true,
+        "requires_external_check": true,
+        "external_sources_required": [
+          "SEC EDGAR",
+          "Investor Relations"
+        ]
+      },
+      "requires_external_dilution_check": true,
+      "data_retrieved_at": "2026-08-11T23:35:21+02:00",
+      "note": "IDONEO MA FUORI DALLA SHORTLIST PER IL CAP — non e' un near miss"
+    }
+  ],
+  "exclusions_by_first_failed_gate": {
+    "revenue_growth": 304,
+    "eps_growth": 106,
+    "operating_margin": 29,
+    "adr": 24,
+    "biotech_pre_revenue": 22,
+    "eps_next_year": 19,
+    "price_above_sma50": 14,
+    "sma50_above_sma150": 8,
+    "earnings_window": 4,
+    "ema21_above_ema50": 2,
+    "sma150_above_sma200": 1,
+    "rsi14": 1
+  },
+  "total_failures_by_gate": {
+    "eps_growth": 343,
+    "revenue_growth": 304,
+    "eps_next_year": 220,
+    "operating_margin": 170,
+    "earnings_window": 33,
+    "adr": 24,
+    "biotech_pre_revenue": 22,
+    "rsi14": 21,
+    "performance_21d": 19,
+    "ema21_above_ema50": 15,
+    "price_above_sma50": 14,
+    "within_25pct_52w_high": 12,
+    "sma50_above_sma150": 9,
+    "sma150_above_sma200": 8,
+    "distance_resistance_hard": 4,
+    "no_extended_move_10d": 3,
+    "atr_pct": 2
+  },
+  "unverifiable_by_gate": {
+    "eps_growth": 23,
+    "revenue_growth": 22,
+    "operating_margin": 20,
+    "price_above_sma50": 9,
+    "sma50_above_sma150": 9,
+    "sma150_above_sma200": 9,
+    "ema21_above_ema50": 9,
+    "within_25pct_52w_high": 9,
+    "rsi14": 9,
+    "atr_pct": 9,
+    "rvol20_data_available": 9,
+    "performance_21d": 9,
+    "distance_resistance_hard": 9,
+    "no_extended_move_10d": 9,
+    "earnings_window": 1
+  },
+  "shortlist_tickers": [
+    "AVGO",
+    "STLD",
+    "ASML"
+  ],
+  "promoted_tickers": [
+    "AVGO",
+    "STLD",
+    "ASML"
+  ],
+  "near_misses": [],
+  "dilution_check": {
+    "status": "NOT_VERIFIABLE",
+    "shares_change_6m_pct": null,
+    "reason": "variazione azioni a 6 mesi non disponibile: FinViz espone solo valori puntuali (Outstanding/Float) e lo storico proprietario e' in accumulo dal 2026-08-11. Nessuna fonte esterna collegata.",
+    "sources_checked": [
+      "FinViz screener (Outstanding, Float: valori puntuali)",
+      "storico proprietario shares_outstanding.jsonl (richiede 180 giorni)"
+    ],
+    "blocks_quantitative_shortlist": false,
+    "blocks_final_setup": true,
+    "requires_external_check": true,
+    "external_sources_required": [
+      "SEC EDGAR",
+      "Investor Relations"
+    ]
+  },
+  "shares_outstanding_history": {
+    "written": 547,
+    "skipped_reason": null,
+    "file": "C:\\Users\\fabio\\Downloads\\claud\\strategia-trading\\data\\shares_outstanding.jsonl",
+    "used_as_gate": false,
+    "min_history_days_required": 180
+  },
+  "validation_levels": {
+    "1_quantitative_shortlist": "questo motore: tutti i gate locali superati",
+    "2_externally_verified": "dopo SEC EDGAR + Investor Relations (fuori portata)",
+    "3_final_setup": "solo dopo il livello 2; final_setup_ready mai true qui"
+  },
+  "scoring_note": "Lo score tecnico ordina la shortlist e misura i near miss; NON promuove e NON esclude. L'idoneita' resta decisa dai soli gate, fail-closed."
+}
