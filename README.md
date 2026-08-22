@@ -1,8 +1,9 @@
 # Screener — output quantitativi Nasdaq Scanner 3.0
 
 Repository degli **output quantitativi** dello Scanner Nasdaq 3.0.
-Contiene esclusivamente dati generati automaticamente: nessun codice, nessuna
-configurazione, nessuna credenziale.
+Contiene i dati generati automaticamente e gli strumenti per verificarli:
+nessun codice del motore di scansione, nessuna configurazione, nessuna
+credenziale.
 
 ## Nessuna raccomandazione finanziaria
 
@@ -26,6 +27,9 @@ acquisizione dei due gruppi di dati.
 ```
 latest/     ultimo run valido
 history/    un cartella per giorno, YYYY-MM-DD
+docs/       schema di strumentazione dei gate, audit dei run, checklist motore
+tools/      validatore degli output e cancello di pubblicazione
+tests/      fixture e test degli strumenti
 ```
 
 `latest/` viene aggiornato **solo** quando un run si conclude completo e supera
@@ -42,6 +46,46 @@ Ogni file:
   Non è una watchlist e non contiene candidati: `quantitative_near_misses` hanno
   fallito un gate tecnico, `prefilter_watch` non hanno mai visto i gate tecnici
   (`technical_gates_evaluated: false`)
+
+## Verifica dei gate
+
+Lo scanner non chiede fiducia: ogni record deve pubblicare i valori numerici che
+determinano ogni gate, per i titoli promossi come per quelli esclusi, cosi' che
+chiunque possa ricalcolarli senza leggere il codice sorgente. Lo schema richiesto
+e' in [`docs/gate_instrumentation.md`](docs/gate_instrumentation.md).
+
+Ogni gate ha quattro stati possibili — `PASS`, `FAIL`, `UNVERIFIED`, `ERROR` — e
+solo `PASS` promuove. Il campo `audit_status` di ogni record ne e' il riassunto,
+con precedenza `ERROR > FAIL > UNVERIFIED > PASS`.
+
+`data_quality_score` misura **copertura e trasparenza, non correttezza**: quanti
+operandi erano disponibili e quanti buchi erano dichiarati. Un run con tutti i
+dati presenti e i gate applicati male vale 98/100 ed e' `RUN INVALID`. Per
+questo il punteggio non autorizza mai da solo la pubblicazione, e il report lo
+espone sempre accanto al verdetto, con i quattro contatori di copertura
+`verified`, `unverified_declared`, `not_exported`, `errors`. L'unita' e' il
+campo atteso per record — campi unici, non occorrenze nei gate — ed e'
+dichiarata nel breakdown insieme al totale atteso.
+
+```
+python3 tools/validate_run.py latest/          # leggibile
+python3 tools/validate_run.py latest/ --json   # per consumo automatico
+python3 tools/publish_guard.py <run_dir>       # `latest/` si aggiorna solo se il run e' valido
+python3 tests/run_tests.py                     # test di validatore e guard
+```
+
+Il validatore ricalcola ogni gate dai valori pubblicati e lo confronta con lo
+stato dichiarato: `RUN VALID` (exit 0), `RUN INVALID` (exit 1, almeno un gate
+diverge), `RUN NON AUDITABILE` (exit 2, valori non esportati). Segnala inoltre
+quali soglie il motore non dichiara, costringendolo a dedurle. L'esito sul run
+2026-08-05 e' in [`docs/audit_2026-08-05.md`](docs/audit_2026-08-05.md): oggi
+**RUN INVALID**, qualita' 39/100.
+
+`publish_guard.py` subordina l'aggiornamento di `latest/` al verdetto: blocca su
+run non valido, run non auditabile, soglie dedotte o titoli promossi con
+`audit_status` diverso da `PASS`, e in quel caso non scrive nulla. Gli
+interventi ancora dovuti al motore, con i rispettivi criteri di accettazione,
+sono in [`docs/engine_checklist_4.0.md`](docs/engine_checklist_4.0.md).
 
 ## Date e orari
 
