@@ -1,7 +1,8 @@
 {
   "generated_at": "2026-09-09T23:47:13+02:00",
-  "market_regime": "BULL",
-  "count": 2,
+  "market_session_date": "2026-09-09",
+  "eligible_total": 2,
+  "reported_cap": 3,
   "titoli": [
     {
       "ticker": "MU",
@@ -584,7 +585,10 @@
         "diagnostic_reasons": [
           "costruito dai dati gia' presenti nel record: nessuna richiesta di rete, nessun documento di prospetto letto"
         ]
-      }
+      },
+      "eligible_rank": 1,
+      "reported_in_shortlist": true,
+      "excluded_from_report_reason": null
     },
     {
       "ticker": "SMTC",
@@ -1194,7 +1198,10 @@
         "diagnostic_reasons": [
           "costruito dai dati gia' presenti nel record: nessuna richiesta di rete, nessun documento di prospetto letto"
         ]
-      }
+      },
+      "eligible_rank": 2,
+      "reported_in_shortlist": true,
+      "excluded_from_report_reason": null
     }
   ]
 }

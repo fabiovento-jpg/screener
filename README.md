@@ -6,10 +6,10 @@ configurazione, nessuna credenziale.
 
 ## Nessuna raccomandazione finanziaria
 
-Questo repository **non contiene raccomandazioni di investimento**. Non ci sono
-buy zone, target, stop, rating o punteggi. I file riportano misurazioni e
-l'esito booleano di filtri quantitativi definiti dall'utente. Ogni decisione
-operativa è successiva ed esterna a questi dati.
+I file contengono misurazioni, gate quantitativi e piani tecnici con ingresso,
+stop e target, quando disponibili. Lo stato del piano e i motivi di blocco
+restano espliciti: un titolo idoneo o fuori cap non e automaticamente operativo.
+La revisione qualitativa resta separata.
 
 ## Fonti
 
@@ -28,13 +28,17 @@ latest/     ultimo run valido
 history/    un cartella per giorno, YYYY-MM-DD
 ```
 
+Replay e verifiche offline restano locali in `reports/` e non vengono pubblicati.
+
 `latest/` viene aggiornato **solo** quando un run si conclude completo e supera
 tutte le validazioni. Se una scansione fallisce, l'ultimo output valido resta
 intatto. In `history/` sono conservati gli ultimi 30 giorni.
 
 Ogni file:
 
-- `scanner_v3_*` — titoli che superano tutti i gate quantitativi
+- `scanner_v3_*` — shortlist editoriale dei titoli idonei
+- `eligible_*` — tutti gli idonei, inclusi quelli fuori cap, con piano completo, stato e motivi di esclusione dall’operativita
+- `funnel_*` — riconciliazione dell’universo, con idonei fuori shortlist separati
 - `excluded_*` — titoli esclusi, con i gate falliti e i valori che li hanno causati
 - `run_metadata_*` — metadati del run: regime di mercato, conteggi, soglie applicate, errori, `report_status`
 - `daily_report.md` / `daily_report_*` — report giornaliero autoesplicativo in markdown
