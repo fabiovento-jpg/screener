@@ -2,11 +2,11 @@
   "schema_version": "PUBLICATION_STATUS_V1",
   "release_version": "4.0.0",
   "last_attempt": {
-    "run_id": "20260917T101722Z",
-    "attempted_at": "2026-09-17T12:17:44+02:00",
+    "run_id": "20260917T101900Z",
+    "attempted_at": "2026-09-17T12:19:17+02:00",
     "market_session_date": "2026-09-16",
     "status": "FAILED",
-    "reason": "git pull --rebase fallito."
+    "reason": "Collisione nello storico non risolta: history/2026-09-16/scanner_v3_2026-09-16.json"
   },
   "last_successful_publication": {
     "run_id": null,
@@ -15,6 +15,12 @@
     "manifest_path": null,
     "note": "pubblicazione precedente alla release 4.0.0"
   },
-  "previous_status": null,
+  "previous_status": {
+    "run_id": "20260917T101722Z",
+    "attempted_at": "2026-09-17T12:17:44+02:00",
+    "market_session_date": "2026-09-16",
+    "status": "FAILED",
+    "reason": "git pull --rebase fallito."
+  },
   "semantics": "Tentativo fallito: i file latest/ appartengono a last_successful_publication."
 }
