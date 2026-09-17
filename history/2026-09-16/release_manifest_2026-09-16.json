@@ -1,0 +1,196 @@
+{
+  "schema_version": "RELEASE_MANIFEST_V1",
+  "release_version": "4.0.0",
+  "run_id": "20260917T102019Z",
+  "market_session_date": "2026-09-16",
+  "generated_at": "2026-09-17T12:20:27+02:00",
+  "engine_git_sha": "d8293763840e50b082fbb16cb87738cba2b4c5c8",
+  "engine_worktree_dirty": false,
+  "run_status": "COMPLETE",
+  "classic_run_status": "OK_REPUBLISHED_PREVIOUS_RUN",
+  "classic_run_status_reason": "Classic 3.9.0 run del 2026-09-16 (completato 23:45:23 Europe/Rome), file invariati: nessun nuovo run Classic prima della chiusura del 17/09",
+  "profiles": {
+    "CLASSIC": {
+      "version": "3.9.0",
+      "mode": "PRODUCTION_REFERENCE",
+      "activation": "ACTIVE",
+      "cohort_id": "CLASSIC_3.9.0",
+      "protocol_hash": null,
+      "protocol_hash_note": "Classic non ha un sigillo SHA-256 di protocollo; il freeze e' descritto in run_metadata.freeze",
+      "adapter_hash": null,
+      "data_sources": {
+        "technical": "TradingView MCP (CDP locale)",
+        "fundamental": "finvizfinance"
+      },
+      "run_completed_at": "2026-09-16T23:45:23+02:00",
+      "status": "OK_REPUBLISHED_PREVIOUS_RUN"
+    },
+    "EXPANSION_SHADOW_V1": {
+      "version": "0.1.0",
+      "mode": "SHADOW_DAILY_OHLC",
+      "ledger_mode": "PROSPECTIVE",
+      "activation": "ACTIVE",
+      "cohort_id": "EXPANSION_SHADOW_V1-PROSPECTIVE-2026-09-17-e543ab86-ea1129c5",
+      "protocol_hash": "e543ab86a5950bc2c4f55bf11f4790e24c190d5e46504cbdc87ea2958794edff",
+      "adapter_hash": "ea1129c5d705604a0fe4d696b900ed0b77bdc5e06bebdf490ba44834c4da332b",
+      "status": "WAITING_FIRST_PROSPECTIVE_SESSION",
+      "status_reason": "T0 2026-09-16 chiusa prima dell'attivazione 2026-09-17T10:15:23.068076+00:00: nessun backfill; prima T0 ammessa 2026-09-17",
+      "execution_verified": false,
+      "runner_run_id": "20260917T101642Z"
+    },
+    "VIDEO_V2_SWING": {
+      "version": null,
+      "mode": "NOT_IN_DAILY_RELEASE",
+      "activation": "NOT_ACTIVATED",
+      "cohort_id": null,
+      "protocol_hash": null,
+      "adapter_hash": null,
+      "status": "SPECIFICATION_INCOMPLETE",
+      "status_reason": "famiglia distinta; componenti riusati solo nel progetto intraday"
+    }
+  },
+  "intraday": {
+    "status": "NOT_EXPORTED",
+    "affects_daily_cohorts": false
+  },
+  "artifacts": [
+    {
+      "path": "latest/review_queue_latest.json",
+      "sha256": "4a3cff03845b9f0f99a09b5a775f16ec7cd68e6db9a8b15ae04510fea2f08879",
+      "bytes": 7185,
+      "source": "output/review_queue_latest.json"
+    },
+    {
+      "path": "latest/funnel_latest.json",
+      "sha256": "21afac1428882e7be15683cef742fddeaf368ba146f5de7ec7479c92756679b7",
+      "bytes": 170342,
+      "source": "output/funnel_latest.json"
+    },
+    {
+      "path": "latest/scanner_v3_latest.json",
+      "sha256": "6b88d6b96f20aa3de3c9cd903a94c934ddfc03713d851efff9a90604bd773b02",
+      "bytes": 106,
+      "source": "output/scanner_v3_latest.json"
+    },
+    {
+      "path": "latest/eligible_latest.json",
+      "sha256": "96edc73a714e43394d21bddd244afbd74f5ffdc0e8488dfbb093327df2955e2f",
+      "bytes": 148,
+      "source": "output/eligible_latest.json"
+    },
+    {
+      "path": "latest/excluded_latest.json",
+      "sha256": "8cdc397d95928a918694472d0bba8c45fd1967b4b610791352f60052ee6fb4ed",
+      "bytes": 592911,
+      "source": "output/excluded_latest.json"
+    },
+    {
+      "path": "latest/run_metadata_latest.json",
+      "sha256": "2afd523632892ade63066b3539ae9c682ef31d2959f84925404ba9b536a5cfb0",
+      "bytes": 37291,
+      "source": "output/run_metadata_latest.json"
+    },
+    {
+      "path": "latest/daily_report.md",
+      "sha256": "638563886f68aa99d1c9ef1cb93c124b5a7e55f26d481ace014bf2c21e8195de",
+      "bytes": 11177,
+      "source": "composto"
+    },
+    {
+      "path": "latest/expansion_latest.json",
+      "sha256": "aef0f43282377a349ad6d050bd1f86a925ce9b134fc88392a3b92d9712e8f31e",
+      "bytes": 1712,
+      "source": "expansion expansion"
+    },
+    {
+      "path": "latest/expansion_funnel_latest.json",
+      "sha256": "5a87a145a9e808f44e83c576c4c3693db43a64c2d0760e3ea932afd068839e6f",
+      "bytes": 2186,
+      "source": "expansion expansion_funnel"
+    },
+    {
+      "path": "latest/expansion_shadow_latest.json",
+      "sha256": "f7749dfc2893d7be0d9c457c0abd76319db317f238ed6ebbeced6d146f849b72",
+      "bytes": 3721,
+      "source": "expansion expansion_shadow"
+    },
+    {
+      "path": "history/2026-09-16/scanner_v3_2026-09-16.json",
+      "sha256": "6b88d6b96f20aa3de3c9cd903a94c934ddfc03713d851efff9a90604bd773b02",
+      "bytes": 106,
+      "source": "output/scanner_v3_2026-09-16.json"
+    },
+    {
+      "path": "history/2026-09-16/scanner_v3_2026-09-16.csv",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "source": "output/scanner_v3_2026-09-16.csv"
+    },
+    {
+      "path": "history/2026-09-16/eligible_2026-09-16.json",
+      "sha256": "96edc73a714e43394d21bddd244afbd74f5ffdc0e8488dfbb093327df2955e2f",
+      "bytes": 148,
+      "source": "output/eligible_2026-09-16.json"
+    },
+    {
+      "path": "history/2026-09-16/excluded_2026-09-16.json",
+      "sha256": "8cdc397d95928a918694472d0bba8c45fd1967b4b610791352f60052ee6fb4ed",
+      "bytes": 592911,
+      "source": "output/excluded_2026-09-16.json"
+    },
+    {
+      "path": "history/2026-09-16/excluded_2026-09-16.csv",
+      "sha256": "cbbca5fc3a9f6f6e0ce94c819d6f9a6c69698aca5c9be5436e4499900a830a51",
+      "bytes": 278967,
+      "source": "output/excluded_2026-09-16.csv"
+    },
+    {
+      "path": "history/2026-09-16/run_metadata_2026-09-16.json",
+      "sha256": "2afd523632892ade63066b3539ae9c682ef31d2959f84925404ba9b536a5cfb0",
+      "bytes": 37291,
+      "source": "output/run_metadata_2026-09-16.json"
+    },
+    {
+      "path": "history/2026-09-16/review_queue_2026-09-16.json",
+      "sha256": "4a3cff03845b9f0f99a09b5a775f16ec7cd68e6db9a8b15ae04510fea2f08879",
+      "bytes": 7185,
+      "source": "output/review_queue_2026-09-16.json"
+    },
+    {
+      "path": "history/2026-09-16/funnel_2026-09-16.json",
+      "sha256": "21afac1428882e7be15683cef742fddeaf368ba146f5de7ec7479c92756679b7",
+      "bytes": 170342,
+      "source": "output/funnel_2026-09-16.json"
+    },
+    {
+      "path": "history/2026-09-16/daily_report_2026-09-16__20260917T102019Z.md",
+      "sha256": "638563886f68aa99d1c9ef1cb93c124b5a7e55f26d481ace014bf2c21e8195de",
+      "bytes": 11177,
+      "source": "composto"
+    },
+    {
+      "path": "history/2026-09-16/expansion_2026-09-16.json",
+      "sha256": "aef0f43282377a349ad6d050bd1f86a925ce9b134fc88392a3b92d9712e8f31e",
+      "bytes": 1712,
+      "source": "expansion expansion"
+    },
+    {
+      "path": "history/2026-09-16/expansion_funnel_2026-09-16.json",
+      "sha256": "5a87a145a9e808f44e83c576c4c3693db43a64c2d0760e3ea932afd068839e6f",
+      "bytes": 2186,
+      "source": "expansion expansion_funnel"
+    },
+    {
+      "path": "history/2026-09-16/expansion_shadow_2026-09-16.json",
+      "sha256": "f7749dfc2893d7be0d9c457c0abd76319db317f238ed6ebbeced6d146f849b72",
+      "bytes": 3721,
+      "source": "expansion expansion_shadow"
+    }
+  ],
+  "artifacts_excluded": {
+    "latest/release_manifest_latest.json": "il manifest non contiene il proprio hash",
+    "history/2026-09-16/release_manifest_2026-09-16.json": "copia del manifest",
+    "latest/publication_status_latest.json": "stato del tentativo di pubblicazione, non del run"
+  },
+  "publisher_commit_note": "Il commit del publisher si determina da GitHub (main); non e' engine_git_sha."
+}

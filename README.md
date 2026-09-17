@@ -1,4 +1,4 @@
-# Screener — output quantitativi Nasdaq Scanner 3.0
+# Screener — output quantitativi Nasdaq Scanner (release 4.0.0)
 
 Repository degli **output quantitativi** dello Scanner Nasdaq 3.0.
 Contiene esclusivamente dati generati automaticamente: nessun codice, nessuna
@@ -15,7 +15,9 @@ La revisione qualitativa resta separata.
 
 | Dominio | Fonte |
 |---|---|
-| Tecnica (OHLCV, medie, RSI, ATR, volumi) | TradingView, via il server MCP `tradingview` sul CDP locale |
+| Tecnica Classic (OHLCV, medie, RSI, ATR, volumi) | TradingView, via il server MCP `tradingview` sul CDP locale |
+| Expansion: OHLCV daily, calendario, corporate actions | Alpaca Market Data (SIP, `adjustment=raw`) |
+| Expansion: membership e capitalizzazione osservate dopo la chiusura | Finviz (query dedicata, senza filtri prezzo/volume) |
 | Screening universo e fondamentali | Finviz, tramite il pacchetto Python `finvizfinance` |
 
 Il campo `sources` di ogni record dichiara il provider e l'orario di
@@ -46,6 +48,41 @@ Ogni file:
   Non è una watchlist e non contiene candidati: `quantitative_near_misses` hanno
   fallito un gate tecnico, `prefilter_watch` non hanno mai visto i gate tecnici
   (`technical_gates_evaluated: false`)
+
+## Release 4.0.0: profili separati
+
+Dalla release 4.0.0 ogni run pubblica due profili con contabilità distinta:
+
+- **Classic** (versione 3.9.0, invariata): i file `scanner_v3_*`, `eligible_*`,
+  `funnel_*`, `excluded_*`, `review_queue_*`, `run_metadata_*` mantengono
+  schema e semantica precedenti.
+- **EXPANSION_SHADOW_V1** (versione 0.1.0): profilo daily long in *shadow*,
+  selezione autonoma sull'universo Nasdaq **prima** dei gate Classic.
+  Livelli etichettati `SHADOW_DAILY_OHLC` con `execution_verified=false`:
+  sono piani condizionali modellati su barre giornaliere, non ingressi
+  verificati, non istruzioni d'ordine e non modificano i totali Classic.
+
+File aggiuntivi in `latest/` (e copie datate in `history/<seduta>/`):
+
+| file | contenuto |
+|---|---|
+| `release_manifest_latest.json` | `release_version`, `run_id`, `market_session_date`, `engine_git_sha` (commit del motore, **non** del publisher), stato del run, profili (versione, mode, attivazione, `cohort_id`, `protocol_hash`, `adapter_hash`) e `artifacts` con percorso e SHA-256 di ogni file del run; non contiene il proprio hash |
+| `expansion_latest.json` | segnali Expansion con valori dei gate, riferimenti alle barre, trigger, stop, tetto dell'open T+1, quantità virtuale, motivo di ammissione/non ammissione; `plans_for_next_session`; `evaluations` (un record per membro) |
+| `expansion_funnel_latest.json` | riconciliazione dell'universo: `terminal_outcomes` (un esito per membro, somma = `members_unique`), non valutabili, `gate_failures_non_exclusive` (non sommabili) |
+| `expansion_shadow_latest.json` | conto virtuale 10.000 USD: piani pending, posizioni aperte, trade chiusi con R netto/costi/ambiguità, equity, curva R, contatore dei 30 trade, checkpoint e kill |
+| `publication_status_latest.json` | ultimo tentativo di pubblicazione (`last_attempt.status` = `PUBLISHED_IN_THIS_COMMIT` o `FAILED`) e ultima pubblicazione riuscita |
+
+Stati Expansion (`status`): `SIGNALS`, `NO_SIGNALS`, `NOT_ACTIVATED`,
+`WAITING_FIRST_PROSPECTIVE_SESSION`, `DATA_UNAVAILABLE`, `INGEST_REJECTED`,
+`ADAPTER_MISMATCH`, `EXPANSION_OUTPUT_UNAVAILABLE`, `PAUSED_*`, `KILLED_*`,
+`SETTLING_*`, `INCONCLUSIVE_*`, `PILOT_PASSED_NO_LIVE_AUTHORIZATION`.
+Uno stato bloccato non equivale a zero segnali. Una posizione aperta, un
+segnale scaduto o un dato mancante non sono trade a 0R.
+
+Se `publication_status_latest.json` riporta `FAILED`, i file `latest/`
+appartengono a `last_successful_publication`, non al tentativo fallito.
+Lo storico non viene riscritto: un secondo run della stessa seduta pubblica
+copie con suffisso `__<run_id>`.
 
 ## Date e orari
 

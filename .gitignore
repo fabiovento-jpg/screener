@@ -54,6 +54,12 @@ desktop.ini
 !latest/scanner_v3_latest.json
 !latest/excluded_latest.json
 !latest/run_metadata_latest.json
+!latest/eligible_latest.json
+!latest/release_manifest_latest.json
+!latest/expansion_latest.json
+!latest/expansion_funnel_latest.json
+!latest/expansion_shadow_latest.json
+!latest/publication_status_latest.json
 !history/**/scanner_v3_*.json
 !history/**/scanner_v3_*.csv
 !history/**/excluded_*.json
@@ -62,5 +68,8 @@ desktop.ini
 !history/**/review_queue_*.json
 !history/**/funnel_*.json
 !history/**/daily_report_*.md
+!history/**/eligible_*.json
+!history/**/expansion_*.json
+!history/**/release_manifest_*.json
 !README.md
 !.gitignore
