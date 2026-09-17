@@ -1,0 +1,48 @@
+{
+  "schema": "EXPANSION_SIGNALS_V1",
+  "schema_version": "1.0",
+  "run_id": "20260917T111925Z",
+  "market_session_date": "2026-09-16",
+  "generated_at": "2026-09-17T13:19:26+02:00",
+  "strategy_id": "EXPANSION_SHADOW_V1",
+  "strategy_version": "0.1.0",
+  "technical_version": "0.1.1",
+  "mode": "SHADOW_DAILY_OHLC",
+  "ledger_mode": "PROSPECTIVE",
+  "execution_verified": false,
+  "cohort_id": "EXPANSION_SHADOW_V1-PROSPECTIVE-2026-09-17-802a3409-ea1129c5",
+  "protocol_hash": "802a3409633f2bac82559314fedf8ead775c41178508d6e7bbb207d63571f6c2",
+  "adapter_hash": "ea1129c5d705604a0fe4d696b900ed0b77bdc5e06bebdf490ba44834c4da332b",
+  "status": "WAITING_FIRST_PROSPECTIVE_SESSION",
+  "status_reason": "T0 2026-09-16 chiusa prima dell'attivazione 2026-09-17T10:55:59.605535+00:00: nessun backfill; prima T0 ammessa 2026-09-17",
+  "committed_to_ledger": false,
+  "ledger_ingest": null,
+  "next_session": null,
+  "universe_kind": "NASDAQ_COMMON_PRE_CLASSIC",
+  "thresholds": {
+    "price_min_usd": 15.0,
+    "market_cap_min_usd": 2000000000.0,
+    "avg_volume_20_min": 750000,
+    "return_min_pct": 4.0,
+    "true_range_expansion_min": 1.5,
+    "rvol_20_min": 1.5,
+    "close_location_min": 0.75
+  },
+  "ranking": "rvol20 desc, range_expansion desc, ticker asc",
+  "signals_total": 0,
+  "admitted_total": 0,
+  "plans_for_next_session": [],
+  "signals": [],
+  "evaluations": [],
+  "record_semantics": {
+    "signals": "membri che superano perimetro e 5 gate (inclusi piani rifiutati per stop/size e non ammessi per capacita')",
+    "evaluations": "un record per membro dell'universo del batch",
+    "selection_status": [
+      "ENROLLED_FOR_NEXT_SESSION",
+      "NOT_ENROLLED",
+      "SIGNAL",
+      "REJECTED",
+      "DATA_UNAVAILABLE"
+    ]
+  }
+}
