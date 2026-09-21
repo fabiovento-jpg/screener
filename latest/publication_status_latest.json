@@ -2,25 +2,25 @@
   "schema_version": "PUBLICATION_STATUS_V1",
   "release_version": "4.0.0",
   "last_attempt": {
-    "run_id": "20260918T213001Z",
-    "attempted_at": "2026-09-18T23:47:51+02:00",
-    "market_session_date": "2026-09-18",
+    "run_id": "20260921T213001Z",
+    "attempted_at": "2026-09-21T23:49:07+02:00",
+    "market_session_date": "2026-09-21",
     "status": "PUBLISHED_IN_THIS_COMMIT",
     "reason": null
   },
   "last_successful_publication": {
-    "run_id": "20260918T213001Z",
-    "market_session_date": "2026-09-18",
-    "published_at": "2026-09-18T23:47:51+02:00",
+    "run_id": "20260921T213001Z",
+    "market_session_date": "2026-09-21",
+    "published_at": "2026-09-21T23:49:07+02:00",
     "run_status": "COMPLETE",
-    "classic_market_session_date": "2026-09-18",
+    "classic_market_session_date": "2026-09-21",
     "classic_data_status": "CURRENT",
     "manifest_path": "latest/release_manifest_latest.json"
   },
   "previous_status": {
-    "run_id": "20260917T220619Z",
-    "attempted_at": "2026-09-18T00:08:06+02:00",
-    "market_session_date": "2026-09-17",
+    "run_id": "20260918T213001Z",
+    "attempted_at": "2026-09-18T23:47:51+02:00",
+    "market_session_date": "2026-09-18",
     "status": "PUBLISHED_IN_THIS_COMMIT",
     "reason": null
   },
