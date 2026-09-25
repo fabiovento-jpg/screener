@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-08-05T23:37:56+02:00",
+  "market_regime": "BULL",
+  "count": 1,
+  "titoli": [
+    {
+      "ticker": "BUG",
+      "name": "BUG Test Corp",
+      "audit_status": "PASS",
+      "data_quality_score": 100,
+      "failed_gates": [],
+      "unverified_gates": [],
+      "error_gates": [],
+      "values": {
+        "price": 93.15,
+        "market_cap": 9000000000,
+        "avg_volume_20d": 1800000,
+        "sma50": 106.4,
+        "sma150": 109.8,
+        "sma200": 119.3,
+        "ema21": 95.3,
+        "ema50": 98.7,
+        "trend_structural_pass": true,
+        "rsi14": 61.3,
+        "atr_pct": 4.8,
+        "rvol20": 1.41,
+        "performance_21d_pct": 12.4,
+        "move_10d_pct": 9.1,
+        "distance_52w_high_pct": 6.2,
+        "distance_resistance_pct": 11.7,
+        "revenue_growth_yoy": 54.3,
+        "eps_growth_yoy": 36.2,
+        "eps_next_year": 41.7,
+        "operating_margin": 10.4,
+        "is_adr": false,
+        "industry": "Building Products",
+        "revenue_ttm": 1250000000.0,
+        "days_to_earnings": 34
+      },
+      "missing_fields": [],
+      "missing_details": {},
+      "source": "fixture",
+      "retrieved_at": "2026-08-05T23:30:00+02:00"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "generated_at": "2026-08-05T23:37:56+02:00",
+  "market_regime": "BULL",
+  "count": 1,
+  "titoli": [
+    {
+      "ticker": "GOOD",
+      "name": "GOOD Test Corp",
+      "gates": {
+        "price_min": {
+          "status": "PASS",
+          "operands": {
+            "price": 140.0
+          }
+        },
+        "market_cap_min": {
+          "status": "PASS",
+          "operands": {
+            "market_cap": 9000000000
+          }
+        },
+        "avg_volume_min": {
+          "status": "PASS",
+          "operands": {
+            "avg_volume_20d": 1800000
+          }
+        },
+        "price_above_sma50": {
+          "status": "PASS",
+          "operands": {
+            "price": 140.0,
+            "sma50": 130.0
+          }
+        },
+        "sma50_above_sma150": {
+          "status": "PASS",
+          "operands": {
+            "sma50": 130.0,
+            "sma150": 120.0
+          }
+        },
+        "sma150_above_sma200": {
+          "status": "PASS",
+          "operands": {
+            "sma150": 120.0,
+            "sma200": 110.0
+          }
+        },
+        "ema21_above_ema50": {
+          "status": "PASS",
+          "operands": {
+            "ema21": 138.0,
+            "ema50": 132.0
+          }
+        },
+        "rsi14": {
+          "status": "PASS",
+          "operands": {
+            "rsi14": 61.3
+          }
+        },
+        "atr_pct": {
+          "status": "PASS",
+          "operands": {
+            "atr_pct": 4.8
+          }
+        },
+        "rvol20": {
+          "status": "PASS",
+          "operands": {
+            "rvol20": 1.41
+          }
+        },
+        "performance_21d": {
+          "status": "PASS",
+          "operands": {
+            "performance_21d_pct": 12.4
+          }
+        },
+        "no_extended_move_10d": {
+          "status": "PASS",
+          "operands": {
+            "move_10d_pct": 9.1
+          }
+        },
+        "within_25pct_52w_high": {
+          "status": "PASS",
+          "operands": {
+            "distance_52w_high_pct": 6.2
+          }
+        },
+        "distance_resistance": {
+          "status": "PASS",
+          "operands": {
+            "distance_resistance_pct": 11.7
+          }
+        },
+        "revenue_growth": {
+          "status": "PASS",
+          "operands": {
+            "revenue_growth_yoy": 54.3
+          }
+        },
+        "eps_growth": {
+          "status": "PASS",
+          "operands": {
+            "eps_growth_yoy": 36.2
+          }
+        },
+        "eps_next_year": {
+          "status": "PASS",
+          "operands": {
+            "eps_next_year": 41.7
+          }
+        },
+        "operating_margin": {
+          "status": "PASS",
+          "operands": {
+            "operating_margin": 10.4
+          }
+        },
+        "adr": {
+          "status": "PASS",
+          "operands": {
+            "is_adr": false
+          }
+        },
+        "biotech_pre_revenue": {
+          "status": "PASS",
+          "operands": {
+            "industry": "Building Products",
+            "revenue_ttm": 1250000000.0
+          }
+        },
+        "earnings_window": {
+          "status": "PASS",
+          "operands": {
+            "days_to_earnings": 34
+          }
+        }
+      },
+      "values": {
+        "trend_structural_pass": true
+      },
+      "source": "fixture",
+      "retrieved_at": "2026-08-05T23:30:00+02:00",
+      "audit_status": "PASS",
+      "data_quality_score": 100
+    }
+  ]
+}
