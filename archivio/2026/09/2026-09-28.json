@@ -1,0 +1,242 @@
+{
+ "brief_version": "morning-brief/1.1.0",
+ "calendar_source": "Alpaca",
+ "expansion": {
+  "available": true,
+  "cohort_id": "EXPANSION_DELAYED_SIP_15M_SHADOW_50M-V1.0.0-PROSPECTIVE-pad65637a5398-ebc4418feb77d-a7b182531a6c5",
+  "counters": {
+   "closed": 0,
+   "equity_r": 0.0,
+   "independent_entry_dates": 0,
+   "max_drawdown_r": 0.0,
+   "sessions": 1,
+   "target_independent_entry_dates": 10,
+   "trades": 0
+  },
+  "engine_status": "OBSERVING",
+  "exits_last_session": [],
+  "expected_last_session": "2026-09-25",
+  "fills_last_session": [],
+  "health_check": {
+   "active": [],
+   "at": "2026-09-26T16:54:39.705985+00:00"
+  },
+  "last_session": "2026-09-25",
+  "other_plans": [],
+  "plans": [
+   {
+    "entry_ceiling": 91.701033125,
+    "fineco": {
+     "date": "2026-09-25",
+     "loss_eur": 65.01093942571482,
+     "notional_eur": 949.953601131281,
+     "qty": 12,
+     "rate": 1.1403,
+     "source": "BCE"
+    },
+    "fineco_round_trip_cost": {
+     "eur": 11.426669173249115,
+     "r": 0.1757653292536385
+    },
+    "indicative_entry": 90.26934094749998,
+    "model_qty": 3,
+    "session": "2026-09-28",
+    "signal_session": "2026-09-25",
+    "stop": 84.09167642857143,
+    "stop_distance_pct": 6.8435910288981034,
+    "target_2r_indicative": 102.62466998535709,
+    "ticker": "AAON",
+    "trigger": 90.17916178571429
+   },
+   {
+    "entry_ceiling": 41.932128125,
+    "fineco": {
+     "date": "2026-09-25",
+     "loss_eur": 90.3567121857028,
+     "notional_eur": 971.4920431136541,
+     "qty": 27,
+     "rate": 1.1403,
+     "source": "BCE"
+    },
+    "fineco_round_trip_cost": {
+     "eur": 11.551777346118799,
+     "r": 0.12784636654748316
+    },
+    "indicative_entry": 41.029347287499995,
+    "model_qty": 5,
+    "session": "2026-09-28",
+    "signal_session": "2026-09-25",
+    "stop": 37.213282142857146,
+    "stop_distance_pct": 9.300818552883612,
+    "target_2r_indicative": 48.66147757678569,
+    "ticker": "VIAV",
+    "trigger": 40.98835892857143
+   },
+   {
+    "entry_ceiling": 99.408746875,
+    "fineco": {
+     "date": "2026-09-25",
+     "loss_eur": 91.75989084169572,
+     "notional_eur": 762.6117625295974,
+     "qty": 9,
+     "rate": 1.1403,
+     "source": "BCE"
+    },
+    "fineco_round_trip_cost": {
+     "eur": 10.338475554198801,
+     "r": 0.11266878654024068
+    },
+    "indicative_entry": 96.6229103125,
+    "model_qty": 1,
+    "session": "2026-09-28",
+    "signal_session": "2026-09-25",
+    "stop": 84.99693214285715,
+    "stop_distance_pct": 12.03232042177352,
+    "target_2r_indicative": 119.8748666517857,
+    "ticker": "MXL",
+    "trigger": 96.52638392857143
+   }
+  ],
+  "positions": [],
+  "problems": [],
+  "runner_last": {
+   "at": "2026-09-25T20:33:01.961522+00:00",
+   "run_id": "20260925T201501Z",
+   "session": "2026-09-25",
+   "status": "INGESTED"
+  },
+  "tasks": {
+   "exp_health": {
+    "last_result": 0,
+    "last_run": "2026-09-26 18:54:54+02:00",
+    "missing": false,
+    "name": "Expansion 50M Health",
+    "next_run": "2026-09-28 13:10:10+02:00",
+    "state": "Ready"
+   },
+   "exp_runner": {
+    "last_result": 0,
+    "last_run": "2026-09-25 23:00:00+02:00",
+    "missing": false,
+    "name": "Expansion 50M Delayed SIP Shadow",
+    "next_run": "2026-09-28 13:00:00+02:00",
+    "state": "Ready"
+   }
+  }
+ },
+ "fx": {
+  "date": "2026-09-25",
+  "rate": 1.1403,
+  "source": "BCE"
+ },
+ "generated_at": "2026-09-27T15:50:45+00:00",
+ "generated_rome": "2026-09-27 17:50",
+ "lab_status": {
+  "sections": {
+   "BACKLOG": [
+    "ORB / Stocks in Play (`lab/backlog/ORB.md`): nessun codice, nessuna task",
+    "Candidate V2 di Expansion 50M e Post-Catalyst (`lab/backlog/V2_CANDIDATES.md`, annotate il 2026-09-26): uscita secondaria (rinviata), costi e dimensione reali, tassonomia, universo, replay storico; nessuna attiva"
+   ],
+   "RICERCA ATTIVA": [
+    "POST_CATALYST_CONTINUATION_V1 (dal 2026-09-25; EARNINGS è una sua categoria)"
+   ],
+   "SHADOW ATTIVO": [
+    "EXPANSION_DELAYED_SIP_15M_SHADOW_50M (v1.0.0, SHADOW_OPERATIONAL dal 2026-09-25, freeze operativo)"
+   ]
+  },
+  "title": "LAB STATUS — aggiornato il 2026-09-25 (checkpoint 1 del 2026-09-24 + attivazioni successive)"
+ },
+ "last_closed_session": "2026-09-25",
+ "notes": [],
+ "post_catalyst": {
+  "activated_at": "2026-09-25T14:20:38.406920+00:00",
+  "available": true,
+  "candidates": [
+   {
+    "catalyst_ts": "2026-09-25T20:01:37+00:00",
+    "category": "CLINICAL_RESULT",
+    "headline": "Adicet Bio To Report Clinical Data From Phase 1 Study Evaluating Prulacabtagene Leucel As Potential Treatment For Patients With Systemic…",
+    "ticker": "ACET"
+   },
+   {
+    "catalyst_ts": "2026-09-25T21:02:23+00:00",
+    "category": "M&A",
+    "headline": "Future Money Acquisition Corp. Receives Nasdaq Deficiency Notice Over Delayed July 31, 2026 Quarterly Form 10-Q Filing",
+    "ticker": "FMAC"
+   },
+   {
+    "catalyst_ts": "2026-09-25T22:03:55+00:00",
+    "category": "CLINICAL_RESULT",
+    "headline": "Kodiak Sciences To Host Webcast To Report Phase 3 DAYBREAK Topline Results For Wet AMD Candidates On September 28 At 8:30 AM Eastern Time",
+    "ticker": "KOD"
+   }
+  ],
+  "cohort_id": "POST_CATALYST_CONTINUATION_V1-DELAYED_SIP_15M-V1.0.0-PROSPECTIVE-p38225960637b-c4e161f4cebff",
+  "counters": {
+   "decision_sessions": 0,
+   "events_in_scope": 3,
+   "plan_outcomes": 0,
+   "plans_ok": 0,
+   "realized_r_sum": null
+  },
+  "heartbeats": {
+   "listener": {
+    "at": "2026-09-27 15:50:02.640197+00:00",
+    "error_class": null,
+    "status": "OK"
+   },
+   "watchdog": {
+    "at": "2026-09-27 15:23:01.798014+00:00",
+    "error_class": null,
+    "status": "OK"
+   }
+  },
+  "last_24h": {
+   "listener_fail": 1,
+   "news": 28,
+   "processing_errors": 0,
+   "undelivered_alerts": 0
+  },
+  "last_decision": null,
+  "problems": [],
+  "tasks": {
+   "pc_listener": {
+    "last_result": 0,
+    "last_run": "2026-09-27 17:50:50+02:00",
+    "missing": false,
+    "name": "Post-Catalyst News Listener",
+    "next_run": "2026-09-27 17:52:52+02:00",
+    "state": "Ready"
+   },
+   "pc_watchdog": {
+    "last_result": 0,
+    "last_run": "2026-09-27 17:23:23+02:00",
+    "missing": false,
+    "name": "Post-Catalyst Watchdog",
+    "next_run": "2026-09-27 17:53:53+02:00",
+    "state": "Ready"
+   }
+  }
+ },
+ "reminders": {
+  "commission_max_eur": 19.0,
+  "commission_min_eur": 2.95,
+  "commission_rate_pct": 0.19,
+  "fx_spread": 0.0033,
+  "max_loss_eur": 100,
+  "notional_eur": 1000,
+  "round_trip_eur_on_notional": 11.717368636390272
+ },
+ "target_session": {
+  "close_et": "16:00",
+  "close_rome": "22:00",
+  "date": "2026-09-28",
+  "early_close": false,
+  "exp_plans_after_rome": "22:15",
+  "is_today": false,
+  "open_et": "09:30",
+  "open_rome": "15:30",
+  "pc_cutoff_rome": "15:05",
+  "pc_decision_rome": "15:20"
+ }
+}
