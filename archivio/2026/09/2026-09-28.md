@@ -1,10 +1,10 @@
 # Brief operativo — seduta di lunedì 28/09/2026
 
-Generato domenica 27/09/2026 alle 17:50 (ora di Roma) · morning-brief/1.1.0 · sola lettura, nessun ordine automatico.
+Generato lunedì 28/09/2026 alle 07:30 (ora di Roma) · morning-brief/1.1.0 · sola lettura, nessun ordine automatico.
 
 ## In breve
 
-- **Seduta USA**: lunedì 28/09/2026, 09:30–16:00 ET = **15:30–22:00 ora di Roma** — oggi la borsa USA è chiusa: il brief riguarda la prossima seduta
+- **Seduta USA**: lunedì 28/09/2026, 09:30–16:00 ET = **15:30–22:00 ora di Roma**
 - **Expansion 50M**: 3 piani validi: AAON, VIAV, MXL · posizioni del modello aperte: 0
 - **Post-Catalyst**: 3 candidati finora (ACET, FMAC, KOD) · decisione alle 15:20, nuove notizie ammesse fino alle 15:05
 - **Salute**: Expansion OK · Post-Catalyst OK
@@ -64,9 +64,9 @@ Dall'attivazione (25/09): eventi in perimetro 3 · sedute decise 0 · piani OK 0
 - Controllo di salute esterno: task pronta, ultima esecuzione 26/09 18:54 (esito 0), prossima 28/09 13:10; nessuna condizione attiva (ultimo controllo 26/09 18:54)
 
 **Post-Catalyst V1: OK**
-- Listener: ultimo heartbeat 27/09 17:50 (OK); task pronta, ultima esecuzione 27/09 17:50 (esito 0), prossima 27/09 17:52
-- Watchdog: ultimo heartbeat 27/09 17:23 (OK); task pronta, ultima esecuzione 27/09 17:23 (esito 0), prossima 27/09 17:53
-- Ultime 24 ore: notizie 28 · esecuzioni FAIL 1 · notizie in errore 0 · messaggi L2/HEALTH non consegnati 0
+- Listener: ultimo heartbeat 28/09 07:30 (OK); task pronta, ultima esecuzione 28/09 07:30 (esito 0), prossima 28/09 07:32
+- Watchdog: ultimo heartbeat 28/09 07:23 (OK); task pronta, ultima esecuzione 28/09 07:23 (esito 0), prossima 28/09 07:53
+- Ultime 24 ore: notizie 45 · esecuzioni FAIL 0 · notizie in errore 0 · messaggi L2/HEALTH non consegnati 0
 
 ## Promemoria operativi
 
