@@ -1,0 +1,90 @@
+{
+  "strategy": "MOMENTUM_12_1_LIQUID500_V1",
+  "frozen_at": "2026-10-04",
+  "historical_classification": "FAILED",
+  "historical_classification_note": "secondo il gate congelato originale, invariata",
+  "research_status": "CANDIDATE_SHADOW",
+  "capital_authorization": "NOT_VALIDATED_FOR_CAPITAL",
+  "order_policy": "NO_AUTOMATIC_ORDER",
+  "forward_start_date": "2026-10-05",
+  "forward_sample": "FORWARD_OOS",
+  "first_expected_signal_date": "2026-10-30",
+  "first_expected_entry_date": "2026-11-02",
+  "ledger": "FORWARD_ONLY",
+  "ledger_path": "forward/MOMENTUM_12_1_LIQUID500_V1/ledger_FORWARD_ONLY.csv",
+
+  "parameters": {
+    "universe": "TOP500_ADV20_POINT_IN_TIME",
+    "formation_sessions": 252,
+    "skip_sessions": 21,
+    "selection": "TOP_QUINTILE",
+    "entry": "NEXT_SESSION_OPEN",
+    "holding_sessions": 126,
+    "stop_loss": null,
+    "regime_filter": null,
+    "sma_filter": null
+  },
+
+  "promotion_gate": {
+    "frozen_before_any_forward_result": true,
+    "min_complete_monthly_cohorts": 12,
+    "strongly_preferred_cohorts": 24,
+    "conditions": [
+      "min 12 coorti mensili complete",
+      "avg return forward > 0",
+      "profit factor forward > 1",
+      "excess return forward vs SPY > 0",
+      "excess return forward vs Liquid500 EW > 0",
+      "portfolio return forward > SPY",
+      "nessuna modifica ai parametri durante il periodo",
+      "nessuna esclusione manuale dei trade"
+    ],
+    "thresholds_may_be_changed_based_on_observed_results": false
+  },
+
+  "drawdown_policy": {
+    "spy_minus_10_points_rule": "ABANDONED",
+    "action_during_forward": "MEASURE_ONLY",
+    "measured": [
+      "forward_maxdd_strategy",
+      "spy_maxdd",
+      "liquid500_ew_maxdd",
+      "volatility",
+      "sharpe_descriptive"
+    ],
+    "risk_assessment_timing": "AFTER_CONFIRMED_EDGE"
+  },
+
+  "development_metrics_as_reported": {
+    "verified_in_this_repository": false,
+    "verification_note": "questo repository non contiene il motore di backtest ne' i dati delle coorti; i valori sono registrati come forniti, non ricalcolati",
+    "period": "2023-2025",
+    "positive_years": 3,
+    "avg_trade_pct": 15.19,
+    "profit_factor": 3.09,
+    "excess_vs_spy_pct": 5.44,
+    "excess_vs_liquid500_ew_pct": 7.09,
+    "portfolio_cagr_pct": 25.67,
+    "spy_cagr_pct": 21.26,
+    "maxdd_pct": -29.94,
+    "robust_without_best_2": true,
+    "robust_without_top_1pct": true
+  },
+
+  "reasons_forward_test_required": {
+    "hypothesis_derived_post_hoc_from": "2023-2025",
+    "oos_2022_cohorts": 2,
+    "oos_2026_closed_cohorts": 4,
+    "oos_combined_excess_vs_spy_pct": -0.68
+  },
+
+  "open_item_before_first_signal": {
+    "item": "monthly_ranking_day",
+    "assumed": "LAST_TRADING_SESSION_OF_MONTH",
+    "note": "non era fra i parametri elencati; se il development usava un giorno diverso va corretto prima del 2026-10-30, perche' dopo sarebbe una modifica di parametro durante il forward test"
+  },
+
+  "separate_strategies_untouched": {
+    "HIGH52_GH": "VALIDATED_SHADOW"
+  }
+}
