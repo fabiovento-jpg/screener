@@ -1,0 +1,443 @@
+{
+ "brief_version": "morning-brief/1.1.0",
+ "calendar_source": "Alpaca",
+ "expansion": {
+  "available": true,
+  "cohort_id": "EXPANSION_DELAYED_SIP_15M_SHADOW_50M-V1.0.0-PROSPECTIVE-pad65637a5398-ebc4418feb77d-a7b182531a6c5",
+  "counters": {
+   "closed": 2,
+   "equity_r": 0.5528619602396012,
+   "independent_entry_dates": 2,
+   "max_drawdown_r": 1.2788148195344742,
+   "sessions": 6,
+   "target_independent_entry_dates": 10,
+   "trades": 4
+  },
+  "engine_status": "OBSERVING",
+  "exits_last_session": [
+   {
+    "entry": 41.029347287499995,
+    "entry_session": "2026-09-28",
+    "exit": 47.0529,
+    "exit_reason": "TIME_EXIT",
+    "exit_session": "2026-10-02",
+    "fineco_net_eur": 132.95204053205924,
+    "fineco_net_r": 1.4459926358416058,
+    "fineco_qty": 27,
+    "model_net_r": 1.4736521781853182,
+    "ticker": "VIAV"
+   }
+  ],
+  "expected_last_session": "2026-10-09",
+  "fills_last_session": [
+   "LIND",
+   "AAOI"
+  ],
+  "health_check": {
+   "active": [],
+   "at": "2026-10-05T12:10:03.655473+00:00"
+  },
+  "last_session": "2026-10-02",
+  "other_plans": [
+   {
+    "entry_ceiling": 63.94318875,
+    "fineco": {
+     "date": "2026-10-09",
+     "loss_eur": 90.666199463935,
+     "notional_eur": 948.5645613109048,
+     "qty": 17,
+     "rate": 1.1206,
+     "source": "BCE"
+    },
+    "fineco_round_trip_cost": {
+     "eur": 11.515275212514366,
+     "r": 0.1270073663680464
+    },
+    "indicative_entry": 62.52714396499999,
+    "model_qty": 3,
+    "session": "2026-10-05",
+    "signal_session": "2026-10-02",
+    "stop": 56.55064142857143,
+    "stop_distance_pct": 9.558252876181186,
+    "target_2r_indicative": 74.48014903785712,
+    "ticker": "PENG",
+    "trigger": 62.46467928571428
+   }
+  ],
+  "plans": [],
+  "positions": [
+   {
+    "entry": 34.534499999999994,
+    "entry_session": "2026-10-02",
+    "holding_sessions": 1,
+    "mark": 34.78,
+    "mark_session": "2026-10-02",
+    "model_qty": 6,
+    "open_r": 0.06875520865215588,
+    "stop": 30.963861428571427,
+    "target": 41.67577714285713,
+    "ticker": "LIND",
+    "time_exit_session": "2026-10-08"
+   },
+   {
+    "entry": 110.36025,
+    "entry_session": "2026-10-02",
+    "holding_sessions": 1,
+    "mark": 115.59,
+    "mark_session": "2026-10-02",
+    "model_qty": 1,
+    "open_r": 0.3947754083171443,
+    "stop": 97.11284428571429,
+    "target": 136.8550614285714,
+    "ticker": "AAOI",
+    "time_exit_session": "2026-10-08"
+   }
+  ],
+  "problems": [
+   "runner: task disabilitata",
+   "controllo di salute: task disabilitata",
+   "seduta del 09/10 non ancora nel ledger (ultima acquisita: 02/10)",
+   "piani di una seduta passata ancora in attesa: PENG"
+  ],
+  "runner_last": {
+   "at": "2026-10-02T20:32:18.456244+00:00",
+   "run_id": "20261002T201501Z",
+   "session": "2026-10-02",
+   "status": "INGESTED"
+  },
+  "tasks": {
+   "exp_health": {
+    "last_result": 0,
+    "last_run": "2026-10-05 14:10:10+02:00",
+    "missing": false,
+    "name": "Expansion 50M Health",
+    "next_run": "2026-10-12 13:10:10+02:00",
+    "state": "Disabled"
+   },
+   "exp_runner": {
+    "last_result": 0,
+    "last_run": "2026-10-05 14:00:00+02:00",
+    "missing": false,
+    "name": "Expansion 50M Delayed SIP Shadow",
+    "next_run": "2026-10-12 13:00:00+02:00",
+    "state": "Disabled"
+   }
+  }
+ },
+ "fx": {
+  "date": "2026-10-09",
+  "rate": 1.1206,
+  "source": "BCE"
+ },
+ "generated_at": "2026-10-12T05:30:01+00:00",
+ "generated_rome": "2026-10-12 07:30",
+ "lab_status": {
+  "sections": {
+   "BACKLOG": [
+    "ORB / Stocks in Play (`lab/backlog/ORB.md`): nessun codice, nessuna task",
+    "Candidate V2 di Expansion 50M e Post-Catalyst (`lab/backlog/V2_CANDIDATES.md`, annotate il 2026-09-26): uscita secondaria (rinviata), costi e dimensione reali, tassonomia, universo, replay storico; nessuna attiva"
+   ],
+   "RICERCA ATTIVA": [
+    "POST_CATALYST_CONTINUATION_V1 (dal 2026-09-25; EARNINGS è una sua categoria)"
+   ],
+   "SHADOW ATTIVO": [
+    "EXPANSION_DELAYED_SIP_15M_SHADOW_50M (v1.0.0, SHADOW_OPERATIONAL dal 2026-09-25, freeze operativo)"
+   ]
+  },
+  "title": "LAB STATUS — aggiornato il 2026-09-25 (checkpoint 1 del 2026-09-24 + attivazioni successive)"
+ },
+ "last_closed_session": "2026-10-09",
+ "notes": [],
+ "post_catalyst": {
+  "activated_at": "2026-09-25T14:20:38.406920+00:00",
+  "available": true,
+  "candidates": [
+   {
+    "catalyst_ts": "2026-10-09T20:07:23+00:00",
+    "category": "M&A",
+    "headline": "Fortune Favor Technology Announces $600M SPAC Merger With Quantumsphere Acquisition Corp.",
+    "ticker": "QUMS"
+   }
+  ],
+  "cohort_id": "POST_CATALYST_CONTINUATION_V1-DELAYED_SIP_15M-V1.0.0-PROSPECTIVE-p38225960637b-c4e161f4cebff",
+  "counters": {
+   "decision_sessions": 10,
+   "events_in_scope": 230,
+   "plan_outcomes": 206,
+   "plans_ok": 140,
+   "realized_r_sum": -44.28593832063088
+  },
+  "heartbeats": {
+   "listener": {
+    "at": "2026-10-12 05:30:02.416582+00:00",
+    "error_class": null,
+    "status": "OK"
+   },
+   "watchdog": {
+    "at": "2026-10-12 05:23:00.759982+00:00",
+    "error_class": null,
+    "status": "OK"
+   }
+  },
+  "last_24h": {
+   "listener_fail": 0,
+   "news": 53,
+   "processing_errors": 0,
+   "undelivered_alerts": 48
+  },
+  "last_decision": {
+   "items": [
+    {
+     "max_entry": 12.7334425,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 11.747494285714286,
+     "ticker": "GRRR",
+     "trigger": 12.536252857142857
+    },
+    {
+     "max_entry": 1.8007875000000002,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 1.5523857142857143,
+     "ticker": "HOVR",
+     "trigger": 1.751107142857143
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "HST",
+     "trigger": null
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "KVHI",
+     "trigger": null
+    },
+    {
+     "max_entry": 77.450843125,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 75.89903642857143,
+     "ticker": "MCHP",
+     "trigger": 77.14048178571429
+    },
+    {
+     "max_entry": 0.825290625,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 0.7132392857142857,
+     "ticker": "MIST",
+     "trigger": 0.8028803571428572
+    },
+    {
+     "max_entry": 22.4667175,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 22.216608571428573,
+     "ticker": "MLYS",
+     "trigger": 22.416695714285716
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "NXST",
+     "trigger": null
+    },
+    {
+     "max_entry": 15.847093749999999,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 15.724749999999998,
+     "ticker": "PENN",
+     "trigger": 15.822624999999999
+    },
+    {
+     "max_entry": 32.493551249999996,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 30.371655714285716,
+     "ticker": "PHVS",
+     "trigger": 32.06917214285714
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "SABR",
+     "trigger": null
+    },
+    {
+     "max_entry": 93.801049375,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 92.37022928571427,
+     "ticker": "SBUX",
+     "trigger": 93.51488535714286
+    },
+    {
+     "max_entry": 17.806505625000003,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 17.699707857142858,
+     "ticker": "SHC",
+     "trigger": 17.785146071428574
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "SNEX",
+     "trigger": null
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "SPTX",
+     "trigger": null
+    },
+    {
+     "max_entry": 7.3074375,
+     "outcome": {
+      "exit_reason": "STOP",
+      "plan_status": "FILLED",
+      "realized_r": -1.1112913037974885
+     },
+     "plan_status": "OK",
+     "stop": 6.177214285714286,
+     "ticker": "SVC",
+     "trigger": 7.081392857142857
+    },
+    {
+     "max_entry": 9.008881250000002,
+     "outcome": {
+      "exit_reason": "STOP",
+      "plan_status": "FILLED",
+      "realized_r": -1.1562009304727647
+     },
+     "plan_status": "OK",
+     "stop": 8.804135714285714,
+     "ticker": "XMAX",
+     "trigger": 8.967932142857144
+    }
+   ],
+   "n_candidates": 17,
+   "n_plans": 11,
+   "session": "2026-10-09",
+   "status": "DONE"
+  },
+  "problems": [
+   "messaggi Telegram L2/HEALTH non consegnati: 48"
+  ],
+  "tasks": {
+   "pc_listener": {
+    "last_result": 0,
+    "last_run": "2026-10-12 07:30:30+02:00",
+    "missing": false,
+    "name": "Post-Catalyst News Listener",
+    "next_run": "2026-10-12 07:32:32+02:00",
+    "state": "Ready"
+   },
+   "pc_watchdog": {
+    "last_result": 0,
+    "last_run": "2026-10-12 07:23:23+02:00",
+    "missing": false,
+    "name": "Post-Catalyst Watchdog",
+    "next_run": "2026-10-12 07:53:53+02:00",
+    "state": "Ready"
+   }
+  }
+ },
+ "reminders": {
+  "commission_max_eur": 19.0,
+  "commission_min_eur": 2.95,
+  "commission_rate_pct": 0.19,
+  "fx_spread": 0.0033,
+  "max_loss_eur": 100,
+  "notional_eur": 1000,
+  "round_trip_eur_on_notional": 11.819276813018227
+ },
+ "target_session": {
+  "close_et": "16:00",
+  "close_rome": "22:00",
+  "date": "2026-10-12",
+  "early_close": false,
+  "exp_plans_after_rome": "22:15",
+  "is_today": true,
+  "open_et": "09:30",
+  "open_rome": "15:30",
+  "pc_cutoff_rome": "15:05",
+  "pc_decision_rome": "15:20"
+ }
+}

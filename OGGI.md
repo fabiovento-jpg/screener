@@ -1,12 +1,12 @@
-# Brief operativo — seduta di venerdì 09/10/2026
+# Brief operativo — seduta di lunedì 12/10/2026
 
-Generato venerdì 09/10/2026 alle 07:30 (ora di Roma) · morning-brief/1.1.0 · sola lettura, nessun ordine automatico.
+Generato lunedì 12/10/2026 alle 07:30 (ora di Roma) · morning-brief/1.1.0 · sola lettura, nessun ordine automatico.
 
 ## In breve
 
-- **Seduta USA**: venerdì 09/10/2026, 09:30–16:00 ET = **15:30–22:00 ora di Roma**
+- **Seduta USA**: lunedì 12/10/2026, 09:30–16:00 ET = **15:30–22:00 ora di Roma**
 - **Expansion 50M**: nessun piano · posizioni del modello aperte: 2
-- **Post-Catalyst**: nessun candidato finora · decisione alle 15:20, nuove notizie ammesse fino alle 15:05
+- **Post-Catalyst**: 1 candidati finora (QUMS) · decisione alle 15:20, nuove notizie ammesse fino alle 15:05
 - **Salute**: Expansion ATTENZIONE · Post-Catalyst ATTENZIONE
 - **Telegram attesi**: POST-CATALYST SIGNAL verso le 15:20 (solo con piano OK); dopo le 22:15 EXPANSION INGRESSO MODELLO CONFERMATO (se un piano della seduta è stato riempito) e PIANO PRONTO per la seduta successiva
 
@@ -22,7 +22,7 @@ Piani in attesa per altre sedute: PENG (05/10)
 - **AAOI**: ingresso 02/10 a 110,36 $ · stop 97,11 $ · target 136,86 $ · chiusura del 02/10 115,59 $ (+0,39 R) · seduta 1 di 5 · uscita a tempo alla chiusura del 08/10 se non tocca stop o target
 
 Ingressi del modello nella seduta del 02/10: LIND, AAOI.
-- Uscita **VIAV** (02/10): USCITA A TEMPO · modello +1,47 R · con il tuo money management (27 azioni): +€ 133,19 (+1,45 R), stima
+- Uscita **VIAV** (02/10): USCITA A TEMPO · modello +1,47 R · con il tuo money management (27 azioni): +€ 132,95 (+1,45 R), stima
 
 Coorte: sedute acquisite 6 · trade 4 (chiusi 2) · date d'ingresso indipendenti 2 su 10 (test di accettazione operativa) · R netto del modello +0,55 R · drawdown massimo 1,28 R · stato del motore OBSERVING.
 
@@ -30,52 +30,45 @@ Coorte: sedute acquisite 6 · trade 4 (chiusi 2) · date d'ingresso indipendenti
 
 Decisione premarket alle **15:20** ora di Roma (09:20 ET, dati SIP ritardati 15 minuti); le notizie fino alle 15:05 (09:05 ET) possono aggiungere candidati. Il SIGNAL arriva su Telegram solo se il piano è OK, già con la QUANTITÀ FINECO.
 
-Nessun candidato finora.
+- **QUMS**: M&A · notizia di ven 09/10 22:07 · "Fortune Favor Technology Announces $600M SPAC Merger With Quantumsphere Acquisition Corp."
 
-Ultima decisione: seduta del 08/10 (DONE): candidati 35, piani OK 18.
-- **ANGO**: trigger 14,97 $ · stop 12,58 $ · esito EXPIRED_NO_TRIGGER
-- **APA**: trigger 45,32 $ · stop 44,13 $ · esito non ancora registrato
-- **APLD**: trigger 25,17 $ · stop 23,14 $ · esito EXPIRED_NO_TRIGGER
-- **CGEM**: trigger 15,70 $ · stop 15,31 $ · esito FILLED, STOP -1,14 R
-- **CPRT**: trigger 26,83 $ · stop 26,49 $ · esito FILLED, STOP -1,22 R
-- **DRH**: trigger 12,36 $ · stop 12,32 $ · esito CANCEL_OPEN_ABOVE_CEILING
-- **EDIT**: trigger 2,82 $ · stop 2,70 $ · esito FILLED, STOP -1,12 R
-- **EXTR**: trigger 24,55 $ · stop 22,94 $ · esito non ancora registrato
-- **GERN**: trigger 1,21 $ · stop 1,19 $ · esito FILLED, STOP -1,14 R
-- **GRWG**: trigger 1,56 $ · stop 1,51 $ · esito EXPIRED_NO_TRIGGER
-- **PEP**: trigger 127,34 $ · stop 122,16 $ · esito non ancora registrato
-- **PROF**: trigger 7,42 $ · stop 6,27 $ · esito EXPIRED_NO_TRIGGER
-- **RGP**: trigger 3,31 $ · stop 3,06 $ · esito FILLED, STOP -1,11 R
-- **ROCK**: trigger 38,14 $ · stop 37,86 $ · esito FILLED, STOP -1,36 R
-- **SEDG**: trigger 32,90 $ · stop 31,98 $ · esito EXPIRED_NO_TRIGGER
-- **TLRY**: trigger 3,84 $ · stop 3,60 $ · esito CANCEL_OPEN_BELOW_STOP
-- **VTRS**: trigger 17,77 $ · stop 16,97 $ · esito EXPIRED_NO_TRIGGER
-- **WULF**: trigger 14,47 $ · stop 13,91 $ · esito EXPIRED_NO_TRIGGER
+Ultima decisione: seduta del 09/10 (DONE): candidati 17, piani OK 11.
+- **GRRR**: trigger 12,54 $ · stop 11,75 $ · esito EXPIRED_NO_TRIGGER
+- **HOVR**: trigger 1,75 $ · stop 1,55 $ · esito EXPIRED_NO_TRIGGER
+- **MCHP**: trigger 77,14 $ · stop 75,90 $ · esito EXPIRED_NO_TRIGGER
+- **MIST**: trigger 0,8029 $ · stop 0,7132 $ · esito EXPIRED_NO_TRIGGER
+- **MLYS**: trigger 22,42 $ · stop 22,22 $ · esito CANCEL_OPEN_ABOVE_CEILING
+- **PENN**: trigger 15,82 $ · stop 15,72 $ · esito CANCEL_OPEN_ABOVE_CEILING
+- **PHVS**: trigger 32,07 $ · stop 30,37 $ · esito EXPIRED_NO_TRIGGER
+- **SBUX**: trigger 93,51 $ · stop 92,37 $ · esito EXPIRED_NO_TRIGGER
+- **SHC**: trigger 17,79 $ · stop 17,70 $ · esito CANCEL_OPEN_ABOVE_CEILING
+- **SVC**: trigger 7,08 $ · stop 6,18 $ · esito FILLED, STOP -1,11 R
+- **XMAX**: trigger 8,97 $ · stop 8,80 $ · esito FILLED, STOP -1,16 R
 
-Dall'attivazione (25/09): eventi in perimetro 212 · sedute decise 9 · piani OK 129 · esiti di piano 187 · R realizzati -43,64 R.
+Dall'attivazione (25/09): eventi in perimetro 230 · sedute decise 10 · piani OK 140 · esiti di piano 206 · R realizzati -44,29 R.
 
 ## Salute dei sistemi
 
 **Expansion 50M: ATTENZIONE**
-- Runner: task DISABILITATA, ultima esecuzione 05/10 14:00 (esito 0), prossima 09/10 13:00
+- Runner: task DISABILITATA, ultima esecuzione 05/10 14:00 (esito 0), prossima 12/10 13:00
 - Ultimo esito del runner: INGESTED (seduta 02/10, 02/10 22:32)
-- Ultima seduta acquisita: 02/10 (attesa: 08/10)
-- Controllo di salute esterno: task DISABILITATA, ultima esecuzione 05/10 14:10 (esito 0), prossima 09/10 13:10; nessuna condizione attiva (ultimo controllo 05/10 14:10)
+- Ultima seduta acquisita: 02/10 (attesa: 09/10)
+- Controllo di salute esterno: task DISABILITATA, ultima esecuzione 05/10 14:10 (esito 0), prossima 12/10 13:10; nessuna condizione attiva (ultimo controllo 05/10 14:10)
 - Problema: runner: task disabilitata
 - Problema: controllo di salute: task disabilitata
-- Problema: seduta del 08/10 non ancora nel ledger (ultima acquisita: 02/10)
+- Problema: seduta del 09/10 non ancora nel ledger (ultima acquisita: 02/10)
 - Problema: piani di una seduta passata ancora in attesa: PENG
 
 **Post-Catalyst V1: ATTENZIONE**
-- Listener: ultimo heartbeat 09/10 07:30 (OK); task pronta, ultima esecuzione 09/10 07:30 (esito 0), prossima 09/10 07:32
-- Watchdog: ultimo heartbeat 09/10 07:23 (OK); task pronta, ultima esecuzione 09/10 07:23 (esito 0), prossima 09/10 07:53
-- Ultime 24 ore: notizie 969 · esecuzioni FAIL 27 · notizie in errore 0 · messaggi L2/HEALTH non consegnati 48
+- Listener: ultimo heartbeat 12/10 07:30 (OK); task pronta, ultima esecuzione 12/10 07:30 (esito 0), prossima 12/10 07:32
+- Watchdog: ultimo heartbeat 12/10 07:23 (OK); task pronta, ultima esecuzione 12/10 07:23 (esito 0), prossima 12/10 07:53
+- Ultime 24 ore: notizie 53 · esecuzioni FAIL 0 · notizie in errore 0 · messaggi L2/HEALTH non consegnati 48
 - Problema: messaggi Telegram L2/HEALTH non consegnati: 48
 
 ## Promemoria operativi
 
 - Money management: controvalore massimo € 1.000,00, perdita massima € 100,00 allo stop del piano. Lo stop del piano non si modifica mai.
-- Conto Fineco Trading: 0,19% per eseguito (min € 2,95, max € 19,00) più lo spread di cambio (0,0033 a conversione): su € 1.000,00 circa € 11,83 andata e ritorno.
+- Conto Fineco Trading: 0,19% per eseguito (min € 2,95, max € 19,00) più lo spread di cambio (0,0033 a conversione): su € 1.000,00 circa € 11,82 andata e ritorno.
 - Nessun ordine automatico: sono piani di ricerca e shadow. Apertura, stop e limite massimo d'ingresso si controllano a mano.
 - Da verificare su Fineco: disponibilità di ordini condizionati d'ingresso per azioni USA sul conto Trading.
 
