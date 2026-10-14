@@ -21,14 +21,14 @@
     "exit": 47.0529,
     "exit_reason": "TIME_EXIT",
     "exit_session": "2026-10-02",
-    "fineco_net_eur": 133.24850472806926,
-    "fineco_net_r": 1.44598386702854,
+    "fineco_net_eur": 133.16536750294452,
+    "fineco_net_r": 1.4459863907241017,
     "fineco_qty": 27,
     "model_net_r": 1.4736521781853182,
     "ticker": "VIAV"
    }
   ],
-  "expected_last_session": "2026-10-12",
+  "expected_last_session": "2026-10-13",
   "fills_last_session": [
    "LIND",
    "AAOI"
@@ -42,16 +42,16 @@
    {
     "entry_ceiling": 63.94318875,
     "fineco": {
-     "date": "2026-10-12",
-     "loss_eur": 90.86892327992626,
-     "notional_eur": 950.6854909265718,
+     "date": "2026-10-13",
+     "loss_eur": 90.81206928788484,
+     "notional_eur": 950.0906751921701,
      "qty": 17,
-     "rate": 1.1181,
+     "rate": 1.1188,
      "source": "BCE"
     },
     "fineco_round_trip_cost": {
-     "eur": 11.540350508549198,
-     "r": 0.1269999697586222
+     "eur": 11.533312493057135,
+     "r": 0.1270019787402398
     },
     "indicative_entry": 62.52714396499999,
     "model_qty": 3,
@@ -96,7 +96,7 @@
   "problems": [
    "runner: task disabilitata",
    "controllo di salute: task disabilitata",
-   "seduta del 12/10 non ancora nel ledger (ultima acquisita: 02/10)",
+   "seduta del 13/10 non ancora nel ledger (ultima acquisita: 02/10)",
    "piani di una seduta passata ancora in attesa: PENG"
   ],
   "runner_last": {
@@ -111,7 +111,7 @@
     "last_run": "2026-10-05 14:10:10+02:00",
     "missing": false,
     "name": "Expansion 50M Health",
-    "next_run": "2026-10-13 13:10:10+02:00",
+    "next_run": "2026-10-14 13:10:10+02:00",
     "state": "Disabled"
    },
    "exp_runner": {
@@ -119,18 +119,18 @@
     "last_run": "2026-10-05 14:00:00+02:00",
     "missing": false,
     "name": "Expansion 50M Delayed SIP Shadow",
-    "next_run": "2026-10-13 13:00:00+02:00",
+    "next_run": "2026-10-14 13:00:00+02:00",
     "state": "Disabled"
    }
   }
  },
  "fx": {
-  "date": "2026-10-12",
-  "rate": 1.1181,
+  "date": "2026-10-13",
+  "rate": 1.1188,
   "source": "BCE"
  },
- "generated_at": "2026-10-13T05:30:01+00:00",
- "generated_rome": "2026-10-13 07:30",
+ "generated_at": "2026-10-14T05:30:01+00:00",
+ "generated_rome": "2026-10-14 07:30",
  "lab_status": {
   "sections": {
    "BACKLOG": [
@@ -146,456 +146,138 @@
   },
   "title": "LAB STATUS — aggiornato il 2026-09-25 (checkpoint 1 del 2026-09-24 + attivazioni successive)"
  },
- "last_closed_session": "2026-10-12",
+ "last_closed_session": "2026-10-13",
  "notes": [],
  "post_catalyst": {
   "activated_at": "2026-09-25T14:20:38.406920+00:00",
   "available": true,
   "candidates": [
    {
-    "catalyst_ts": "2026-10-12T20:02:10+00:00",
+    "catalyst_ts": "2026-10-13T20:08:55+00:00",
+    "category": "M&A",
+    "headline": "Porch Group Agrees To Acquire Allied Trust's Insurance Carrier, Managing General Agency For Initial Price Of $55M In Cash",
+    "ticker": "PRCH"
+   },
+   {
+    "catalyst_ts": "2026-10-13T20:10:26+00:00",
     "category": "CLINICAL_RESULT",
-    "headline": "ArriVent BioPharma Doses First Patient In Phase 1 Trial Of Dual-Target ADC ARR-002 For Ovarian And Endometrial Cancer",
-    "ticker": "AVBP"
-   },
-   {
-    "catalyst_ts": "2026-10-12T20:06:50+00:00",
-    "category": "EARNINGS",
-    "headline": "ImmuCell Reports Q3 Preliminary Sales Of $8M, Up 46% YoY",
-    "ticker": "ICCC"
-   },
-   {
-    "catalyst_ts": "2026-10-12T20:09:54+00:00",
-    "category": "EARNINGS",
-    "headline": "CORRECTION: Nurix Therapeutics Q3 EPS $4.73 Beats $3.98 Estimate, Sales $673.064M Beat $411.481M Estimate",
-    "ticker": "NRIX"
-   },
-   {
-    "catalyst_ts": "2026-10-12T20:32:07+00:00",
-    "category": "CLINICAL_RESULT",
-    "headline": "Biomea Fusion To Report Results From Phase I GLP-131 Clinical Study Evaluating BMF-650, Investigational Next-Gen Oral Small-Molecule GLP-1…",
+    "headline": "Biomea Fusion Reports Phase 1 Results For Oral GLP-1 Candidate BMF-650, Showing Consistent Weight Reduction And Encouraging Tolerability",
     "ticker": "BMEA"
+   },
+   {
+    "catalyst_ts": "2026-10-13T20:31:41+00:00",
+    "category": "M&A",
+    "headline": "Black Hawk Acquisition Shareholders Approve Its Proposed Business Combination With Vesicor Therapeutics",
+    "ticker": "BKHA"
+   },
+   {
+    "catalyst_ts": "2026-10-13T20:37:01+00:00",
+    "category": "M&A",
+    "headline": "LCI Industries Says It And Patrick Industries Received DOJ Second Request On Merger, Extending HSR Waiting Period",
+    "ticker": "PATK"
+   },
+   {
+    "catalyst_ts": "2026-10-13T22:05:45+00:00",
+    "category": "EARNINGS",
+    "headline": "Eagle Nuclear Energy Q3 EPS $0.10",
+    "ticker": "NUCL"
    }
   ],
   "cohort_id": "POST_CATALYST_CONTINUATION_V1-DELAYED_SIP_15M-V1.0.0-PROSPECTIVE-p38225960637b-c4e161f4cebff",
   "counters": {
-   "decision_sessions": 11,
-   "events_in_scope": 270,
-   "plan_outcomes": 239,
-   "plans_ok": 166,
-   "realized_r_sum": -44.81763270167437
+   "decision_sessions": 12,
+   "events_in_scope": 310,
+   "plan_outcomes": 279,
+   "plans_ok": 190,
+   "realized_r_sum": -54.445738440271334
   },
   "heartbeats": {
    "listener": {
-    "at": "2026-10-13 05:30:02.335201+00:00",
+    "at": "2026-10-14 05:30:01.603263+00:00",
     "error_class": null,
     "status": "OK"
    },
    "watchdog": {
-    "at": "2026-10-13 05:23:01.130731+00:00",
+    "at": "2026-10-14 05:23:01.581847+00:00",
     "error_class": null,
     "status": "OK"
    }
   },
   "last_24h": {
    "listener_fail": 0,
-   "news": 972,
+   "news": 1101,
    "processing_errors": 0,
    "undelivered_alerts": 48
   },
   "last_decision": {
    "items": [
     {
-     "max_entry": 23.597874374999996,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 22.109572142857143,
-     "ticker": "AIP",
-     "trigger": 23.300213928571427
-    },
-    {
-     "max_entry": 108.53786749999999,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 105.52815142857143,
-     "ticker": "AKAM",
-     "trigger": 107.93592428571428
-    },
-    {
-     "max_entry": 56.6011725,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "CANCEL_OPEN_BELOW_STOP",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 56.32008857142858,
-     "ticker": "ALRM",
-     "trigger": 56.54495571428571
-    },
-    {
-     "max_entry": 14.952215625000001,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 14.526039285714285,
-     "ticker": "AVPT",
-     "trigger": 14.866980357142857
-    },
-    {
-     "max_entry": 1.50654125,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "CANCEL_OPEN_BELOW_STOP",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 1.4853814285714286,
-     "ticker": "CLNE",
-     "trigger": 1.5023092857142857
-    },
-    {
-     "max_entry": 10.864096875000001,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 10.341032142857143,
-     "ticker": "CLSK",
-     "trigger": 10.759483928571429
-    },
-    {
-     "max_entry": 10.752949374999998,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 10.225200714285714,
-     "ticker": "CRVS",
-     "trigger": 10.647399642857142
-    },
-    {
-     "max_entry": 63.901971249999995,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "CANCEL_OPEN_BELOW_STOP",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 62.68346142857143,
-     "ticker": "CYTK",
-     "trigger": 63.65826928571428
-    },
-    {
-     "max_entry": 19.649831875000004,
+     "max_entry": 16.828564375,
      "outcome": {
       "exit_reason": "STOP",
       "plan_status": "FILLED",
-      "realized_r": -1.1470709010778877
+      "realized_r": -1.1272444506718884
      },
      "plan_status": "OK",
-     "stop": 19.164477857142856,
-     "ticker": "DNLI",
-     "trigger": 19.552761071428574
+     "stop": 16.095926428571428,
+     "ticker": "AVBP",
+     "trigger": 16.682036785714285
     },
     {
-     "max_entry": 2.9687918750000004,
-     "outcome": null,
+     "max_entry": 26.038562499999998,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
      "plan_status": "OK",
-     "stop": 2.422309285714286,
-     "ticker": "ENVX",
-     "trigger": 2.8594953571428574
+     "stop": 24.6845,
+     "ticker": "BEAM",
+     "trigger": 25.76775
     },
     {
-     "max_entry": 1.3610375000000001,
+     "max_entry": 1.5971000000000002,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 1.3890285714285713,
+     "ticker": "BMEA",
+     "trigger": 1.5554857142857144
+    },
+    {
+     "max_entry": 34.96465500000001,
      "outcome": {
       "exit_reason": null,
       "plan_status": "CANCEL_OPEN_BELOW_STOP",
       "realized_r": null
      },
      "plan_status": "OK",
-     "stop": 1.3138142857142858,
-     "ticker": "GEVO",
-     "trigger": 1.3515928571428573
+     "stop": 34.718965714285716,
+     "ticker": "CENX",
+     "trigger": 34.91551714285715
     },
     {
-     "max_entry": 0.436769375,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "CANCEL_OPEN_BELOW_STOP",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 0.4026207142857143,
-     "ticker": "HUMA",
-     "trigger": 0.42993964285714287
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "ICFI",
-     "trigger": null
-    },
-    {
-     "max_entry": 1.90891375,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 1.889812857142857,
-     "ticker": "INMB",
-     "trigger": 1.9050935714285713
-    },
-    {
-     "max_entry": 9.6053,
-     "outcome": null,
-     "plan_status": "OK",
-     "stop": 9.1368,
-     "ticker": "LCUT",
-     "trigger": 9.5116
-    },
-    {
-     "max_entry": 100.47531187499999,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 86.63535785714286,
-     "ticker": "MIRM",
-     "trigger": 97.70732107142857
-    },
-    {
-     "max_entry": 1.5986906250000001,
-     "outcome": null,
-     "plan_status": "OK",
-     "stop": 1.315782142857143,
-     "ticker": "MNOV",
-     "trigger": 1.5421089285714287
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "NEWT",
-     "trigger": null
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "NTRA",
-     "trigger": null
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "OM",
-     "trigger": null
-    },
-    {
-     "max_entry": 21.730851875,
-     "outcome": null,
-     "plan_status": "OK",
-     "stop": 21.307597857142856,
-     "ticker": "OMDA",
-     "trigger": 21.64620107142857
-    },
-    {
-     "max_entry": 10.341930624999998,
-     "outcome": {
-      "exit_reason": "TARGET",
-      "plan_status": "FILLED",
-      "realized_r": 1.7389490833269339
-     },
-     "plan_status": "OK",
-     "stop": 10.255079285714285,
-     "ticker": "PBYI",
-     "trigger": 10.324560357142856
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "QUMS",
-     "trigger": null
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "RLMD",
-     "trigger": null
-    },
-    {
-     "max_entry": 8.942955000000001,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 8.850908571428572,
-     "ticker": "SENS",
-     "trigger": 8.924545714285715
-    },
-    {
-     "max_entry": 3.264455625,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 3.2334792857142856,
-     "ticker": "SIGA",
-     "trigger": 3.258260357142857
-    },
-    {
-     "max_entry": 235.8062725,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 234.54997428571428,
-     "ticker": "STLD",
-     "trigger": 235.55501285714286
-    },
-    {
-     "max_entry": 7.684906249999999,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 6.895821428571428,
-     "ticker": "SVC",
-     "trigger": 7.527089285714285
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "TBCH",
-     "trigger": null
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "TLSI",
-     "trigger": null
-    },
-    {
-     "max_entry": null,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "NO_PREMARKET_DATA",
-      "realized_r": null
-     },
-     "plan_status": "NO_PREMARKET_DATA",
-     "stop": null,
-     "ticker": "TNDM",
-     "trigger": null
-    },
-    {
-     "max_entry": 43.128276250000006,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 39.639112857142855,
-     "ticker": "TRMD",
-     "trigger": 42.430443571428576
-    },
-    {
-     "max_entry": 13.822969375000001,
-     "outcome": {
-      "exit_reason": null,
-      "plan_status": "EXPIRED_NO_TRIGGER",
-      "realized_r": null
-     },
-     "plan_status": "OK",
-     "stop": 13.123749285714284,
-     "ticker": "TRVI",
-     "trigger": 13.683125357142858
-    },
-    {
-     "max_entry": 8.66,
+     "max_entry": 1.325830625,
      "outcome": {
       "exit_reason": "STOP",
       "plan_status": "FILLED",
-      "realized_r": -1.1235725632925302
+      "realized_r": -1.1315317164300507
      },
      "plan_status": "OK",
-     "stop": 8.238571428571428,
-     "ticker": "VSTM",
-     "trigger": 8.575714285714286
+     "stop": 1.2776221428571428,
+     "ticker": "CNCK",
+     "trigger": 1.3161889285714286
+    },
+    {
+     "max_entry": 13.796805624999998,
+     "outcome": null,
+     "plan_status": "OK",
+     "stop": 12.996507857142857,
+     "ticker": "CRSR",
+     "trigger": 13.63674607142857
     },
     {
      "max_entry": null,
@@ -606,8 +288,20 @@
      },
      "plan_status": "NO_PREMARKET_DATA",
      "stop": null,
-     "ticker": "WASH",
+     "ticker": "CYRX",
      "trigger": null
+    },
+    {
+     "max_entry": 325.332496875,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "SIZE_ZERO",
+      "realized_r": null
+     },
+     "plan_status": "SIZE_ZERO",
+     "stop": 290.5914321428572,
+     "ticker": "DPZ",
+     "trigger": 318.38428392857145
     },
     {
      "max_entry": null,
@@ -618,25 +312,361 @@
      },
      "plan_status": "NO_PREMARKET_DATA",
      "stop": null,
-     "ticker": "WEST",
+     "ticker": "DTI",
      "trigger": null
     },
     {
-     "max_entry": 36.69291312499999,
+     "max_entry": 3.1003499999999997,
      "outcome": {
       "exit_reason": null,
       "plan_status": "EXPIRED_NO_TRIGGER",
       "realized_r": null
      },
      "plan_status": "OK",
-     "stop": 36.03667071428572,
-     "ticker": "XENE",
-     "trigger": 36.56166464285714
+     "stop": 2.5811714285714285,
+     "ticker": "ENTX",
+     "trigger": 2.9965142857142855
+    },
+    {
+     "max_entry": 4.5575399999999995,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "STOP_TOO_WIDE",
+      "realized_r": null
+     },
+     "plan_status": "STOP_TOO_WIDE",
+     "stop": 3.1913828571428575,
+     "ticker": "FRMI",
+     "trigger": 4.284308571428571
+    },
+    {
+     "max_entry": 11.2695975,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 10.477602857142857,
+     "ticker": "ICCC",
+     "trigger": 11.111198571428572
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "INGN",
+     "trigger": null
+    },
+    {
+     "max_entry": 15.177190625000001,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 14.133210714285715,
+     "ticker": "INMD",
+     "trigger": 14.968394642857143
+    },
+    {
+     "max_entry": null,
+     "outcome": null,
+     "plan_status": "SAME_TICKER_SESSION",
+     "stop": null,
+     "ticker": "INMD",
+     "trigger": null
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "IRHO",
+     "trigger": null
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "JYNT",
+     "trigger": null
+    },
+    {
+     "max_entry": 54.54567,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 54.23352,
+     "ticker": "KRT",
+     "trigger": 54.48324
+    },
+    {
+     "max_entry": 38.12876875,
+     "outcome": {
+      "exit_reason": "STOP",
+      "plan_status": "FILLED",
+      "realized_r": -1.1521899904487016
+     },
+     "plan_status": "OK",
+     "stop": 37.23855,
+     "ticker": "LASR",
+     "trigger": 37.950725
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "LOCO",
+     "trigger": null
+    },
+    {
+     "max_entry": 17.012956250000002,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 16.635192857142858,
+     "ticker": "MITK",
+     "trigger": 16.937403571428572
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "NATR",
+     "trigger": null
+    },
+    {
+     "max_entry": 22.92416625,
+     "outcome": {
+      "exit_reason": "STOP",
+      "plan_status": "FILLED",
+      "realized_r": -1.1306396072236478
+     },
+     "plan_status": "OK",
+     "stop": 22.058095714285713,
+     "ticker": "NRIX",
+     "trigger": 22.75095214285714
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "NTGR",
+     "trigger": null
+    },
+    {
+     "max_entry": 37.494445000000006,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 35.820634285714284,
+     "ticker": "OUST",
+     "trigger": 37.15968285714286
+    },
+    {
+     "max_entry": 4.601374375,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 3.712715,
+     "ticker": "PRLD",
+     "trigger": 4.4236425
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "PRTS",
+     "trigger": null
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "PSIX",
+     "trigger": null
+    },
+    {
+     "max_entry": 8.468749375,
+     "outcome": null,
+     "plan_status": "OK",
+     "stop": 7.692857857142857,
+     "ticker": "PXS",
+     "trigger": 8.313571071428571
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "QDEL",
+     "trigger": null
+    },
+    {
+     "max_entry": 15.81776625,
+     "outcome": null,
+     "plan_status": "OK",
+     "stop": 15.272552857142857,
+     "ticker": "QNST",
+     "trigger": 15.708723571428571
+    },
+    {
+     "max_entry": 13.416101249999999,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 12.843312857142857,
+     "ticker": "RGTI",
+     "trigger": 13.30154357142857
+    },
+    {
+     "max_entry": 4.0478375,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 3.8739,
+     "ticker": "SERV",
+     "trigger": 4.01305
+    },
+    {
+     "max_entry": 378.27491375,
+     "outcome": {
+      "exit_reason": "STOP",
+      "plan_status": "FILLED",
+      "realized_r": -1.258622764935978
+     },
+     "plan_status": "OK",
+     "stop": 372.11438428571427,
+     "ticker": "TSLA",
+     "trigger": 377.04280785714286
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "TTGT",
+     "trigger": null
+    },
+    {
+     "max_entry": 56.63590625,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 55.28753571428572,
+     "ticker": "UNTY",
+     "trigger": 56.36623214285714
+    },
+    {
+     "max_entry": 146.14771875000002,
+     "outcome": {
+      "exit_reason": "STOP",
+      "plan_status": "FILLED",
+      "realized_r": -1.217494639555576
+     },
+     "plan_status": "OK",
+     "stop": 143.65260714285714,
+     "ticker": "WTFC",
+     "trigger": 145.64869642857144
+    },
+    {
+     "max_entry": 1.1183575000000001,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 1.0504485714285714,
+     "ticker": "ZENA",
+     "trigger": 1.1047757142857144
+    },
+    {
+     "max_entry": 63.214937500000005,
+     "outcome": {
+      "exit_reason": "STOP",
+      "plan_status": "FILLED",
+      "realized_r": -1.2248936417026355
+     },
+     "plan_status": "OK",
+     "stop": 62.38292857142857,
+     "ticker": "ZION",
+     "trigger": 63.04853571428572
     }
    ],
-   "n_candidates": 37,
-   "n_plans": 26,
-   "session": "2026-10-12",
+   "n_candidates": 39,
+   "n_plans": 24,
+   "session": "2026-10-13",
    "status": "DONE"
   },
   "problems": [
@@ -645,18 +675,18 @@
   "tasks": {
    "pc_listener": {
     "last_result": 0,
-    "last_run": "2026-10-13 07:30:30+02:00",
+    "last_run": "2026-10-14 07:30:30+02:00",
     "missing": false,
     "name": "Post-Catalyst News Listener",
-    "next_run": "2026-10-13 07:32:32+02:00",
+    "next_run": "2026-10-14 07:32:32+02:00",
     "state": "Ready"
    },
    "pc_watchdog": {
     "last_result": 0,
-    "last_run": "2026-10-13 07:23:23+02:00",
+    "last_run": "2026-10-14 07:23:23+02:00",
     "missing": false,
     "name": "Post-Catalyst Watchdog",
-    "next_run": "2026-10-13 07:53:53+02:00",
+    "next_run": "2026-10-14 07:53:53+02:00",
     "state": "Ready"
    }
   }
@@ -668,12 +698,12 @@
   "fx_spread": 0.0033,
   "max_loss_eur": 100,
   "notional_eur": 1000,
-  "round_trip_eur_on_notional": 11.832466105814916
+  "round_trip_eur_on_notional": 11.828767162129347
  },
  "target_session": {
   "close_et": "16:00",
   "close_rome": "22:00",
-  "date": "2026-10-13",
+  "date": "2026-10-14",
   "early_close": false,
   "exp_plans_after_rome": "22:15",
   "is_today": true,

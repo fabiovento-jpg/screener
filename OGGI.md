@@ -1,12 +1,12 @@
-# Brief operativo — seduta di martedì 13/10/2026
+# Brief operativo — seduta di mercoledì 14/10/2026
 
-Generato martedì 13/10/2026 alle 07:30 (ora di Roma) · morning-brief/1.1.0 · sola lettura, nessun ordine automatico.
+Generato mercoledì 14/10/2026 alle 07:30 (ora di Roma) · morning-brief/1.1.0 · sola lettura, nessun ordine automatico.
 
 ## In breve
 
-- **Seduta USA**: martedì 13/10/2026, 09:30–16:00 ET = **15:30–22:00 ora di Roma**
+- **Seduta USA**: mercoledì 14/10/2026, 09:30–16:00 ET = **15:30–22:00 ora di Roma**
 - **Expansion 50M**: nessun piano · posizioni del modello aperte: 2
-- **Post-Catalyst**: 4 candidati finora (AVBP, ICCC, NRIX, BMEA) · decisione alle 15:20, nuove notizie ammesse fino alle 15:05
+- **Post-Catalyst**: 5 candidati finora (PRCH, BMEA, BKHA, PATK, NUCL) · decisione alle 15:20, nuove notizie ammesse fino alle 15:05
 - **Salute**: Expansion ATTENZIONE · Post-Catalyst ATTENZIONE
 - **Telegram attesi**: POST-CATALYST SIGNAL verso le 15:20 (solo con piano OK); dopo le 22:15 EXPANSION INGRESSO MODELLO CONFERMATO (se un piano della seduta è stato riempito) e PIANO PRONTO per la seduta successiva
 
@@ -22,7 +22,7 @@ Piani in attesa per altre sedute: PENG (05/10)
 - **AAOI**: ingresso 02/10 a 110,36 $ · stop 97,11 $ · target 136,86 $ · chiusura del 02/10 115,59 $ (+0,39 R) · seduta 1 di 5 · uscita a tempo alla chiusura del 08/10 se non tocca stop o target
 
 Ingressi del modello nella seduta del 02/10: LIND, AAOI.
-- Uscita **VIAV** (02/10): USCITA A TEMPO · modello +1,47 R · con il tuo money management (27 azioni): +€ 133,25 (+1,45 R), stima
+- Uscita **VIAV** (02/10): USCITA A TEMPO · modello +1,47 R · con il tuo money management (27 azioni): +€ 133,17 (+1,45 R), stima
 
 Coorte: sedute acquisite 6 · trade 4 (chiusi 2) · date d'ingresso indipendenti 2 su 10 (test di accettazione operativa) · R netto del modello +0,55 R · drawdown massimo 1,28 R · stato del motore OBSERVING.
 
@@ -30,57 +30,56 @@ Coorte: sedute acquisite 6 · trade 4 (chiusi 2) · date d'ingresso indipendenti
 
 Decisione premarket alle **15:20** ora di Roma (09:20 ET, dati SIP ritardati 15 minuti); le notizie fino alle 15:05 (09:05 ET) possono aggiungere candidati. Il SIGNAL arriva su Telegram solo se il piano è OK, già con la QUANTITÀ FINECO.
 
-- **AVBP**: CLINICAL_RESULT · notizia di lun 12/10 22:02 · "ArriVent BioPharma Doses First Patient In Phase 1 Trial Of Dual-Target ADC ARR-002 For Ovarian And Endometrial Cancer"
-- **ICCC**: EARNINGS · notizia di lun 12/10 22:06 · "ImmuCell Reports Q3 Preliminary Sales Of $8M, Up 46% YoY"
-- **NRIX**: EARNINGS · notizia di lun 12/10 22:09 · "CORRECTION: Nurix Therapeutics Q3 EPS $4.73 Beats $3.98 Estimate, Sales $673.064M Beat $411.481M Estimate"
-- **BMEA**: CLINICAL_RESULT · notizia di lun 12/10 22:32 · "Biomea Fusion To Report Results From Phase I GLP-131 Clinical Study Evaluating BMF-650, Investigational Next-Gen Oral Small-Molecule GLP-1…"
+- **PRCH**: M&A · notizia di mar 13/10 22:08 · "Porch Group Agrees To Acquire Allied Trust's Insurance Carrier, Managing General Agency For Initial Price Of $55M In Cash"
+- **BMEA**: CLINICAL_RESULT · notizia di mar 13/10 22:10 · "Biomea Fusion Reports Phase 1 Results For Oral GLP-1 Candidate BMF-650, Showing Consistent Weight Reduction And Encouraging Tolerability"
+- **BKHA**: M&A · notizia di mar 13/10 22:31 · "Black Hawk Acquisition Shareholders Approve Its Proposed Business Combination With Vesicor Therapeutics"
+- **PATK**: M&A · notizia di mar 13/10 22:37 · "LCI Industries Says It And Patrick Industries Received DOJ Second Request On Merger, Extending HSR Waiting Period"
+- **NUCL**: EARNINGS · notizia di mer 14/10 00:05 · "Eagle Nuclear Energy Q3 EPS $0.10"
 
-Ultima decisione: seduta del 12/10 (DONE): candidati 37, piani OK 26.
-- **AIP**: trigger 23,30 $ · stop 22,11 $ · esito EXPIRED_NO_TRIGGER
-- **AKAM**: trigger 107,94 $ · stop 105,53 $ · esito EXPIRED_NO_TRIGGER
-- **ALRM**: trigger 56,54 $ · stop 56,32 $ · esito CANCEL_OPEN_BELOW_STOP
-- **AVPT**: trigger 14,87 $ · stop 14,53 $ · esito EXPIRED_NO_TRIGGER
-- **CLNE**: trigger 1,50 $ · stop 1,49 $ · esito CANCEL_OPEN_BELOW_STOP
-- **CLSK**: trigger 10,76 $ · stop 10,34 $ · esito EXPIRED_NO_TRIGGER
-- **CRVS**: trigger 10,65 $ · stop 10,23 $ · esito EXPIRED_NO_TRIGGER
-- **CYTK**: trigger 63,66 $ · stop 62,68 $ · esito CANCEL_OPEN_BELOW_STOP
-- **DNLI**: trigger 19,55 $ · stop 19,16 $ · esito FILLED, STOP -1,15 R
-- **ENVX**: trigger 2,86 $ · stop 2,42 $ · esito non ancora registrato
-- **GEVO**: trigger 1,35 $ · stop 1,31 $ · esito CANCEL_OPEN_BELOW_STOP
-- **HUMA**: trigger 0,4299 $ · stop 0,4026 $ · esito CANCEL_OPEN_BELOW_STOP
-- **INMB**: trigger 1,91 $ · stop 1,89 $ · esito EXPIRED_NO_TRIGGER
-- **LCUT**: trigger 9,51 $ · stop 9,14 $ · esito non ancora registrato
-- **MIRM**: trigger 97,71 $ · stop 86,64 $ · esito EXPIRED_NO_TRIGGER
-- **MNOV**: trigger 1,54 $ · stop 1,32 $ · esito non ancora registrato
-- **OMDA**: trigger 21,65 $ · stop 21,31 $ · esito non ancora registrato
-- **PBYI**: trigger 10,32 $ · stop 10,26 $ · esito FILLED, TARGET +1,74 R
-- **SENS**: trigger 8,92 $ · stop 8,85 $ · esito CANCEL_OPEN_ABOVE_CEILING
-- **SIGA**: trigger 3,26 $ · stop 3,23 $ · esito CANCEL_OPEN_ABOVE_CEILING
-- **STLD**: trigger 235,56 $ · stop 234,55 $ · esito CANCEL_OPEN_ABOVE_CEILING
-- **SVC**: trigger 7,53 $ · stop 6,90 $ · esito EXPIRED_NO_TRIGGER
-- **TRMD**: trigger 42,43 $ · stop 39,64 $ · esito EXPIRED_NO_TRIGGER
-- **TRVI**: trigger 13,68 $ · stop 13,12 $ · esito EXPIRED_NO_TRIGGER
-- **VSTM**: trigger 8,58 $ · stop 8,24 $ · esito FILLED, STOP -1,12 R
-- **XENE**: trigger 36,56 $ · stop 36,04 $ · esito EXPIRED_NO_TRIGGER
+Ultima decisione: seduta del 13/10 (DONE): candidati 39, piani OK 24.
+- **AVBP**: trigger 16,68 $ · stop 16,10 $ · esito FILLED, STOP -1,13 R
+- **BEAM**: trigger 25,77 $ · stop 24,68 $ · esito EXPIRED_NO_TRIGGER
+- **BMEA**: trigger 1,56 $ · stop 1,39 $ · esito EXPIRED_NO_TRIGGER
+- **CENX**: trigger 34,92 $ · stop 34,72 $ · esito CANCEL_OPEN_BELOW_STOP
+- **CNCK**: trigger 1,32 $ · stop 1,28 $ · esito FILLED, STOP -1,13 R
+- **CRSR**: trigger 13,64 $ · stop 13,00 $ · esito non ancora registrato
+- **ENTX**: trigger 3,00 $ · stop 2,58 $ · esito EXPIRED_NO_TRIGGER
+- **ICCC**: trigger 11,11 $ · stop 10,48 $ · esito EXPIRED_NO_TRIGGER
+- **INMD**: trigger 14,97 $ · stop 14,13 $ · esito EXPIRED_NO_TRIGGER
+- **KRT**: trigger 54,48 $ · stop 54,23 $ · esito CANCEL_OPEN_ABOVE_CEILING
+- **LASR**: trigger 37,95 $ · stop 37,24 $ · esito FILLED, STOP -1,15 R
+- **MITK**: trigger 16,94 $ · stop 16,64 $ · esito EXPIRED_NO_TRIGGER
+- **NRIX**: trigger 22,75 $ · stop 22,06 $ · esito FILLED, STOP -1,13 R
+- **OUST**: trigger 37,16 $ · stop 35,82 $ · esito EXPIRED_NO_TRIGGER
+- **PRLD**: trigger 4,42 $ · stop 3,71 $ · esito EXPIRED_NO_TRIGGER
+- **PXS**: trigger 8,31 $ · stop 7,69 $ · esito non ancora registrato
+- **QNST**: trigger 15,71 $ · stop 15,27 $ · esito non ancora registrato
+- **RGTI**: trigger 13,30 $ · stop 12,84 $ · esito EXPIRED_NO_TRIGGER
+- **SERV**: trigger 4,01 $ · stop 3,87 $ · esito EXPIRED_NO_TRIGGER
+- **TSLA**: trigger 377,04 $ · stop 372,11 $ · esito FILLED, STOP -1,26 R
+- **UNTY**: trigger 56,37 $ · stop 55,29 $ · esito CANCEL_OPEN_ABOVE_CEILING
+- **WTFC**: trigger 145,65 $ · stop 143,65 $ · esito FILLED, STOP -1,22 R
+- **ZENA**: trigger 1,10 $ · stop 1,05 $ · esito EXPIRED_NO_TRIGGER
+- **ZION**: trigger 63,05 $ · stop 62,38 $ · esito FILLED, STOP -1,22 R
 
-Dall'attivazione (25/09): eventi in perimetro 270 · sedute decise 11 · piani OK 166 · esiti di piano 239 · R realizzati -44,82 R.
+Dall'attivazione (25/09): eventi in perimetro 310 · sedute decise 12 · piani OK 190 · esiti di piano 279 · R realizzati -54,45 R.
 
 ## Salute dei sistemi
 
 **Expansion 50M: ATTENZIONE**
-- Runner: task DISABILITATA, ultima esecuzione 05/10 14:00 (esito 0), prossima 13/10 13:00
+- Runner: task DISABILITATA, ultima esecuzione 05/10 14:00 (esito 0), prossima 14/10 13:00
 - Ultimo esito del runner: INGESTED (seduta 02/10, 02/10 22:32)
-- Ultima seduta acquisita: 02/10 (attesa: 12/10)
-- Controllo di salute esterno: task DISABILITATA, ultima esecuzione 05/10 14:10 (esito 0), prossima 13/10 13:10; nessuna condizione attiva (ultimo controllo 05/10 14:10)
+- Ultima seduta acquisita: 02/10 (attesa: 13/10)
+- Controllo di salute esterno: task DISABILITATA, ultima esecuzione 05/10 14:10 (esito 0), prossima 14/10 13:10; nessuna condizione attiva (ultimo controllo 05/10 14:10)
 - Problema: runner: task disabilitata
 - Problema: controllo di salute: task disabilitata
-- Problema: seduta del 12/10 non ancora nel ledger (ultima acquisita: 02/10)
+- Problema: seduta del 13/10 non ancora nel ledger (ultima acquisita: 02/10)
 - Problema: piani di una seduta passata ancora in attesa: PENG
 
 **Post-Catalyst V1: ATTENZIONE**
-- Listener: ultimo heartbeat 13/10 07:30 (OK); task pronta, ultima esecuzione 13/10 07:30 (esito 0), prossima 13/10 07:32
-- Watchdog: ultimo heartbeat 13/10 07:23 (OK); task pronta, ultima esecuzione 13/10 07:23 (esito 0), prossima 13/10 07:53
-- Ultime 24 ore: notizie 972 · esecuzioni FAIL 0 · notizie in errore 0 · messaggi L2/HEALTH non consegnati 48
+- Listener: ultimo heartbeat 14/10 07:30 (OK); task pronta, ultima esecuzione 14/10 07:30 (esito 0), prossima 14/10 07:32
+- Watchdog: ultimo heartbeat 14/10 07:23 (OK); task pronta, ultima esecuzione 14/10 07:23 (esito 0), prossima 14/10 07:53
+- Ultime 24 ore: notizie 1101 · esecuzioni FAIL 0 · notizie in errore 0 · messaggi L2/HEALTH non consegnati 48
 - Problema: messaggi Telegram L2/HEALTH non consegnati: 48
 
 ## Promemoria operativi
