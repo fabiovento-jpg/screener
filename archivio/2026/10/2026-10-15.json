@@ -1,0 +1,515 @@
+{
+ "brief_version": "morning-brief/1.1.0",
+ "calendar_source": "Alpaca",
+ "expansion": {
+  "available": true,
+  "cohort_id": "EXPANSION_DELAYED_SIP_15M_SHADOW_50M-V1.0.0-PROSPECTIVE-pad65637a5398-ebc4418feb77d-a7b182531a6c5",
+  "counters": {
+   "closed": 2,
+   "equity_r": 0.5528619602396012,
+   "independent_entry_dates": 2,
+   "max_drawdown_r": 1.2788148195344742,
+   "sessions": 6,
+   "target_independent_entry_dates": 10,
+   "trades": 4
+  },
+  "engine_status": "OBSERVING",
+  "exits_last_session": [
+   {
+    "entry": 41.029347287499995,
+    "entry_session": "2026-09-28",
+    "exit": 47.0529,
+    "exit_reason": "TIME_EXIT",
+    "exit_session": "2026-10-02",
+    "fineco_net_eur": 133.08232934266644,
+    "fineco_net_r": 1.4459888611456748,
+    "fineco_qty": 27,
+    "model_net_r": 1.4736521781853182,
+    "ticker": "VIAV"
+   }
+  ],
+  "expected_last_session": "2026-10-14",
+  "fills_last_session": [
+   "LIND",
+   "AAOI"
+  ],
+  "health_check": {
+   "active": [],
+   "at": "2026-10-05T12:10:03.655473+00:00"
+  },
+  "last_session": "2026-10-02",
+  "other_plans": [
+   {
+    "entry_ceiling": 63.94318875,
+    "fineco": {
+     "date": "2026-10-14",
+     "loss_eur": 90.7552863950742,
+     "notional_eur": 949.4966033095131,
+     "qty": 17,
+     "rate": 1.1195,
+     "source": "BCE"
+    },
+    "fineco_round_trip_cost": {
+     "eur": 11.526287664612402,
+     "r": 0.12700403604519944
+    },
+    "indicative_entry": 62.52714396499999,
+    "model_qty": 3,
+    "session": "2026-10-05",
+    "signal_session": "2026-10-02",
+    "stop": 56.55064142857143,
+    "stop_distance_pct": 9.558252876181186,
+    "target_2r_indicative": 74.48014903785712,
+    "ticker": "PENG",
+    "trigger": 62.46467928571428
+   }
+  ],
+  "plans": [],
+  "positions": [
+   {
+    "entry": 34.534499999999994,
+    "entry_session": "2026-10-02",
+    "holding_sessions": 1,
+    "mark": 34.78,
+    "mark_session": "2026-10-02",
+    "model_qty": 6,
+    "open_r": 0.06875520865215588,
+    "stop": 30.963861428571427,
+    "target": 41.67577714285713,
+    "ticker": "LIND",
+    "time_exit_session": "2026-10-08"
+   },
+   {
+    "entry": 110.36025,
+    "entry_session": "2026-10-02",
+    "holding_sessions": 1,
+    "mark": 115.59,
+    "mark_session": "2026-10-02",
+    "model_qty": 1,
+    "open_r": 0.3947754083171443,
+    "stop": 97.11284428571429,
+    "target": 136.8550614285714,
+    "ticker": "AAOI",
+    "time_exit_session": "2026-10-08"
+   }
+  ],
+  "problems": [
+   "runner: task disabilitata",
+   "controllo di salute: task disabilitata",
+   "seduta del 14/10 non ancora nel ledger (ultima acquisita: 02/10)",
+   "piani di una seduta passata ancora in attesa: PENG"
+  ],
+  "runner_last": {
+   "at": "2026-10-02T20:32:18.456244+00:00",
+   "run_id": "20261002T201501Z",
+   "session": "2026-10-02",
+   "status": "INGESTED"
+  },
+  "tasks": {
+   "exp_health": {
+    "last_result": 0,
+    "last_run": "2026-10-05 14:10:10+02:00",
+    "missing": false,
+    "name": "Expansion 50M Health",
+    "next_run": "2026-10-15 13:10:10+02:00",
+    "state": "Disabled"
+   },
+   "exp_runner": {
+    "last_result": 0,
+    "last_run": "2026-10-05 14:00:00+02:00",
+    "missing": false,
+    "name": "Expansion 50M Delayed SIP Shadow",
+    "next_run": "2026-10-15 13:00:00+02:00",
+    "state": "Disabled"
+   }
+  }
+ },
+ "fx": {
+  "date": "2026-10-14",
+  "rate": 1.1195,
+  "source": "BCE"
+ },
+ "generated_at": "2026-10-15T05:30:01+00:00",
+ "generated_rome": "2026-10-15 07:30",
+ "lab_status": {
+  "sections": {
+   "BACKLOG": [
+    "ORB / Stocks in Play (`lab/backlog/ORB.md`): nessun codice, nessuna task",
+    "Candidate V2 di Expansion 50M e Post-Catalyst (`lab/backlog/V2_CANDIDATES.md`, annotate il 2026-09-26): uscita secondaria (rinviata), costi e dimensione reali, tassonomia, universo, replay storico; nessuna attiva"
+   ],
+   "RICERCA ATTIVA": [
+    "POST_CATALYST_CONTINUATION_V1 (dal 2026-09-25; EARNINGS è una sua categoria)"
+   ],
+   "SHADOW ATTIVO": [
+    "EXPANSION_DELAYED_SIP_15M_SHADOW_50M (v1.0.0, SHADOW_OPERATIONAL dal 2026-09-25, freeze operativo)"
+   ]
+  },
+  "title": "LAB STATUS — aggiornato il 2026-09-25 (checkpoint 1 del 2026-09-24 + attivazioni successive)"
+ },
+ "last_closed_session": "2026-10-14",
+ "notes": [],
+ "post_catalyst": {
+  "activated_at": "2026-09-25T14:20:38.406920+00:00",
+  "available": true,
+  "candidates": [
+   {
+    "catalyst_ts": "2026-10-14T20:07:12+00:00",
+    "category": "CLINICAL_RESULT",
+    "headline": "Rezolute Completes Enrollment In Open-Label Phase 3 Study Of Ersodetug In Tumor HI; Topline Data Expected In Mid-December 2026",
+    "ticker": "RZLT"
+   },
+   {
+    "catalyst_ts": "2026-10-14T20:08:26+00:00",
+    "category": "EARNINGS",
+    "headline": "Elite Express Holding Q3 EPS $(0.02) Down From $(0.01) YoY, Sales $766.422K Up From $633.865K YoY",
+    "ticker": "ETS"
+   },
+   {
+    "catalyst_ts": "2026-10-14T21:03:53+00:00",
+    "category": "CLINICAL_RESULT",
+    "headline": "Vanda Pharmaceuticals' Phase III Clinical Study Of VQW-765 In Adults With Social Anxiety Disorder Did Not Meet Its Primary Endpoint…",
+    "ticker": "VNDA"
+   }
+  ],
+  "cohort_id": "POST_CATALYST_CONTINUATION_V1-DELAYED_SIP_15M-V1.0.0-PROSPECTIVE-p38225960637b-c4e161f4cebff",
+  "counters": {
+   "decision_sessions": 13,
+   "events_in_scope": 331,
+   "plan_outcomes": 302,
+   "plans_ok": 202,
+   "realized_r_sum": -56.47474614792442
+  },
+  "heartbeats": {
+   "listener": {
+    "at": "2026-10-15 05:30:01.708906+00:00",
+    "error_class": null,
+    "status": "OK"
+   },
+   "watchdog": {
+    "at": "2026-10-15 05:23:01.066327+00:00",
+    "error_class": null,
+    "status": "OK"
+   }
+  },
+  "last_24h": {
+   "listener_fail": 1,
+   "news": 926,
+   "processing_errors": 0,
+   "undelivered_alerts": 48
+  },
+  "last_decision": {
+   "items": [
+    {
+     "max_entry": 15.154812499999998,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "STOP_TOO_WIDE",
+      "realized_r": null
+     },
+     "plan_status": "STOP_TOO_WIDE",
+     "stop": 9.7445,
+     "ticker": "BKHA",
+     "trigger": 14.07275
+    },
+    {
+     "max_entry": 1.167406875,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "STOP_TOO_WIDE",
+      "realized_r": null
+     },
+     "plan_status": "STOP_TOO_WIDE",
+     "stop": 0.8548921428571429,
+     "ticker": "BMEA",
+     "trigger": 1.1049039285714286
+    },
+    {
+     "max_entry": 153.42142187500002,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 138.96123214285714,
+     "ticker": "CAMT",
+     "trigger": 150.52938392857143
+    },
+    {
+     "max_entry": 4.466380625,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_ABOVE_CEILING",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 4.421850714285714,
+     "ticker": "COYA",
+     "trigger": 4.457474642857143
+    },
+    {
+     "max_entry": 26.8978375,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_BELOW_STOP",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 26.310042857142857,
+     "ticker": "CPRT",
+     "trigger": 26.78027857142857
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "DSGR",
+     "trigger": null
+    },
+    {
+     "max_entry": 1.655604375,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_BELOW_STOP",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 1.6326664285714285,
+     "ticker": "DTCX",
+     "trigger": 1.6510167857142857
+    },
+    {
+     "max_entry": 1.5636437499999998,
+     "outcome": null,
+     "plan_status": "OK",
+     "stop": 1.3606928571428571,
+     "ticker": "EMAT",
+     "trigger": 1.5230535714285713
+    },
+    {
+     "max_entry": 53.747974375,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_BELOW_STOP",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 47.702315,
+     "ticker": "FAST",
+     "trigger": 52.5388425
+    },
+    {
+     "max_entry": 29.177124999999997,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "CANCEL_OPEN_BELOW_STOP",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 28.561857142857143,
+     "ticker": "IMVT",
+     "trigger": 29.054071428571426
+    },
+    {
+     "max_entry": 0.6979225,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 0.6264457142857144,
+     "ticker": "IVVD",
+     "trigger": 0.6836271428571429
+    },
+    {
+     "max_entry": 1.292206875,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "STOP_TOO_WIDE",
+      "realized_r": null
+     },
+     "plan_status": "STOP_TOO_WIDE",
+     "stop": 0.9946207142857143,
+     "ticker": "MXCT",
+     "trigger": 1.2326896428571428
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "NUCL",
+     "trigger": null
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "PATK",
+     "trigger": null
+    },
+    {
+     "max_entry": 17.724673125,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 16.750373571428568,
+     "ticker": "PRCH",
+     "trigger": 17.529813214285713
+    },
+    {
+     "max_entry": 87.687784375,
+     "outcome": null,
+     "plan_status": "OK",
+     "stop": 85.14253214285715,
+     "ticker": "RYTM",
+     "trigger": 87.17873392857143
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "SKIN",
+     "trigger": null
+    },
+    {
+     "max_entry": 8.249543749999999,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "STOP_TOO_WIDE",
+      "realized_r": null
+     },
+     "plan_status": "STOP_TOO_WIDE",
+     "stop": 5.550521428571429,
+     "ticker": "SOTK",
+     "trigger": 7.709739285714285
+    },
+    {
+     "max_entry": null,
+     "outcome": null,
+     "plan_status": "SAME_TICKER_SESSION",
+     "stop": null,
+     "ticker": "SOTK",
+     "trigger": null
+    },
+    {
+     "max_entry": 5.741904375,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 4.687823571428572,
+     "ticker": "TRDA",
+     "trigger": 5.531088214285714
+    },
+    {
+     "max_entry": 27.438183125,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "EXPIRED_NO_TRIGGER",
+      "realized_r": null
+     },
+     "plan_status": "OK",
+     "stop": 26.224219285714288,
+     "ticker": "VKTX",
+     "trigger": 27.195390357142855
+    },
+    {
+     "max_entry": null,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "NO_PREMARKET_DATA",
+      "realized_r": null
+     },
+     "plan_status": "NO_PREMARKET_DATA",
+     "stop": null,
+     "ticker": "VRCA",
+     "trigger": null
+    },
+    {
+     "max_entry": 9.82328125,
+     "outcome": {
+      "exit_reason": null,
+      "plan_status": "STOP_TOO_WIDE",
+      "realized_r": null
+     },
+     "plan_status": "STOP_TOO_WIDE",
+     "stop": 7.037678571428572,
+     "ticker": "VSTM",
+     "trigger": 9.266160714285714
+    }
+   ],
+   "n_candidates": 23,
+   "n_plans": 12,
+   "session": "2026-10-14",
+   "status": "DONE"
+  },
+  "problems": [
+   "messaggi Telegram L2/HEALTH non consegnati: 48"
+  ],
+  "tasks": {
+   "pc_listener": {
+    "last_result": 0,
+    "last_run": "2026-10-15 07:30:30+02:00",
+    "missing": false,
+    "name": "Post-Catalyst News Listener",
+    "next_run": "2026-10-15 07:32:32+02:00",
+    "state": "Ready"
+   },
+   "pc_watchdog": {
+    "last_result": 0,
+    "last_run": "2026-10-15 07:23:23+02:00",
+    "missing": false,
+    "name": "Post-Catalyst Watchdog",
+    "next_run": "2026-10-15 07:53:53+02:00",
+    "state": "Ready"
+   }
+  }
+ },
+ "reminders": {
+  "commission_max_eur": 19.0,
+  "commission_min_eur": 2.95,
+  "commission_rate_pct": 0.19,
+  "fx_spread": 0.0033,
+  "max_loss_eur": 100,
+  "notional_eur": 1000,
+  "round_trip_eur_on_notional": 11.825072844308929
+ },
+ "target_session": {
+  "close_et": "16:00",
+  "close_rome": "22:00",
+  "date": "2026-10-15",
+  "early_close": false,
+  "exp_plans_after_rome": "22:15",
+  "is_today": true,
+  "open_et": "09:30",
+  "open_rome": "15:30",
+  "pc_cutoff_rome": "15:05",
+  "pc_decision_rome": "15:20"
+ }
+}
