@@ -1,0 +1,144 @@
+{
+  "generated_at": "2026-08-05T23:37:56+02:00",
+  "count": 3,
+  "titoli": [
+    {
+      "ticker": "BREAK",
+      "name": "BREAK Test Corp",
+      "audit_status": "FAIL",
+      "data_quality_score": 100,
+      "failed_gates": [
+        "price_above_sma50",
+        "ema21_above_ema50"
+      ],
+      "unverified_gates": [],
+      "error_gates": [],
+      "values": {
+        "price": 93.15,
+        "market_cap": 9000000000,
+        "avg_volume_20d": 1800000,
+        "sma50": 130.0,
+        "sma150": 120.0,
+        "sma200": 110.0,
+        "ema21": 95.3,
+        "ema50": 98.7,
+        "trend_structural_pass": false,
+        "rsi14": 61.3,
+        "atr_pct": 4.8,
+        "rvol20": 1.41,
+        "performance_21d_pct": 12.4,
+        "move_10d_pct": 9.1,
+        "distance_52w_high_pct": 6.2,
+        "distance_resistance_pct": 11.7,
+        "revenue_growth_yoy": 54.3,
+        "eps_growth_yoy": 36.2,
+        "eps_next_year": 41.7,
+        "operating_margin": 10.4,
+        "is_adr": false,
+        "industry": "Building Products",
+        "revenue_ttm": 1250000000.0,
+        "days_to_earnings": 34
+      },
+      "missing_fields": [],
+      "missing_details": {},
+      "source": "fixture",
+      "retrieved_at": "2026-08-05T23:30:00+02:00"
+    },
+    {
+      "ticker": "NODATA",
+      "name": "NODATA Test Corp",
+      "audit_status": "UNVERIFIED",
+      "data_quality_score": 97,
+      "failed_gates": [],
+      "unverified_gates": [
+        "operating_margin"
+      ],
+      "error_gates": [],
+      "values": {
+        "price": 140.0,
+        "market_cap": 9000000000,
+        "avg_volume_20d": 1800000,
+        "sma50": 130.0,
+        "sma150": 120.0,
+        "sma200": 110.0,
+        "ema21": 138.0,
+        "ema50": 132.0,
+        "trend_structural_pass": true,
+        "rsi14": 61.3,
+        "atr_pct": 4.8,
+        "rvol20": 1.41,
+        "performance_21d_pct": 12.4,
+        "move_10d_pct": 9.1,
+        "distance_52w_high_pct": 6.2,
+        "distance_resistance_pct": 11.7,
+        "revenue_growth_yoy": 54.3,
+        "eps_growth_yoy": 36.2,
+        "eps_next_year": 41.7,
+        "operating_margin": null,
+        "is_adr": false,
+        "industry": "Building Products",
+        "revenue_ttm": 1250000000.0,
+        "days_to_earnings": 34
+      },
+      "missing_fields": [
+        "operating_margin"
+      ],
+      "missing_details": {
+        "operating_margin": {
+          "reason": "source_no_data",
+          "source": "finvizfinance"
+        }
+      },
+      "source": "fixture",
+      "retrieved_at": "2026-08-05T23:30:00+02:00"
+    },
+    {
+      "ticker": "BROKEN",
+      "name": "BROKEN Test Corp",
+      "audit_status": "ERROR",
+      "data_quality_score": 90,
+      "failed_gates": [],
+      "unverified_gates": [],
+      "error_gates": [
+        "sma150_above_sma200"
+      ],
+      "values": {
+        "price": 140.0,
+        "market_cap": 9000000000,
+        "avg_volume_20d": 1800000,
+        "sma50": 130.0,
+        "sma150": 120.0,
+        "sma200": null,
+        "ema21": 138.0,
+        "ema50": 132.0,
+        "trend_structural_pass": false,
+        "rsi14": 61.3,
+        "atr_pct": 4.8,
+        "rvol20": 1.41,
+        "performance_21d_pct": 12.4,
+        "move_10d_pct": 9.1,
+        "distance_52w_high_pct": 6.2,
+        "distance_resistance_pct": 11.7,
+        "revenue_growth_yoy": 54.3,
+        "eps_growth_yoy": 36.2,
+        "eps_next_year": 41.7,
+        "operating_margin": 10.4,
+        "is_adr": false,
+        "industry": "Building Products",
+        "revenue_ttm": 1250000000.0,
+        "days_to_earnings": 34
+      },
+      "missing_fields": [
+        "sma200"
+      ],
+      "missing_details": {
+        "sma200": {
+          "reason": "pipeline_error",
+          "source": "TradingView MCP"
+        }
+      },
+      "source": "fixture",
+      "retrieved_at": "2026-08-05T23:30:00+02:00"
+    }
+  ]
+}
